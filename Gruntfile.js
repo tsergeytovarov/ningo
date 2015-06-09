@@ -1,7 +1,5 @@
 /*
-  Author: Sergey Popov.
-  Version: 1.2.
-  Last version date: 20.05.2015.
+  Author - Sergey Popov.
   Author URI: http://ourworkspace.ru
   Author social: https://vk.com/sergeytovarov
   Author email: tovarov.piter@gmail.com
@@ -10,30 +8,35 @@
 
 module.exports = function(grunt) {
 
-  // вызываем все таски стандартные
   require('load-grunt-tasks')(grunt);
-
   grunt.initConfig({
 
-    // постпроцессор
-    postcss: {
-      options: {
-        map: false,
-        processors: [
-          require('postcss-size').postcss, // функция для размеров
-          require("postcss-import").postcss, // импорты файлов
-          require('postcss-mixins').postcss, // миксины
-          require('postcss-conditionals').postcss, // условия
-          require('postcss-for').postcss, // циклы
-          require('postcss-simple-vars').postcss, //переменные
-          require('postcss-nested').postcss, // вложенности
-          require('autoprefixer-core')({ browsers: ['last 2 versions', 'ie 9']}).postcss //вызов автопрефиксера над css файлом
-        ]
-      },
-      dist: {
+    // компиляция less
+    less: {
+      style: {
+        options: {
+          compress: false,
+          yuicompress: false,
+          optimization: 2,
+          sourceMap: true,
+          sourceMapFilename: "build/css/style.css.map",
+          sourceMapURL: 'style.css.map',
+          sourceMapRootpath: '../../',
+        },
         files: {
-           'src/css/style.css': 'src/css/postcss/style.css'
-        }
+          'build/css/style.css': ['src/less/style.less']
+        },
+      }
+    },
+
+    // автопрефиксер
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 9'],
+        map: true,
+      },
+      style: {
+        src: 'build/css/style.css'
       }
     },
 
@@ -49,23 +52,11 @@ module.exports = function(grunt) {
       }
     },
 
-    // красота
-    csscomb: {
-      dist: {
-        options: {
-          config: 'csscomb.json'
-        },
-        files: {
-          'build/css/style.css': ['build/css/style.css'],
-        }
-      }
-    },
-
     //сжатие js
     uglify: {
       start: {
         files: {
-          'build/js/script.min.js': ['build/js/script.js']
+          'build/js/script.min.js': ['build/js/script.min.js']
         }
       }
     },
@@ -101,12 +92,6 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'build/js/',
       },
-      css:{
-        expand: true,
-        cwd: 'src/css/',
-        src: ['*.css'],
-        dest: 'build/css/',
-      },
       img: {
         expand: true,
         cwd: 'src/img/',
@@ -119,6 +104,16 @@ module.exports = function(grunt) {
         src: ['*.html'],
         dest: 'build/',
       },
+      css_min: {
+        src: ['build/css/style.css'],
+        dest: 'build/css/style.min.css',
+      },
+      css_add: {
+        expand: true,
+        cwd: 'src/less/css/',
+        src: ['*.css'],
+        dest: 'build/css/',
+      },
       fonts: {
         expand: true,
         cwd: 'src/font/',
@@ -130,7 +125,7 @@ module.exports = function(grunt) {
     // отслеживаем изменений
     watch: {
       style: {
-        files: ['src/css/**/*.css'],
+        files: ['src/less/**/*.less'],
         tasks: ['style'],
         options: {
           spawn: false,
@@ -138,7 +133,7 @@ module.exports = function(grunt) {
         },
       },
       scripts: {
-        files: ['src/js/*.js'],
+        files: ['src/js/script.js'],
         tasks: ['js'],
         options: {
           spawn: false,
@@ -160,7 +155,7 @@ module.exports = function(grunt) {
           spawn: false,
           livereload: true
         },
-      }
+      },
     },
 
     // автоперезагрузка
@@ -192,55 +187,53 @@ module.exports = function(grunt) {
   });
 
   // базовый таск
-   grunt.registerTask('default', [
-     'postcss',
-     'copy:css',
-     'csscomb',
-     'cssmin',
-     'copy:js',
-     'uglify',
-     'copy:html',
-     'copy:img',
-     'copy:fonts',
-    //  'imagemin',
-     'browserSync',
-     'watch'
-   ]);
+  grunt.registerTask('default', [
+    'less',
+    'autoprefixer',
+    'copy:css_min',
+    'cssmin',
+    'copy:js',
+    'uglify',
+    'copy:html',
+    'copy:img',
+    'copy:fonts',
+    'browserSync',
+    'watch'
+  ]);
 
-   // билдовый таск
-   grunt.registerTask('build', [
-     'clean:build',
-     'postcss',
-     'copy:css',
-     'csscomb',
-     'cssmin',
-     'copy:js',
-     'uglify',
-     'copy:html',
-     'copy:img',
-     'copy:fonts',
-    //  'imagemin',
-   ]);
+  // билдовый таск
+  grunt.registerTask('build', [
+    'clean:build',
+    'less',
+    'autoprefixer',
+    'copy:css_min',
+    'cssmin',
+    'copy:js',
+    'uglify',
+    'copy:html',
+    'copy:img',
+    'copy:fonts',
+  ]);
 
-   // только js
-   grunt.registerTask('js', [
-     'uglify',
-     'copy:js',
-   ]);
+  // только js
+  grunt.registerTask('js', [
+    'uglify',
+    'copy:js_vendors',
+    'copy:js',
+  ]);
 
-   // только стили
-   grunt.registerTask('style', [
-     'postcss',
-     'copy:css',
-     'csscomb',
-     'cssmin'
-   ]);
+  // только стили
+  grunt.registerTask('style', [
+    'less',
+    'autoprefixer',
+    'cssmin'
+  ]);
 
-   // только картики и стили
-   grunt.registerTask('img', [
-     'copy:img',
-    //  'imagemin',
-     'postcss'
-   ]);
-
-}
+  // только картики и стили
+  grunt.registerTask('img', [
+    'copy:img',
+    'less',
+    'autoprefixer',
+    'cssmin'
+  ]);
+};
