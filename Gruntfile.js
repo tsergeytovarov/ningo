@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           require('postcss-for').postcss, // циклы
           require('postcss-simple-vars').postcss, //переменные
           require('postcss-nested').postcss, // вложенности
-          require('autoprefixer-core')({browsers: 'last 10 version'}).postcss //вызов автопрефиксера над css файлом
+          require('autoprefixer-core')({ browsers: ['last 2 versions', 'ie 9']}).postcss //вызов автопрефиксера над css файлом
         ]
       },
       dist: {
