@@ -25,22 +25,6 @@
     }
   }
 
-  .col{ /* стили колонок */
-
-    &:first-child{
-      padding-left: 0px;
-    }
-
-    &:last-child{
-      padding-right: 0px;
-    }
-
-    &--single{ /* модификатор для колонки, которая идет одна */
-      margin: 0 auto;
-      float: none;
-    }
-  }
-
   &:after,
   &:before{
     content: "";
@@ -52,11 +36,16 @@
   }
 }
 
-.col{
+.col{ /* стили колонок */
   float: left;
   box-sizing: border-box;
   padding: 0 @paddings;
   min-height: 1px;
+
+  &--single{ /* модификатор для колонки, которая идет одна */
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .s-1{
@@ -99,11 +88,11 @@
   width: 20%;
 }
 
-.text-right{
+.content-right{
   text-align: right;
 }
 
-.text-center{
+.content-center{
   text-align: center;
 }
 
