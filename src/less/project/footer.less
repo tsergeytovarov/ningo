@@ -1,0 +1,74 @@
+.main-footer{
+  padding-top: 100px;
+  background: transparent;
+
+  &--sticky{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__content{
+    background: #eef8fc;
+  }
+
+  &__item{
+    min-height: 90px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    background: #eef8fc;
+
+    p{
+      font-size: 14px;
+      line-height: 18px;
+      color: #6ecbed;
+      margin: 0;
+      padding-top: 14px;
+      background: #eef8fc;
+      min-height: inherit;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -50;
+    }
+
+    &-1{
+      &:before{
+        width: 106px;
+        height: 151px;
+        background: url("../img/ningo-footer-1.png") no-repeat center;
+      }
+    }
+
+    &-2{
+      &:before{
+        width: 86px;
+        height: 157px;
+        background: url("../img/ningo-footer-2.png") no-repeat center;
+      }
+    }
+
+    &-3{
+      &:before{
+        width: 114px;
+        height: 157px;
+        background: url("../img/ningo-footer-3.png") no-repeat center;
+      }
+    }
+
+    &-4{
+      &:before{
+        width: 109px;
+        height: 181px;
+        background: url("../img/ningo-footer-4.png") no-repeat center;
+      }
+    }
+  }
+}
