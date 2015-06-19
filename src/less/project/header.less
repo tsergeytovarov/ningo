@@ -1,0 +1,79 @@
+// главный экран на индексной странице
+.index-screen{
+  height: 100%;
+  background: @main-page-top;
+  padding: 20px 0 160px;
+  box-sizing: border-box;
+
+  .container{
+    height: 100%;
+  }
+
+  .logo{
+    float: left;
+    margin-right: 20px;
+  }
+
+  &__nav{
+    float: left;
+
+    a{
+      font-size: 14px;
+      line-height: 40px;
+      color: #6ecbed;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 25px;
+
+      &:hover{
+        color: #2b7a97;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__login{
+    float: right;
+  }
+
+  &__form-container{
+    display: table;
+    min-height: 200px;
+    width: 100%;
+    height: 70%;
+  }
+
+  &__form{
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+
+// logo
+.logo{
+  display: block;
+  width: 88px;
+  height: 42px;
+
+  img{
+    display: block;
+    width: inherit;
+    height: inherit;
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+
+    &:hover{
+      opacity: .7;
+    }
+  }
+}
