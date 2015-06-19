@@ -44,6 +44,8 @@
     display: table;
     min-height: 200px;
     width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
     height: 70%;
   }
 
@@ -52,6 +54,59 @@
     width: 100%;
     vertical-align: middle;
     text-align: center;
+  }
+
+  form{
+    position: relative;
+  }
+
+  &__input{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 22px;
+    line-height: 40px;
+    color: #313131;
+    font-weight: 300;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: none;
+    border: none;
+    box-shadow: 0 0 20px 21px rgba(106,195,227, 0.13);
+
+    &::-webkit-input-placeholder{
+      color: #f3bd01;
+    }
+
+    &::-moz-placeholder{
+      color: #f3bd01;
+    }
+
+    &:hover{
+      box-shadow: 0 0 20px 21px rgba(255,255,255, 0.25);
+    }
+
+    &:focus{
+      &::-webkit-input-placeholder{
+        color: #818181;
+      }
+
+      &::-moz-placeholder{
+        color: #818181;
+      }
+    }
+  }
+
+  &__button{
+    background-color: transparent;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background: url("../img/ico/ico-01.svg") no-repeat center;
+
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
 }
 
