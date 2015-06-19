@@ -46,14 +46,13 @@
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
-    height: 70%;
+    height: 90%;
   }
 
   &__form{
     display: table-cell;
     width: 100%;
     vertical-align: middle;
-    text-align: center;
   }
 
   form{
@@ -67,7 +66,7 @@
     line-height: 40px;
     color: #313131;
     font-weight: 300;
-    padding: 20px 30px;
+    padding: 20px 60px 20px 30px;
     border-radius: 5px;
     background: #fff;
     box-shadow: none;
@@ -87,6 +86,8 @@
     }
 
     &:focus{
+      box-shadow: 0 0 20px 21px rgba(255,255,255, 0.25);
+
       &::-webkit-input-placeholder{
         color: #818181;
       }
@@ -107,6 +108,17 @@
     position: absolute;
     top: 15px;
     right: 20px;
+  }
+
+  &__more{
+    font-size: 14px;
+    line-height: 40px;
+    text-decoration: none;
+    display: block;
+    color: #6ecbed;
+    padding-left: 20px;
+    background: url("../img/ico-arrow-down.png") no-repeat 5px center;
+    margin-top: 10px;
   }
 }
 
