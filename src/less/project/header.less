@@ -148,4 +148,52 @@
       opacity: .7;
     }
   }
+
+  &--big{
+    width: 110px;
+    height: 50px;
+  }
+}
+
+
+// main-header
+.main-header{
+  background: #fff;
+
+  &--sticky{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 800;
+  }
+
+  &__right{
+    float: right;
+    font-size: 0;
+
+    .tooltip-container{
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .logo{
+    float: left;
+  }
+
+  &__navigation{
+    float: left;
+  }
+
+  &__find{
+    float: right;
+    padding-left: 40px;
+    background: #fff url("../img/ico/ico-02.svg") no-repeat 13px center;
+
+    &:hover{
+      background: #f2fbff url("../img/ico/ico-02.svg") no-repeat 13px center;
+    }
+  }
+
 }
