@@ -5,12 +5,42 @@ input[type='password']{ /* поля */
   box-sizing: border-box;
   outline: none;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   font-family: 'Roboto', Arial, sans-serif;
+  padding: 10px 15px;
+  color: #313131;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  box-shadow: none;
+  margin-top: 15px;
+
+  &:first-child{
+    margin-top: 0;
+  }
 
   &:focus{
+    border: 1px solid #a5e1f2;
+  }
 
+  &.error{
+    border: 1px solid #f44c4c;
+    color: #f44c4c;
+
+    & + p{
+      font-size: 12px;
+      line-height: 16px;
+      margin: 0;
+      margin-top: 5px;
+      color: #f44c4c;
+      text-align: left;
+    }
+
+    &:focus{
+      border: 1px solid #f44c4c;
+      color: #f44c4c;
+    }
   }
 }
 

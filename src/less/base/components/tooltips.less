@@ -1,0 +1,84 @@
+.tooltip-container{
+  position: relative;
+}
+
+.tooltip-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%,100%);
+  text-align: center;
+  z-index: 300;
+
+  &__title{
+    font-size: 12px;
+    line-height: 14px;
+    color: #313131;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.tooltip-socio{
+  width: 300px;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 30px 20px 25px;
+  border-bottom: 1px solid #edf7fa;
+
+  &__ico{
+    font-size: 0;
+
+    a{
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 10px;
+
+      &:hover{
+        opacity: .8;
+      }
+    }
+
+    img{
+      display: block;
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+
+.tooltip-email{
+  width: 300px;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 25px 30px 25px;
+
+  .btn{
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__href{
+
+    a{
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
+
+      &:first-child{
+        float: left;
+      }
+
+      &:last-child{
+        float: right;
+      }
+
+      &:hover{
+        text-decoration: none;
+        color: darken( #999, 20%);
+      }
+    }
+  }
+}

@@ -31,7 +31,34 @@
         </nav>
         <!-- блок авторизации -->
         <div class="index-screen__login">
-          <a href="#" class="btn btn--transparent">Войти</a>
+          <div class="tooltip-container">
+            <a href="#" class="btn btn--transparent js-tooltip-toggle">Войти</a>
+            <div class="tooltip-content">
+              <!-- тултип входа через соц-сети -->
+              <div class="tooltip-socio">
+                <p class="tooltip-content__title">Войти через социальную сеть:</p>
+                <div class="tooltip-socio__ico">
+                  <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
+                  <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
+                  <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
+                </div>
+              </div>
+              <!-- тултип входа через email -->
+              <div class="tooltip-email">
+                <p class="tooltip-content__title">Войти через социальную сеть:</p>
+                <form action="/echo" method="POST">
+                  <input type="text" placeholder="Email" class="error" required>
+                  <p>Такой адрес не зарегистрирован</p>
+                  <input type="password" placeholder="Пароль" required>
+                  <button type="submit" class="btn btn--orange">Войти</button>
+                </form>
+                <div class="row tooltip-email__href">
+                  <a href="#">Регистрация</a>
+                  <a href="#">Забыли пароль?</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="#" class="btn btn--blue">Продать вещь</a>
         </div>
       </div>
