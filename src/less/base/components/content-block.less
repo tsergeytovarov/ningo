@@ -188,6 +188,15 @@
   //цвет ссылки в тексте
   &__link {
     color: @blue;
+
+    &:hover {
+      color: #91d8f3;
+    }
+
+    &:active {
+      text-decoration: none;
+      opacity: .9;
+    }
   }
 
   &__show-answer-btn {
@@ -201,6 +210,14 @@
     background-color: #fff;
     border: none;
     outline: none;
+
+    &:hover {
+      color: #91d8f3;
+    }
+
+    &:active {
+      opacity: .9;
+    }
   }
 
   &__question {
