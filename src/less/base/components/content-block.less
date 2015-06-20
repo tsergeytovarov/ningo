@@ -33,6 +33,7 @@
   //заголовки блоков
   &__title {
     position: relative;
+    margin: 0;
     margin-bottom: 33px;
     font-weight: 400;
     font-size: 18px;
@@ -61,7 +62,7 @@
 
     //маргин заголовка блока "faq"
     &--faq {
-      margin-bottom: 25px;
+      margin-bottom: 13px;
     }
 
     //маргин заголовка блока обратной связи
@@ -218,80 +219,6 @@
 
     &:active {
       opacity: .9;
-    }
-  }
-
-  &__question {
-    position: relative;
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-
-    //полоска-разделитель
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      left: 0;
-      right: 0;
-      width: 565px;
-      border-bottom: 1px solid #edf7fa;
-    }
-
-    &--last {
-      //полоска-разделитель
-      &:before {
-        display: none;
-      }
-    }
-
-    //стрелка вниз на кнопке с вопросом
-    &:after {
-      content: url(../img/ico/ico-20.svg);
-      position: absolute;
-      top: 50%;
-      right: -200px;
-      margin-top: -14px;
-    }
-
-    &--bold {
-      margin-bottom: 21px;
-      padding-top: 29px;
-      padding-right: 200px;
-      font-weight: 700;
-      cursor: pointer;
-      
-      //стрелка вверх на тексте вопроса
-      &:after {
-        content: url(../img/ico/ico-20-gray.svg);
-        position: absolute;
-        top: 50%;
-        right: 0;
-        margin-top: 0;
-        opacity: .2;
-      }
-
-      &:before {
-        display: none;
-      }
-    }
-  }
-
-  &__answer-text {
-    position: relative;
-    margin: 0;
-    margin-bottom: 24px;
-
-    //полоска-разделитель
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -22px;
-      left: 0;
-      right: 0;
-      width: 565px;
-      border-bottom: 1px solid #edf7fa;
     }
   }
 

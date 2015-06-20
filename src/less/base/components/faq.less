@@ -1,0 +1,86 @@
+.faq {
+
+  &__toggle {
+    position: relative;
+    margin: 0;
+    margin-bottom: 21px;
+    padding-top: 29px;
+    padding-right: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: @blue;
+    cursor: pointer;
+
+    //полоска-разделитель
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      right: 0;
+      width: 565px;
+      border-bottom: 1px solid #edf7fa;
+    }
+
+    &--last {
+      //полоска-разделитель
+      &:before {
+        display: none;
+      }
+    }
+
+    //стрелка вниз на вопросе
+    &:after {
+      content: url(../img/ico/ico-20.svg);
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    //полоска-разделитель
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      right: 0;
+      width: 565px;
+      border-bottom: 1px solid #edf7fa;
+    }
+  }
+
+  //стили открытого блока вопросов
+  &--active {
+
+    .faq__toggle {
+      font-weight: 700;
+      color: @darkgray;
+
+      //стрелка вниз меняется на стрелку вверх
+      &:after {
+        content: url(../img/ico/ico-20-gray.svg);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        opacity: .2;
+      }
+
+      //разделитель пропадает
+      &:before {
+        display: none;
+      }
+    }
+
+    .faq__content {
+      display: block;
+      position: relative;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+  }
+}
