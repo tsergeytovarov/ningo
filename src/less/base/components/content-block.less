@@ -17,6 +17,18 @@
     margin-bottom: 20px;
   }
 
+  //нижние отступы блока "faq"
+  &--faq {
+    margin-bottom: 54px;
+    padding-bottom: 10px;
+  }
+
+  //нижние отступы блока обратной связи
+  &--feedback {
+    margin-bottom: 20px;
+    padding-bottom: 27px;
+  }
+
   //заголовки блоков
   &__title {
     position: relative;
@@ -44,6 +56,16 @@
     //маргин заголовка блока "как продать"
     &--sell {
       margin-bottom: 15px;
+    }
+
+    //маргин заголовка блока "faq"
+    &--faq {
+      margin-bottom: 25px;
+    }
+
+    //маргин заголовка блока обратной связи
+    &--feedback {
+      margin-bottom: 43px;
     }
   }
 
@@ -168,9 +190,13 @@
     color: @blue;
   }
 
-  &__show-answer {
+  &__show-answer-btn {
+    display: block;
     margin: 0;
-    padding: 0;
+    padding: 17px 0;
+    padding-right: 200px;
+    width: 100%;
+    text-align: left;
     color: @blue;
     background-color: #fff;
     border: none;
@@ -178,8 +204,46 @@
   }
 
   &__question {
+    margin: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+
+    &--bold {
+      margin-bottom: 21px;
+      padding-top: 29px;
+      font-weight: 700;
+    }
+  }
+
+  &__answer-text {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__feedback-form {
+    padding-top: 5px;
+    padding-right: 1px;
+    min-height: 65px;
+    background-image: url("../img/input-message-bg.png");
+    background-repeat: no-repeat;
+    background-position: right 3px;
+  }
+
+  &__input-label {
+    float: left;
+  }
+
+  &__textarea {
+    float: right;
+    margin-bottom: 17px;
+    padding-right: 10px;
+    width: 515px;
+    max-height: 59px;
+    font-size: 14px;
+    line-height: 40px;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
   }
 }
