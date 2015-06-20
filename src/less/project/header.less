@@ -178,6 +178,14 @@
     }
   }
 
+  &__left{
+    display: none;
+
+    &--open{
+      display: block;
+    }
+  }
+
   .logo{
     float: left;
   }
@@ -194,6 +202,37 @@
     &:hover{
       background: #f2fbff url("../img/ico/ico-02.svg") no-repeat 13px center;
     }
+  }
+
+  &__form{
+    padding: 7px 8px;
+  }
+
+  &__select{
+    width: 145px;
+    float: left;
+    margin-top: 0;
+  }
+
+  &__input-container{
+    margin-left: 155px;
+    margin-right: 220px;
+  }
+
+  input[type="text"].main-header__input{
+    background: #fff;
+    border: none;
+    width: 100%;
+  }
+
+  &__close{
+    float: right;
+    width: 18px;
+    height: 18px;
+    margin-top: 13px;
+    margin-right: 10px;
+    border: none;
+    background: transparent url("../img/ico/ico-19.svg") no-repeat center;
   }
 
 }

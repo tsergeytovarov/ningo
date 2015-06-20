@@ -111,7 +111,7 @@
     </div>
 
     <!-- левая часть нормальная -->
-    <div class="main-header__left main-header__left--basic row">
+    <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
@@ -123,13 +123,23 @@
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
 
-      <a href="#" class="main-header__find btn btn--all-blue-soft">Искать</a>
+      <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
 
     </div>
 
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
-
+      <form action="/echo" method="POST" class="main-header__form">
+        <button type="button" class="main-header__close js-close-header-find"></button>
+        <select class="main-header__select">
+          <option value="1">Вещи</option>
+          <option value="2">Стулья</option>
+          <option value="3">Коробки</option>
+        </select>
+        <div class="main-header__input-container">
+          <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
+        </div>
+      </form>
     </div>
   </header>
 
