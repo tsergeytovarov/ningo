@@ -156,15 +156,46 @@
 
   //обертка картинок в блоках купить и продать
   &__image-wrapper {
+    position: relative;
     float: left;
     padding-top: 45px;
     width: 255px;
     min-height: 150px;
     text-align: center;
 
+    &--last {
+
+      //полоска-разделитель
+      &:after {
+        display: none;
+      }
+    }
+
+    //полоска-разделитель
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      right: 0;
+      width: 565px;
+      border-bottom: 1px solid #edf7fa;
+    }
+
     &--sell {
       float: right;
       padding-top: 45px;
+
+      //полоска-разделитель
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        left: -312px;
+        right: 0;
+        width: 565px;
+        border-bottom: 1px solid #edf7fa;
+      }
     }
   }
 
