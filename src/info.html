@@ -17,19 +17,21 @@
 
 
 
-
-  <header class="page-header"></header>
-
+  <div class="container container--small">
 
 
+    <header class="page-header"></header>
 
-  <!-- контейнер для навигации и контента -->
-  <div class="row  s-12">
 
-    <!-- фиксированная панель навигации, в версиях меньше десктопной - как бы выпадающий список -->
-    <div class="col  s-4">
 
-      <nav class="info-navigation">
+
+    <!-- контейнер для навигации и контента -->
+    <div class="row  s-12">
+
+      <div class="col  s-4">
+
+        <!-- фиксированная панель навигации, в версиях меньше десктопной - как бы выпадающий список -->
+        <nav class="info-navigation">
 
         <!-- кнопка, разворачивающая список навигации, видна только в не-десктопных версиях -->
         <button class="navigation-toggle">О компании</button>
@@ -90,224 +92,202 @@
           </li>
 
         </ul>
-      </nav>
-    </div>
+        </nav>
+      </div>
 
 
 
 
-    <!-- содержание страницы -->
-    <div class="col  s-8">
+      <!-- содержание страницы -->
+      <div class="col  s-8">
 
 
 
-      <article class="project-info">
+        <article class="content-block  content-block--project-info">
 
-        <h1 class="project-info__title">О проекте</h1>
-        <img src="img/project-info-photo.jpg" alt="" class="project-info__photo">
-        <p class="project-info__text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их
-        </p>
+          <h1 class="content-block__title">О проекте</h1>
+          <img src="img/project-info-photo.jpg" alt="" class="content-block__photo">
+          <p class="content-block__text  content-block__text--underline">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их
+          </p>
 
-        <section class="project-info__feature">
+          <section class="content-block__feature  row">
 
-          <div class="row">
-
-            <div class="col s-3">
-
-              <img src="img/project-info-icon-1.png" alt="" class="project-info__icon">
-
+            <div class="content-block__icon-wrapper  content-block__icon-wrapper--first">
+              <img src="img/project-info-icon-1.png" alt="" class="content-block__icon">
             </div>
 
-            <div class="col s-5">
+            <div class="content-block__text-wrapper">
 
-              <h2 class="project-info__feature-title">Подзаголовок</h2>
+              <h2 class="content-block__subtitle">Подзаголовок</h2>
 
-              <p class="project-info__feature-text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалотправте пожалуйста очень хочу их</p>
-
+              <p class="content-block__text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалотправте пожалуйста очень хочу их</p>
             </div>
-          </div>
-        </section>
+          </section>
 
 
-        <section class="project-info__feature">
+          <section class="content-block__feature  content-block__feature--last-feature  row">
 
-          <div class="row">
-
-            <div class="col s-3">
-
-              <img src="img/project-info-icon-2.png" alt="" class="project-info__icon">
-
+            <div class="content-block__icon-wrapper  content-block__icon-wrapper--second">
+              <img src="img/project-info-icon-2.png" alt="" class="content-block__icon">
             </div>
 
-            <div class="col s-5">
+            <div class="content-block__text-wrapper">
 
-              <h2 class="project-info__feature-title">Подзаголовок</h2>
+              <h2 class="content-block__subtitle">Подзаголовок</h2>
 
-              <p class="project-info__feature-text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалотправте пожалуйста очень хочу их</p>
-
+              <p class="content-block__text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу ихГород Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалотправте пожалуйста очень хочу их</p>
             </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </article>
 
 
 
-      <article class="content-block  content-block--how-to-buy">
+        <article class="content-block  content-block--how-to-buy">
 
-        <h1 class="content-block__title">Как купить</h1>
+          <h1 class="content-block__title  content-block__title--buy">Как купить</h1>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
+          <section class="content-block__feature-item  row">
+
+            <div class="content-block__image-wrapper">
               <img src="img/buy-step-1.png" alt="" class="content-block__image">
             </div>
-            <div class="col s-4">
+            <div class="content-block__feature-wrapper">
               <h2 class="content-block__feature-title">Шаг 1</h2>
               <p class="content-block__feature-description">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
+          <section class="content-block__feature-item  row">
+
+            <div class="content-block__image-wrapper">
               <img src="img/buy-step-2.png" alt="" class="content-block__image">
             </div>
-            <div class="col s-4">
+            <div class="content-block__feature-wrapper">
               <h2 class="content-block__feature-title">Шаг 2</h2>
               <p class="content-block__feature-description">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
-              <img src="img/buy-step-3.png" alt="" class="content-block__image">
+          <section class="content-block__feature-item  row">
+
+            <div class="content-block__image-wrapper">
+              <img src="img/buy-step-3.png" alt="" class="content-block__image  content-block__image--last">
             </div>
-            <div class="col s-4">
+            <div class="content-block__feature-wrapper">
               <h2 class="content-block__feature-title">Шаг 3</h2>
               <p class="content-block__feature-description">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
             </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </article>
 
 
 
-      <article class="content-block  content-block--how-to-sell">
+        <article class="content-block  content-block--how-to-sell">
 
-        <h1 class="content-block__title">Как продать</h1>
+          <h1 class="content-block__title  content-block__title--sell">Как продать</h1>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
+          <section class="content-block__feature-item  row">
+            <div class="content-block__feature-wrapper  content-block__feature-wrapper--sell">
               <h2 class="content-block__feature-title">Шаг 1</h2>
               <p class="content-block__feature-description">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
               <a href="#" class="content-block__link">Как продать вещь быстрее?</a>
             </div>
-            <div class="col s-4">
+            <div class="content-block__image-wrapper  content-block__image-wrapper--sell">
               <img src="img/sell-step-1.png" alt="" class="content-block__image">
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
+          <section class="content-block__feature-item  row">
+            <div class="content-block__feature-wrapper  content-block__feature-wrapper--sell">
               <h2 class="content-block__feature-title">Шаг 2</h2>
               <p class="content-block__feature-description">Опубликуй вещь и жди поступления предложений. Обсуди детали с покупателями</p>
             </div>
-            <div class="col s-4">
+            <div class="content-block__image-wrapper  content-block__image-wrapper--sell">
               <img src="img/sell-step-2.png" alt="" class="content-block__image">
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="content-block__feature-item">
-          <div class="row">
-            <div class="col s-4">
+          <section class="content-block__feature-item  row">
+            <div class="content-block__feature-wrapper  content-block__feature-wrapper--sell">
               <h2 class="content-block__feature-title">Шаг 3</h2>
               <p class="content-block__feature-description">Отправь вещь покупателю и получи оплату</p>
             </div>
-            <div class="col s-4">
+            <div class="content-block__image-wrapper  content-block__image-wrapper--sell">
             </div>
+          </section>
+
+        </article>
+
+
+
+        <article class="content-block  content-block--faq">
+
+          <h1 class="content-block__title">Часто задаваемые вопросы</h1>
+
+          <!-- ответы изначально скрыты, открываются по нажатию на вопрос -->
+          <section class="content-block__feature-item">
+
+            <button class="content-block__show-answer">
+              <h2 class="content-block__question">Как мне продать вещь через этот сервис</h2>
+            </button>
+
+            <div class="content-block__answer">
+              <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
+              <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
+            </div>
+          </section>
+
+          <section class="content-block__feature-item">
+
+            <button class="content-block__show-answer">
+              <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
+            </button>
+
+            <!-- <div class="content-block__answer">
+              <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
+              <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
+            </div> -->
+          </section>
+
+          <section class="content-block__feature-item">
+
+            <button class="content-block__show-answer">
+              <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
+            </button>
+
+            <!-- <div class="content-block__answer">
+              <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
+              <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
+            </div> -->
+          </section>
+
+        </article>
+
+
+
+        <article class="content-block  content-block--feedback">
+
+          <h1 class="content-block__title">Обратная связь</h1>
+
+          <!-- этот блок показывается, если пользователь не залогинен -->
+          <div class="content-block__feedback-form">
+            <p class="content-block__text">Чтобы написать нам, необходимо <a href="#" class="content-block__link">зарегистрироваться</a></p>
           </div>
-        </section>
 
-      </article>
+          <!-- этот блок показывается, если пользователь залогинен -->
+          <div class="content-block__feedback-form  content-block__feedback-form--logged-in">
 
+            <form action="#" method="post" class="send-message">
 
+              <img src="img/user-avatar.png" alt="" class="content-block__avatar">
 
-      <article class="content-block  content-block--faq">
+              <input type="text" id="message" name="message" placeholder="Напишите нам">
 
-        <h1 class="content-block__title">Часто задаваемые вопросы</h1>
-
-        <!-- ответы изначально скрыты, открываются по нажатию на вопрос -->
-        <section class="content-block__feature-item">
-
-          <button class="content-block__show-answer">
-            <h2 class="content-block__question">Как мне продать вещь через этот сервис</h2>
-          </button>
-
-          <div class="content-block__answer">
-            <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
-            <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
+              <button type="submit" class="send-message">Написать</button>
+            </form>
           </div>
-        </section>
-
-        <section class="content-block__feature-item">
-
-          <button class="content-block__show-answer">
-            <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
-          </button>
-
-          <div class="content-block__answer">
-            <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
-            <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
-          </div>
-        </section>
-
-        <section class="content-block__feature-item">
-
-          <button class="content-block__show-answer">
-            <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
-          </button>
-
-          <div class="content-block__answer">
-            <h2 class="content-block__question">Как мне тут, как это, как это, как это, как это, как это, как это, как это, как это, как это</h2>
-            <p class="content-block__answer-text">Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв Нажми "Продать вещь", загрузи фотки и опиши свою вещь ваваыываываыв аыавыв. Вмвавапв</p>
-          </div>
-        </section>
-
-      </article>
-
-
-
-      <article class="content-block  content-block--feedback">
-        
-        <h1 class="content-block__title">Обратная связь</h1>
-
-        <!-- этот блок показывается, если пользователь не залогинен -->
-        <div class="content-block__feedback-form">
-          <p class="content-block__text">Чтобы написать нам, необходимо <a href="#" class="content-block__link">зарегистрироваться</a></p>
-        </div>
-        
-        <!-- этот блок показывается, если пользователь залогинен -->
-        <div class="content-block__feedback-form  content-block__feedback-form--logged-in">
-          
-          <form action="#" method="post" class="send-message">
-
-            <img src="img/user-avatar.png" alt="" class="content-block__avatar">
-
-            <input type="text" id="message" name="message" placeholder="Напишите нам">
-
-            <button type="submit" class="send-message">Написать</button>
-          </form>
-
-        </div>
-
-      </article>
+        </article>
+      </div>
     </div>
   </div>
 

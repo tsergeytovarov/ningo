@@ -1,0 +1,185 @@
+.content-block {
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.05);
+
+  //нижний маргин блока "как купить"
+  &--how-to-buy {
+    margin-bottom: 38px;
+    padding-bottom: 0;
+  }
+
+  //нижний маргин блока "как продать"
+  &--how-to-sell {
+    margin-bottom: 20px;
+  }
+
+  //заголовки блоков
+  &__title {
+    position: relative;
+    margin-bottom: 33px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    //полоска-разделитель под заголовком
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: -22px;
+      right: 0;
+      width: 610px;
+      border-bottom: 1px solid #edf7fa;
+    }
+
+    //маргин заголовка блока "как купить"
+    &--buy {
+      margin-bottom: 24px;
+    }
+
+    //маргин заголовка блока "как продать"
+    &--sell {
+      margin-bottom: 15px;
+    }
+  }
+
+  //подзаголовок в блоке "о проекте"
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  //заголовки секций блоков купить и продать
+  &__feature-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  //текст в секциях блоков купить и продать
+  &__feature-description {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  //нижний маргин большой фотографии в блоке "о проекте"
+  &__photo {
+    margin-bottom: 18px;
+  }
+
+  //текстовые блоки страницы
+  &__text {
+    margin: 0;
+    letter-spacing: -0.2px;
+
+    &--underline {
+      position: relative;
+      margin-bottom: 24px;
+      padding-bottom: 33px;
+
+      //полоска-разделитель
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 565px;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
+  }
+
+  //обертка иконок в секциях блока "о проекте"
+  &__icon-wrapper {
+    float: left;
+    width: 150px;
+
+    &--first {
+      padding-top: 6px;
+      padding-left: 27px;
+    }
+
+    &--second {
+      padding-top: 24px;
+      padding-left: 45px;
+    }
+  }
+
+  //обертка текстового блока в секциях блока "о проекте"
+  &__text-wrapper {
+    float: right;
+    width: 352px;
+  }
+
+  //секции блока "о проекте"
+  &__feature {
+    margin-bottom: 39px;
+
+    &--last-feature {
+      margin-bottom: 10px;
+    }
+  }
+
+  //обертка картинок в блоках купить и продать
+  &__image-wrapper {
+    float: left;
+    padding-top: 45px;
+    width: 255px;
+    min-height: 150px;
+    text-align: center;
+
+    &--sell {
+      float: right;
+      padding-top: 45px;
+    }
+  }
+
+  //обертка текста в блоках купить и продать
+  &__feature-wrapper {
+    float: right;
+    padding-top: 70px;
+    width: 272px;
+
+    &--sell {
+      float: left;
+    }
+  }
+
+  //отрицательный маргин последней картинки в блоках купить и продать
+  &__image {
+
+    &--last {
+      margin-bottom: -6px;
+    }
+  }
+
+  //цвет ссылки в тексте
+  &__link {
+    color: @blue;
+  }
+
+  &__show-answer {
+    margin: 0;
+    padding: 0;
+    color: @blue;
+    background-color: #fff;
+    border: none;
+    outline: none;
+  }
+
+  &__question {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
