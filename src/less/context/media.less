@@ -24,6 +24,8 @@
       width: 100%;
     }
   }
+
+  //скрытая навигация
   .info-navigation {
     position: relative;
     width: 100%;
@@ -41,6 +43,7 @@
     }
   }
 
+  //кнопка включения мобильного меню
   .navigation-toggle {
     position: relative;
     display: block;
@@ -106,12 +109,14 @@
       }
     }
   }
-
+  
+  //контентные блоки на стр.инфо
   .content-block {
     &__photo {
       width: 100%;
     }
-
+    
+    //обертка иконок в блоке "о проекте"
     &__icon-wrapper {
       width: 30%;
 
@@ -119,19 +124,23 @@
         padding-left: 30px;
       }
     }
-
+    
+    //обертка текста в блоке "о проекте"
     &__text-wrapper {
       width: 60%;
     }
-
+    
+    //обертка иконки в блоке "о проекте"
     &__icon {
       max-width: 100%;
     }
-
+    
+    //блок обратной связи скрыт
     &--feedback {
       display: none;
     }
-
+    
+    //полоска под заголовками блоков
     &__title {
 
       //полоска-разделитель под заголовком
@@ -145,7 +154,8 @@
         border-bottom: 1px solid #edf7fa;
       }
     }
-
+    
+    //полоска под текстом в блоке "о проекте"
     &__text {
 
       &--underline {
@@ -155,7 +165,8 @@
         }
       }
     }
-
+    
+    //обертка текста в блоках купить и продать
     &__feature-wrapper {
       padding-right: 40px;
       width: 55%;
@@ -164,7 +175,8 @@
         padding-right: 0;
       }
     }
-
+    
+    //обертка картинки с мышью в блоках купить и продать
     &__image-wrapper {
       width: 30%;
 
@@ -176,7 +188,8 @@
       }
     }
   }
-
+  
+  //блок часто задаваемых вопросов
   .faq {
 
     &__content {
@@ -259,6 +272,15 @@
         bottom: 5px;
       }
     }
+
+    //полоска под заголовками блоков
+    &__title {
+
+      //полоска-разделитель под заголовком
+      &:after {
+        width: 130%;
+      }
+    }
   }
 
   .faq {
@@ -269,6 +291,70 @@
 
     &__toggle {
       padding-right: 50px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 479px) {
+
+  .container {
+    width: 87.5%;
+
+    &--small {
+      width: 87.5%;
+    }
+  }
+  // стили страницы инфо
+
+  .info-page {
+    min-width: 320px;
+  }
+
+  .content-block {
+
+    &__feature-wrapper {
+      padding-top: 28px;
+      width: 48%;
+    }
+
+    &__image-wrapper {
+      padding-top: 70px;
+      width: 40%;
+    }
+
+    &__feature-description {
+      margin: 0;
+    }
+
+    &__icon-wrapper {
+      padding: 25px 0;
+    }
+
+    &__link {
+
+      &--sell {
+        display: none;
+      }
+    }
+  }
+
+  .faq {
+
+    &__toggle {
+      padding-right: 35px;
+    }
+
+    &__content {
+      padding-right: 5px;
     }
   }
 }
