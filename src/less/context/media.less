@@ -1,4 +1,4 @@
-@media (min-width: 480px) and (max-width: 750px) {
+@media (min-width: 750px) and (max-width: 969px) {
 
   .container {
     width: 94.668%;
@@ -126,6 +126,54 @@
 
     &__icon {
       max-width: 100%;
+    }
+
+    &--feedback {
+      display: none;
+    }
+
+    &__title {
+
+      //полоска-разделитель под заголовком
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -13px;
+        left: -22px;
+        right: 0;
+        width: 110%;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
+
+    &__text {
+
+      &--underline {
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    &__feature-wrapper {
+      padding-right: 40px;
+      width: 55%;
+
+      &--sell {
+        padding-right: 0;
+      }
+    }
+
+    &__image-wrapper {
+      width: 30%;
+
+      &--sell {
+
+        .content-block__image {
+          padding-right: 0;
+        }
+      }
     }
   }
 }
