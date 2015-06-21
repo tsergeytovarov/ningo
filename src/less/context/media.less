@@ -7,7 +7,7 @@
       width: 94.668%;
     }
   }
-  // стили страницы инфо
+  /////////////// стили страницы инфо
 
   .info-page {
     min-width: 750px;
@@ -207,6 +207,100 @@
       }
     }
   }
+
+  /////////////// стили страницы избранного
+
+  .favourites-page {
+    min-width: 750px;
+    width: 100%;
+    
+    //элементы выступают за пределы контейнера, каскад - чтобы перебить вес селектора
+    .content-block {
+
+      &--join-us {
+        overflow: visible;
+      }
+    }
+
+    .container {
+
+      &--small {
+        width: 95.333%;
+        overflow: hidden;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .favourites-gallery {
+    margin-right: -2.493%;
+  }
+
+  .gallery-item {
+    margin-right: 2.493%;
+    margin-bottom: 27px;
+    width: 30.84%;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__brand {
+
+      &--display {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .page-title {
+    margin-bottom: 15px;
+  }
+
+  .content-block {
+
+    &--why-ningo {
+      display: none;
+    }
+
+    &--join-us {
+      position: relative;
+      display: block;
+      margin-bottom: 33px;
+      padding: 26px 84px;
+      text-align: center;
+
+      &:after {
+        content: url("../img/speech-bubble.png");
+        position: absolute;
+        right: 0;
+        bottom: -27px;
+      }
+    }
+
+    &__text {
+
+      &--display {
+        display: block;
+      }
+
+      &--join-us {
+        margin-bottom: 15px;
+        line-height: 20px;
+      }
+    }
+  }
 }
 
 
@@ -293,6 +387,8 @@
       padding-right: 50px;
     }
   }
+
+  /////////////// стили страницы избранного
 }
 
 
@@ -357,4 +453,6 @@
       padding-right: 5px;
     }
   }
+
+  /////////////// стили страницы избранного
 }
