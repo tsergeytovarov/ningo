@@ -1,4 +1,15 @@
 .gallery-item {
+  position: relative;
   float: left;
   margin-right: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.05);
+
+  &__capture {
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
 }
