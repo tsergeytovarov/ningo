@@ -1,15 +1,152 @@
 .gallery-item {
   position: relative;
   float: left;
-  margin-right: 15px;
+  margin-right: 14px;
+  margin-bottom: 17px;
   border-radius: 3px;
   box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.05);
+  overflow: hidden;
 
   &__capture {
     position: absolute;
-    bottom: 42px;
+    bottom: 45px;
     left: 0;
-    width: 100%;
+    padding-left: 4.124%;
+    padding-right: 4.124%;
+    width: 91.752%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
     background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__brand {
+    padding-top: 5px;
+    padding-bottom: 1px;
+  }
+
+  &__price {
+    float: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__sizes {
+    float: right;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    width: 50%;
+    text-align: right;
+  }
+
+  &__comment-like {
+    position: relative;
+    margin-top: -6px;
+    padding-left: 4.124%;
+    padding-right: 4.124%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 91.752%;
+    height: 19px;
+    text-align: center;
+    background-color: #fff;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 45px;
+      background-color: #edf7fa;
+    }
+  }
+
+  &__comment {
+    float: left;
+    width: 50%;
+  }
+
+  &__like {
+    float: right;
+    width: 50%;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 0;
+
+    &--rubl {
+      &:after {
+        content: url("../img/ico/ico-11.svg");
+        position: absolute;
+        top: 3px;
+        left: 0;
+      }
+    }
+
+    &--comment {
+
+      &:after {
+        content: url("../img/ico/ico-12.svg");
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -9px;
+      }
+
+      &:hover {
+
+        &:after {
+          content: url("../img/ico/ico-13.svg");
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -9px;
+        }
+      }
+
+      &:active {
+
+        &:after {
+          opacity: .7;
+        }
+      }
+    }
+
+    &--like {
+
+      &:after {
+        content: url("../img/ico/ico-16.svg");
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -9px;
+      }
+
+      &:hover {
+
+        &:after {
+          content: url("../img/ico/ico-15.svg");
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -9px;
+        }
+      }
+
+      &:active {
+
+        &:after {
+          opacity: .7;
+        }
+      }
+    }
   }
 }
