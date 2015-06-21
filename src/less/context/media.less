@@ -270,6 +270,8 @@
   }
 
   .content-block {
+    position: relative;
+    z-index: 10000;
 
     &--why-ningo {
       display: none;
@@ -281,6 +283,7 @@
       margin-bottom: 33px;
       padding: 26px 84px;
       text-align: center;
+      z-index: 50;
 
       &:after {
         content: url("../img/speech-bubble.png");
@@ -288,12 +291,20 @@
         right: 0;
         bottom: -27px;
       }
+
+      &:before {
+        content: url("../img/thumbs-up.png");
+        position: absolute;
+        bottom: -75px;
+        right: 15px;
+      }
     }
 
     &__text {
 
       &--display {
         display: block;
+        color: #2b7a97;
       }
 
       &--join-us {
