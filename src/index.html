@@ -15,68 +15,7 @@
 </head>
 <body>
 
-  <!-- главный экран -->
-  <div class="index-screen">
-    <div class="container">
-      <!-- верхняя часть -->
-      <div class="index-screen__top row">
-        <!-- логотип -->
-        <figure class="logo">
-          <img src="img/logo.png" alt="">
-        </figure>
-        <!-- навигация -->
-        <nav class="index-screen__nav">
-          <a href="#">Моя лента</a>
-          <a href="№">Как это работает?</a>
-        </nav>
-        <!-- блок авторизации -->
-        <div class="index-screen__login">
-          <div class="tooltip-container">
-            <a href="#" class="btn btn--transparent js-tooltip-toggle">Войти</a>
-            <div class="tooltip-content tooltip-content--triangle">
-              <!-- тултип входа через соц-сети -->
-              <div class="tooltip-socio">
-                <p class="tooltip-content__title">Войти через социальную сеть:</p>
-                <div class="tooltip-socio__ico">
-                  <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
-                  <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
-                  <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
-                </div>
-              </div>
-              <!-- тултип входа через email -->
-              <div class="tooltip-email">
-                <p class="tooltip-content__title">Войти через социальную сеть:</p>
-                <form action="/echo" method="POST">
-                  <input type="text" placeholder="Email" class="error" required>
-                  <p>Такой адрес не зарегистрирован</p>
-                  <input type="password" placeholder="Пароль" required>
-                  <button type="submit" class="btn btn--orange">Войти</button>
-                </form>
-                <div class="row tooltip-email__href">
-                  <a href="#">Регистрация</a>
-                  <a href="#">Забыли пароль?</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="btn btn--blue">Продать вещь</a>
-        </div>
-      </div>
-
-      <!-- средняя часть с полем поиска -->
-      <div class="index-screen__form-container">
-        <div class="index-screen__form">
-          <form action="#" method="POST">
-            <input type="text" class="index-screen__input" placeholder="Поиск одежды от хенд-мейда до известных брендов">
-            <button type="submit" class="index-screen__button"></button>
-          </form>
-          <a href="#" class="index-screen__more">Расширенный поиск</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- основной хедер, который будет на других страницах. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header main-header--sticky">
     <div class="main-header__right">
       <div class="tooltip-container">
@@ -143,6 +82,78 @@
     </div>
   </header>
 
+  <!-- главный экран -->
+  <div class="index-screen">
+    <div class="container">
+      <!-- верхняя часть -->
+      <div class="index-screen__top row">
+        <!-- логотип -->
+        <figure class="logo">
+          <img src="img/logo.png" alt="">
+        </figure>
+        <!-- навигация -->
+        <nav class="index-screen__nav">
+          <a href="#">Моя лента</a>
+          <a href="№">Как это работает?</a>
+        </nav>
+        <!-- блок авторизации -->
+        <div class="index-screen__login">
+          <div class="tooltip-container">
+            <a href="#" class="btn btn--transparent js-tooltip-toggle">Войти</a>
+            <div class="tooltip-content tooltip-content--triangle">
+              <!-- тултип входа через соц-сети -->
+              <div class="tooltip-socio">
+                <p class="tooltip-content__title">Войти через социальную сеть:</p>
+                <div class="tooltip-socio__ico">
+                  <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
+                  <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
+                  <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
+                </div>
+              </div>
+              <!-- тултип входа через email -->
+              <div class="tooltip-email">
+                <p class="tooltip-content__title">Войти через социальную сеть:</p>
+                <form action="/echo" method="POST">
+                  <input type="text" placeholder="Email" class="error" required>
+                  <p>Такой адрес не зарегистрирован</p>
+                  <input type="password" placeholder="Пароль" required>
+                  <button type="submit" class="btn btn--orange">Войти</button>
+                </form>
+                <div class="row tooltip-email__href">
+                  <a href="#">Регистрация</a>
+                  <a href="#">Забыли пароль?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn--blue">Продать вещь</a>
+        </div>
+      </div>
+
+      <!-- средняя часть с полем поиска -->
+      <div class="index-screen__form-container">
+        <div class="index-screen__form">
+          <form action="#" method="POST">
+            <input type="text" class="index-screen__input" placeholder="Поиск одежды от хенд-мейда до известных брендов">
+            <button type="submit" class="index-screen__button"></button>
+          </form>
+          <a href="#" class="index-screen__more">Расширенный поиск</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="index-content container row">
+    <!-- колонка с фильтрами и каталогом -->
+    <div class="col s-8">
+
+    </div>
+
+    <!-- колонка с виджетами -->
+    <div class="col s-4">
+
+    </div>
+  </div>
 
 
   <!-- прилипающий к низу футер -->
