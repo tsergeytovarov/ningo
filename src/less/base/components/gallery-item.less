@@ -6,6 +6,7 @@
   vertical-align: top;
   margin-right: 14px;
   margin-bottom: 17px;
+  background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.05);
   overflow: hidden;
@@ -16,8 +17,8 @@
 
   //фиксированная ширина картинок для десктопа страницы избранного
   &__image {
+    display: block;
     width: 194px;
-    height: auto;
 
     //переопределение фиксированной ширины картинок для десктопа страницы "мои вещи"
     .my-items & {
@@ -68,7 +69,7 @@
 
   &__comment-like {
     position: relative;
-    margin-top: -6px;
+    margin-top: 0;
     padding-left: 4.124%;
     padding-right: 4.124%;
     padding-top: 13px;
@@ -237,14 +238,26 @@
 
     &--blue {
       background-color: rgba(110, 203, 237, 0.8);
+
+      &:hover {
+        background-color: rgba(110,203,237,1);
+      }
     }
 
     &--yellow {
       background-color: rgba(243, 189, 1, 0.8);
+
+      &:hover {
+        background-color: rgba(243,189,1,1);
+      }
     }
 
     &--green {
       background-color: rgba(23, 145, 14, 0.8);
+
+      &:hover {
+        background-color: rgba(23,145,14,1);
+      }
     }
 
     &--checkin {
@@ -311,5 +324,17 @@
 
   .gallery-item {
     margin-right: 22px;
+
+    &__comment-like {
+      display: none;
+    }
+
+    &__capture {
+      bottom: 0;
+    }
+
+    &__image {
+      height: 206px;
+    }
   }
 }

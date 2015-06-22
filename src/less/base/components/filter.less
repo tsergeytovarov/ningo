@@ -1,0 +1,41 @@
+//фильтр - навигация на странице "мои вещи"
+.filter {
+  float: right;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-right: 9px;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 28px;
+    padding: 0;
+    padding-top: 3px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__link {
+    padding: 0;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 40px;
+    color: @darkgray;
+
+    &--active {
+      color: @blue;
+      cursor: default;
+    }
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+}

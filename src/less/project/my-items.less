@@ -4,6 +4,8 @@
 
     &--small {
       padding: 0 22px;
+      padding-top: 30px;
+      padding-bottom: 120px;
       width: 926px;
     }
   }
@@ -14,11 +16,33 @@
 }
 
 .s-4 {
-  padding: 0;
+  padding-left: 14px;
+
 }
 
+//отрицательный маргин контейнера с картинками, равный по модулю маргину отдельной картинки
 .my-items-gallery {
+  position: relative;
   margin-right: -22px;
   width: 633px;
   font-size: 0;
+
+  &:before {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 0;
+      width: 611px;
+      height: 1px;
+      background-color: #d1f1ff;
+    }
+}
+
+//заголовок страницы
+.page-title {
+
+  &--my-items {
+    float: left;
+    margin-bottom: 17px;
+  }
 }
