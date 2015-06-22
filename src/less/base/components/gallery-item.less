@@ -12,9 +12,15 @@
     display: none;
   }
 
+  //фиксированная ширина картинок для десктопа страницы избранного
   &__image {
     width: 194px;
     height: auto;
+
+    //переопределение фиксированной ширины картинок для десктопа страницы "мои вещи"
+    .my-items & {
+      width: 136px;
+    }
   }
 
   &__capture {
@@ -208,7 +214,94 @@
   //по умолчанию флажок на карточке товара не виден
   &__flag {
     display: none;
-  }
 
-  
+    &--fullsize {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 25px;
+
+    }
+
+    &--square {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25px;
+      min-height: 25px;
+    }
+
+    &--blue {
+      background-color: rgba(110, 203, 237, 0.8);
+    }
+
+    &--yellow {
+      background-color: rgba(243, 189, 1, 0.8);
+    }
+
+    &--green {
+      background-color: rgba(23, 145, 14, 0.8);
+    }
+
+    &--checkin {
+
+      &:before {
+        content: "На проверке";
+        position: absolute;
+        display: block;
+        padding: 4px 0;
+        width: 100%;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    &--quick-sell {
+
+      &:before {
+        content: "Продать быстрее";
+        position: absolute;
+        display: block;
+        padding: 4px 0;
+        width: 100%;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    &--delivery {
+
+      &:before {
+        content: "Доставка";
+        position: absolute;
+        display: block;
+        padding: 4px 0;
+        width: 100%;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    &--arrow {
+
+      &:after {
+        content: url("../img/ico/ico-51.svg");
+        position: absolute;
+        top: 6px;
+        right: 9px;
+      }
+    }
+  }
 }
