@@ -1,7 +1,9 @@
 
 .gallery-item {
   position: relative;
-  float: left;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
   margin-right: 14px;
   margin-bottom: 17px;
   border-radius: 3px;
@@ -29,7 +31,7 @@
     left: 0;
     padding-left: 4.124%;
     padding-right: 4.124%;
-    width: 91.752%;
+    width: 91.78%;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
@@ -222,7 +224,6 @@
       left: 0;
       width: 100%;
       min-height: 25px;
-
     }
 
     &--square {
@@ -303,5 +304,12 @@
         right: 9px;
       }
     }
+  }
+}
+
+.my-items {
+
+  .gallery-item {
+    margin-right: 22px;
   }
 }
