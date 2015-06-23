@@ -2,6 +2,8 @@
 
   .container {
     width: 94.668%;
+    padding-left: 0;
+    padding-right: 0;
 
     &--small {
       width: 94.668%;
@@ -208,7 +210,7 @@
     }
   }
 
-  /////////////// стили страницы избранного
+  /////////////// стили страницы избранное
 
   .favourites-page {
     min-width: 750px;
@@ -223,6 +225,8 @@
     }
 
     .container {
+      padding-left: 0;
+      padding-right: 0;
 
       &--small {
         width: 95.333%;
@@ -313,6 +317,69 @@
       }
     }
   }
+
+  /////////////// стили страницы "мои вещи"
+
+  .my-items {
+    min-width: 750px;
+    width: 100%;
+
+    //элементы выступают за пределы контейнера, каскад - чтобы перебить вес селектора
+    .content-block {
+
+      &--join-us {
+        overflow: visible;
+      }
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+        overflow: hidden;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .my-items-gallery {
+      margin-right: -2.377%;
+      min-width: 715px;
+      width: 100%;
+
+      &:before {
+        width: 100%;
+      }
+    }
+
+    .gallery-item {
+      margin-right: 2.377%;
+      width: 23.217%;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .add-item {
+      box-sizing: border-box;
+      padding-top: 53px;
+      padding-bottom: 53px;
+      width: 23.217%;
+      margin-right: 2.377%;
+    }
+  }
 }
 
 
@@ -324,10 +391,12 @@
 
 
 
-@media (max-width: 750px) {
+@media (max-width: 749px) {
 
   .container {
     width: 87.5%;
+    padding-left: 0;
+    padding-right: 0;
 
     &--small {
       width: 87.5%;
@@ -400,7 +469,7 @@
     }
   }
 
-  /////////////// стили страницы избранного
+  /////////////// стили страницы избранное
 
   .favourites-page {
     min-width: 480px;
@@ -423,17 +492,18 @@
   }
 
   .favourites-gallery {
-    margin-right: -2.917%;
+    margin-right: -3.54%;
     min-width: 460px;
   }
 
   .gallery-item {
     width: 46.458%;
-    margin-right: 2.917%;
+    margin-right: 3.54%;
     margin-bottom: 17px;
 
     &--display {
-      display: block;
+      display: inline-block;
+      vertical-align: top;
     }
   }
 
@@ -444,6 +514,8 @@
       padding-left: 25px;
     }
   }
+
+  /////////////// стили страницы "мои вещи"
 }
 
 
@@ -459,6 +531,8 @@
 
   .container {
     width: 87.5%;
+    padding-left: 0;
+    padding-right: 0;
 
     &--small {
       width: 87.5%;
@@ -509,7 +583,7 @@
     }
   }
 
-  /////////////// стили страницы избранного
+  /////////////// стили страницы избранное
 
   .favourites-page {
     min-width: 320px;
@@ -527,7 +601,9 @@
   }
 
   .favourites-gallery {
-    margin-right: -2.917%;
+    margin-right: -3.54%;
     min-width: 305px;
   }
+
+  /////////////// стили страницы "мои вещи"
 }
