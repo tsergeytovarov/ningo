@@ -339,6 +339,7 @@
       &--small {
         width: 95.333%;
         overflow: hidden;
+
       }
     }
 
@@ -352,19 +353,10 @@
       width: 100%;
     }
 
-    .my-items-gallery {
-      margin-right: -2.377%;
-      min-width: 715px;
-      width: 100%;
-
-      &:before {
-        width: 100%;
-      }
-    }
-
     .gallery-item {
       margin-right: 2.377%;
-      width: 23.217%;
+      margin-bottom: 30px;
+      width: 22.62%;
 
       &__image {
         width: 100%;
@@ -373,11 +365,29 @@
     }
 
     .add-item {
-      box-sizing: border-box;
-      padding-top: 53px;
-      padding-bottom: 53px;
-      width: 23.217%;
+      width: 22.62%;
       margin-right: 2.377%;
+      margin-bottom: 30px;
+
+      &__link {
+
+        &:before {
+          top: 23.6%;
+        }
+
+        &:after {
+          top: 60%;
+        }
+      }
+    }
+  }
+
+  .my-items-gallery {
+    display: block;
+    margin-right: -2.377%;
+
+    &:before {
+      width: 100%;
     }
   }
 }

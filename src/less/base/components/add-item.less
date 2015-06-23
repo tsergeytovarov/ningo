@@ -1,29 +1,48 @@
 .add-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   margin-right: 22px;
-  padding: 40px 31px 34px 30px;
-  width: 75px;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.05);
   background-color: #fff;
-
-  &__text {
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-  }
+  overflow: hidden;
 
   &__link {
     display: block;
-    margin-bottom: 6px;
-    text-decoration: none;
+    
+    &:before {
+    content: url("../img/ico/ico-42.svg");
+    position: absolute;
+    top: 19.512%;
+    left: 50%;
+    margin-left: -38px;
+    width: 76px;
+    height: 76px;
+  }
+
+  &:after {
+    content: "Добавить вещь";
+    position: absolute;
+    top: 63.415%;
+    left: 50%;
+    margin-left: -38px;
+    width: 76px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
     color: #d1f1ff;
+  }
 
     &:hover {
-      opacity: .7;
+      opacity: .8;
     }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
