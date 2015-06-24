@@ -16,7 +16,7 @@
 <body>
 
   <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
-  <header class="main-header main-header--sticky">
+  <header class="main-header main-header--sticky js-main-header main-header--hidden">
     <div class="main-header__right">
       <div class="tooltip-container">
         <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
@@ -146,7 +146,162 @@
   <div class="index-content container row">
     <!-- колонка с фильтрами и каталогом -->
     <div class="col s-8">
+      <div class="gallery">
+        <div class="gallery-item">
 
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+
+          <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+          <div class="gallery-item__stroke"></div>
+
+          <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+
+          <div class="gallery-item__capture">
+            <div class="gallery-item__brand"></div>
+            <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+            <div class="gallery-item__sizes">M, S</div>
+          </div>
+
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count">2</span></a>
+            </div>
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- колонка с виджетами -->
