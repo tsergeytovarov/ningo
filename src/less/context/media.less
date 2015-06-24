@@ -324,11 +324,33 @@
     min-width: 750px;
     width: 100%;
 
-    //элементы выступают за пределы контейнера, каскад - чтобы перебить вес селектора
+    //свой набор блоков в каждом варианте макета
     .content-block {
 
       &--join-us {
-        overflow: visible;
+        display: none;
+      }
+
+      &--why-ningo {
+        display: block;
+        height: 170px;
+      }
+
+      &--why-ningo-second {
+        display: block;
+      }
+
+      &--some-information {
+        display: none;
+      }
+    }
+
+    .gallery-item {
+      display: none;
+
+      &--tablet {
+        display: inline-block;
+        vertical-align: top;
       }
     }
 
@@ -388,6 +410,7 @@
 
     &:before {
       width: 100%;
+      top: -20px;
     }
   }
 }
@@ -526,6 +549,75 @@
   }
 
   /////////////// стили страницы "мои вещи"
+
+  .my-items {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-top: 35px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+
+    .my-items-gallery {
+      margin-bottom: 63px;
+      margin-right: -2.917%;
+      min-width: 460px;
+
+      &:before {
+        top: -22px;
+      }
+    }
+
+    .gallery-item {
+      width: 47%;
+      margin-right: 2.917%;
+      margin-bottom: 17px;
+    }
+
+    .add-item {
+      width: 47%;
+      margin-right: 2.917%;
+      margin-bottom: 17px;
+
+      &__link {
+
+        &:before {
+          top: 27.245%;
+        }
+
+        &:after {
+          top: 54.18%;
+        }
+      }
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: none;
+      }
+
+      &--why-ningo-second {
+        display: none;
+      }
+
+      &--join-us {
+        display: block;
+        overflow: visible;
+      }
+
+      &--some-information {
+        display: block;
+        height: 147px;
+      }
+    }
+  }
 }
 
 
@@ -616,4 +708,67 @@
   }
 
   /////////////// стили страницы "мои вещи"
+
+  .my-items {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .filter {
+      margin-bottom: 16px;
+      width: 100%;
+      text-align: center;
+
+      &__list {
+        padding: 0;
+      }
+
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+    }
+
+    .my-items-gallery {
+      margin-bottom: 9px;
+      min-width: 305px;
+
+      &:before {
+        top: -16px;
+      }
+    }
+
+    .add-item {
+
+      &__link {
+
+        &:before {
+          top: 19.417%;
+        }
+
+        &:after {
+          top: 62.136%;
+        }
+      }
+    }
+  }
+
+  .page-title {
+
+    &--my-items {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
 }

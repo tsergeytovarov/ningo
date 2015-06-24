@@ -324,6 +324,13 @@
 
   .gallery-item {
     margin-right: 22px;
+    display: none;
+
+    //в десктопной версии видны только карточки с модификатором desktop
+    &--desktop {
+      display: inline-block;
+      vertical-align: top;
+    }
 
     &__comment-like {
       display: none;
