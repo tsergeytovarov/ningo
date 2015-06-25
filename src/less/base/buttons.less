@@ -148,9 +148,23 @@
 
   //голубая кнопка "нравится" в профайле
   &--profile-blue {
+    position: relative;
+    display: block;
+    margin-bottom: 9px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 43px;
+    width: 131px;
     font-weight: 400;
     color: #fff;
     background-color: @blue;
+
+    &:before {
+      content: url("../img/ico/ico-41.svg");
+      position: absolute;
+      top: 8px;
+      left: 17px;
+    }
 
     &:hover,
     &--hover{
@@ -165,7 +179,11 @@
 
   //кнопка с голубым бордером в профайле
   &--blue-bordered {
-    padding: 8px 20px;
+    display: block;
+    margin-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    width: 131px;
     font-weight: 400;
     color: @blue;
     border: 1px solid #92e2f7;
