@@ -1,0 +1,39 @@
+.rating-box {
+  font-size: 0;
+
+  &--orange {
+    margin-bottom: 30px;
+    width: 95px;
+    height: 17px;
+  }
+
+  &__star {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    &--orange {
+      width: 16px;
+      margin-right: 3px;
+
+      &:after {
+        content: url("../img/ico/ico-39.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        opacity: .3;
+      }
+    }
+
+    &--orange-disabled {
+      opacity: .3;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

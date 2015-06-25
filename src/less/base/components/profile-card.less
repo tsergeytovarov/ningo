@@ -1,3 +1,127 @@
 .profile-card {
-  
+  margin-bottom: 31px;
+  padding: 22px 25px;
+  padding-bottom: 14px;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
+
+  &__picture-wrapper {
+  	float: left;
+  	margin-right: 34px;
+  }
+
+  &__info-wrapper {
+  	float: right;
+  	padding-top: 6px;
+  	width: 395px;
+  	line-height: 22px;
+  }
+
+  &__avatar {
+  	display: block;
+  	margin-bottom: 17px;
+  	padding-left: 5px;
+  	width: 123px;
+  	height: 123px;
+  	border-radius: 50%;
+  }
+
+  &__contacts {
+  	float: left;
+  	width: 235px;
+  }
+
+  &__stats {
+  	float: right;
+    width: 143px;
+  }
+
+  &__username {
+  	font-weight: 600;
+  	font-size: 18px;
+  	line-height: 37px;
+  }
+
+  &__text {
+    display: block;
+  	padding-top: 11px;
+  	padding-bottom: 8px;
+    text-decoration: none;
+    color: #999;
+  	border-top: 1px solid #edf7f9;
+
+  	&--contacts {
+      position: relative;
+      padding-left: 33px;
+      color: @darkgray;
+  	}
+
+    &--phone {
+
+      &:before {
+        content: url("../img/ico/ico-43.svg");
+        position: absolute;
+        top: 11px;
+        left: 4px;
+      }
+    }
+
+    &--email {
+
+      &:before {
+        content: url("../img/ico/ico-44.svg");
+        position: absolute;
+        top: 12px;
+        left: 4px;
+      }
+    }
+
+    &--location {
+
+      &:before {
+        content: url("../img/ico/ico-45.svg");
+        position: absolute;
+        top: 12px;
+        left: 6px;
+      }
+    }
+
+    &--vk {
+
+      &:before {
+        content: url("../img/ico/ico-46.svg");
+        position: absolute;
+        top: 11px;
+        left: 4px;
+      }
+    }
+
+    &--instagram {
+
+      &:before {
+        content: url("../img/ico/ico-47.svg");
+        position: absolute;
+        top: 12px;
+        left: 4px;
+      }
+    }
+  }
+
+  &__link {
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      opacity: .9;
+    }
+  }
+
+  &__count {
+    float: right;
+    color: @darkgray;
+  }
 }
