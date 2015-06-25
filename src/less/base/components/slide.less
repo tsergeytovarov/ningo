@@ -1,0 +1,21 @@
+.slide {
+  display: none;
+}
+
+#items:checked ~ .filter label[for="items"] {
+  color: @blue;
+  cursor: default;
+}
+
+#likes:checked ~ .filter label[for="likes"] {
+  color: @blue;
+  cursor: default;
+}
+
+#items:checked ~ .slides .slide--items {
+  display: block;
+}
+
+#likes:checked ~ .slides .slide--likes {
+  display: block;
+}

@@ -245,8 +245,11 @@
     }
   }
 
-  .favourites-gallery {
-    margin-right: -2.493%;
+  .gallery {
+
+    &--favourites {
+      margin-right: -2.493%;
+    }
   }
 
   //карточка товара занимает треть контейнера галереи
@@ -404,13 +407,16 @@
     }
   }
 
-  .my-items-gallery {
-    display: block;
-    margin-right: -2.377%;
+  .gallery {
 
-    &:before {
-      width: 100%;
-      top: -20px;
+    &--my-items {
+      display: block;
+      margin-right: -2.377%;
+
+      &:before {
+        width: 100%;
+        top: -20px;
+      }
     }
   }
 }
@@ -524,9 +530,12 @@
     text-align: center;
   }
 
-  .favourites-gallery {
-    margin-right: -3.54%;
-    min-width: 460px;
+  .gallery {
+
+    &--favourites {
+      margin-right: -3.54%;
+      min-width: 460px;
+    }
   }
 
   .gallery-item {
@@ -564,13 +573,16 @@
       }
     }
 
-    .my-items-gallery {
-      margin-bottom: 63px;
-      margin-right: -2.917%;
-      min-width: 460px;
+    .gallery {
 
-      &:before {
-        top: -22px;
+      &--my-items {
+        margin-bottom: 63px;
+        margin-right: -2.917%;
+        min-width: 460px;
+
+        &:before {
+          top: -22px;
+        }
       }
     }
 
@@ -702,9 +714,12 @@
     }
   }
 
-  .favourites-gallery {
-    margin-right: -3.54%;
-    min-width: 305px;
+  .gallery {
+
+    &--favourites {
+      margin-right: -3.54%;
+      min-width: 305px;
+    }
   }
 
   /////////////// стили страницы "мои вещи"
@@ -740,12 +755,15 @@
       }
     }
 
-    .my-items-gallery {
-      margin-bottom: 9px;
-      min-width: 305px;
+    .gallery {
 
-      &:before {
-        top: -16px;
+      &--my-items {
+        margin-bottom: 9px;
+        min-width: 305px;
+
+        &:before {
+          top: -16px;
+        }
       }
     }
 
