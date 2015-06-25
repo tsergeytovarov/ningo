@@ -419,6 +419,88 @@
       }
     }
   }
+
+  /////////////// стили страницы "профиль"
+
+  .profile-page {
+    min-width: 750px;
+    width: 100%;
+
+    //элементы выступают за пределы контейнера, каскад - чтобы перебить вес селектора
+    .content-block {
+
+      &--join-us {
+        overflow: visible;
+      }
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 40px;
+
+      &--small {
+        width: 95.333%;
+        overflow: hidden;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .gallery {
+      margin-right: -2.377%;
+      margin-bottom: 24px;
+      min-width: 715px;
+
+      &:before {
+        width: 100%;
+      }
+
+      &--profile-likes {
+        margin-right: -1.958%;
+      }
+    }
+
+    .gallery-item {
+      margin-right: 2.377%;
+      margin-bottom: 12px;
+      width: 22.62%;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .like-item {
+      margin-right: 1.958%;
+      width: 31.3%;
+
+      &__info {
+        float: right;
+      }
+    }
+
+    .rating-box {
+
+      &--blue {
+        margin-bottom: 5px;
+        width: 100%;
+      }
+    }
+
+    .btn--like {
+      margin-left: 0;
+    }
+  }
 }
 
 
@@ -630,6 +712,8 @@
       }
     }
   }
+
+  /////////////// стили страницы "профиль"
 }
 
 
@@ -789,4 +873,6 @@
       width: 100%;
     }
   }
+
+  /////////////// стили страницы "профиль"
 }
