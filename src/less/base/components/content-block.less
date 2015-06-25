@@ -298,10 +298,37 @@
   //блок "присоединяйтесь к нам" на стр.избранного в десктопной версии не виден
   &--join-us {
     display: none;
+
+    position: relative;
+    display: block;
+    margin-bottom: 33px;
+    padding: 26px 84px;
+    text-align: center;
+    z-index: 50;
+
+    &:after {
+      content: url("../img/speech-bubble.png");
+      position: absolute;
+      right: 0;
+      bottom: -27px;
+    }
+
+    &:before {
+      content: url("../img/thumbs-up.png");
+      position: absolute;
+      bottom: -75px;
+      right: 15px;
+    }
+
+    &--main{
+      display: block;
+    }
   }
 
   //фиксированная высота пустого блока
   &--some-information {
-    height: 245px;
+    min-height: 245px;
+    position: relative;
+    z-index: 100;
   }
 }
