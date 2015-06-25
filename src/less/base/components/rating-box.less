@@ -7,6 +7,11 @@
     height: 17px;
   }
 
+  &--blue {
+    width: 80px;
+    height: 14px;
+  }
+
   &__star {
     position: relative;
     display: inline-block;
@@ -29,6 +34,30 @@
     }
 
     &--orange-disabled {
+      opacity: .3;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--blue {
+      width: 14px;
+      margin-right: 2px;
+
+      &:after {
+        content: url("../img/ico/ico-37.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        opacity: .3;
+      }
+    }
+
+    &--blue-disabled {
       opacity: .3;
 
       &:hover {
