@@ -430,7 +430,16 @@
     .content-block {
 
       &--join-us {
-        overflow: visible;
+        display: none;
+      }
+
+      &--some-information {
+        display: none;
+      }
+
+      &--why-ningo {
+        display: block;
+        height: 130px;
       }
     }
 
@@ -499,6 +508,26 @@
 
     .btn--like {
       margin-left: 0;
+    }
+
+    .profile-card {
+      padding: 30px;
+
+      &__info-wrapper {
+        width: 72%;
+      }
+
+      &__info-row {
+        width: 100%;
+      }
+
+      &__contacts {
+        width: 47%;
+      }
+
+      &__stats {
+        width: 47%;
+      }
     }
   }
 }
