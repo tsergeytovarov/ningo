@@ -743,6 +743,138 @@
   }
 
   /////////////// стили страницы "профиль"
+
+  .profile-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-top: 35px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+
+    .gallery {
+    min-width: 460px;
+
+    &--profile-items {
+      margin-right: -2.917%;
+      margin-bottom: 18px;
+    }
+
+    &--profile-likes {
+      margin-right: -3.043%;
+      margin-bottom: 18px;
+    }
+  }
+
+    .gallery-item {
+      width: 47%;
+      margin-right: 2.917%;
+      margin-bottom: 14px;
+    }
+
+    .like-item {
+      margin-right: 3.043%;
+      width: 46.5%;
+    }
+
+    .profile-card {
+      padding-right: 4.345%;
+      padding-left: 4.345%;
+      padding-top: 22px;
+      padding-bottom: 16px;
+      width: 91.304%;
+
+      &__picture-wrapper {
+        margin-right: 0;
+        width: 100%;
+        font-size: 0;
+      }
+
+      &__avatar {
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        width: 28.04%;
+        height: auto;
+      }
+
+      &__btn {
+        float: right;
+        display: inline-block;
+        vertical-align: top;
+        width: 48.5%;
+
+        &--to-left {
+          float: left;
+        }
+      }
+
+      &__username {
+        display: none;
+
+        &--mobile {
+          display: block;
+        }
+      }
+
+      &__btn-wrapper {
+        float: right;
+        display: inline-block;
+        vertical-align: top;
+        width: 62%;
+      }
+
+      &__name-wrapper {
+        float: right;
+        display: inline-block;
+        vertical-align: top;
+        width: 62%;
+      }
+
+      &__username {
+        font-size: 18px;
+        line-height: 36px;
+      }
+
+      &__info-wrapper {
+        width: 100%;
+      }
+    }
+
+    .rating-box {
+
+      &--orange {
+        margin-bottom: 15px;
+      }
+
+      &--desktop {
+        display: none;
+      }
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: none;
+      }
+
+      &--join-us {
+        display: block;
+        overflow: visible;
+      }
+
+      &--some-information {
+        display: block;
+        min-height: 150px;
+      }
+    }
+  }
 }
 
 
@@ -904,4 +1036,106 @@
   }
 
   /////////////// стили страницы "профиль"
+
+  .profile-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .profile-card {
+      padding-left: 5.9%;
+      padding-right: 5.9%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 88.2%;
+
+      &__avatar {
+        margin-bottom: 20px;
+        padding-left: 0;
+        width: 45.72%;
+      }
+
+      &__name-wrapper {
+        float: right;
+        width: 45.72%;
+      }
+
+      &__username {
+        margin-bottom: 3px;
+        padding-top: 24px;
+        line-height: 24px;
+      }
+
+      &__btn-wrapper {
+        margin-bottom: 11px;
+        width: 100%;
+      }
+
+      &__info-wrapper {
+        padding-top: 0;
+      }
+
+      &__contacts {
+        width: 100%;
+      }
+
+      &__stats {
+        width: 100%;
+      }
+
+      &__text {
+        position: relative;
+        padding-top: 12px;
+        border: none;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -50px;
+          width: 130%;
+          height: 1px;
+          background-color: #edf7f9;
+        }
+      }
+    }
+
+    .gallery {
+      min-width: 305px;
+    }
+
+    .like-item {
+      width: 100%;
+
+      &__avatar {
+        float: left;
+      }
+
+      &__info {
+        float: left;
+      }
+    }
+
+    .rating-box {
+
+      &--blue {
+        width: auto;
+      }
+    }
+
+    .content-block {
+
+      &--join-us {
+        padding: 35px 18px;
+      }
+    }
+  }
 }

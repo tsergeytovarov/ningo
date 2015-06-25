@@ -39,15 +39,33 @@
 
           <div class="profile-card__picture-wrapper">
             <img src="img/profile-picture.jpg" alt="" class="profile-card__avatar">
-            <a href="#" class="btn  btn--profile-blue">Нравится</a>
-            <a href="#" class="btn  btn--blue-bordered">Написать</a>
+
+            <!-- дубликат блока имени и рейтинга пользователя для мобильной версии. блок для десктопа и планшета ниже по коду -->
+              <div class="profile-card__name-wrapper">
+
+                <div class="profile-card__username  profile-card__username--mobile">Мария Иванова</div>
+
+                <div class="rating-box  rating-box--orange">
+                  <a href="#" class="rating-box__star  rating-box__star--orange"></a>
+                  <a href="#" class="rating-box__star  rating-box__star--orange"></a>
+                  <a href="#" class="rating-box__star  rating-box__star--orange"></a>
+                  <a href="#" class="rating-box__star  rating-box__star--orange  rating-box__star--orange-disabled"></a>
+                  <a href="#" class="rating-box__star  rating-box__star--orange  rating-box__star--orange-disabled"></a>
+                </div>
+
+              </div>
+
+            <div class="profile-card__btn-wrapper row">
+              <a href="#" class="profile-card__btn  profile-card__btn--to-left  btn  btn--profile-blue">Нравится</a>
+              <a href="#" class="profile-card__btn  btn  btn--blue-bordered">Написать</a>
+            </div>
           </div>
 
           <div class="profile-card__info-wrapper">
 
             <div class="profile-card__username">Мария Иванова</div>
 
-            <div class="rating-box  rating-box--orange">
+            <div class="rating-box  rating-box--orange    rating-box--desktop">
               <a href="#" class="rating-box__star  rating-box__star--orange"></a>
               <a href="#" class="rating-box__star  rating-box__star--orange"></a>
               <a href="#" class="rating-box__star  rating-box__star--orange"></a>
