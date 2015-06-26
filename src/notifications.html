@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+   ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
+  / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
+  \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
+  (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
+  -->
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ningo - страница уведомлений</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="notifications-page">
+
+
+
+  <div class="container container--small">
+
+
+
+
+    <header class="page-header"></header>
+
+
+
+
+    <div class="row">
+
+
+      <div class="col s-8">
+
+
+        <h1 class="page-title  page-title--notifications">Уведомления</h1>
+
+
+
+
+        <div class="gallery  gallery--notifications">
+
+
+          <!-- карточка уведомления -->
+          <div class="notification-item row">
+
+            <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
+            <a href="#" class="notification-item__icon  notification-item__icon--arrow-up"></a>
+            <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
+            <div class="notification-item__wrapper">
+              <!-- обертка картинки, прямоугольная или круглая рамка добавляются модификаторами rectangle и round -->
+              <div class="notification-item__image-wrapper  notification-item__image-wrapper--rectangle">
+                <img src="img/notification-item.jpg" alt="" class="notification-item__image">
+              </div>
+            </div>
+
+            <div class="notification-item__text-wrapper">
+
+              <p class="notification-item__text">Ваш друг <a href="#" class="notification-item__link">ilovehapaclothing</a> загрузил новую вещь <a href="#" class="notification-item__link">Туфли Christian Louboutin</a></p>
+
+              <time class="notification-item__time">3 часа назад</time>
+            </div>
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+          </div>
+
+          <!-- карточка уведомления -->
+          <div class="notification-item row">
+
+            <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
+            <a href="#" class="notification-item__icon  notification-item__icon--plus"></a>
+            <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
+            <div class="notification-item__wrapper">
+              <!-- обертка картинки, прямоугольная или круглая рамка добавляются модификаторами rectangle и round -->
+              <div class="notification-item__image-wrapper  notification-item__image-wrapper--round">
+                <img src="img/notification-avatar.png" alt="" class="notification-item__image">
+              </div>
+            </div>
+
+            <div class="notification-item__text-wrapper">
+
+              <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a> подписалась на вас</p>
+
+              <time class="notification-item__time">4 часа назад</time>
+            </div>
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+          </div>
+
+          <!-- карточка уведомления -->
+          <div class="notification-item row">
+
+            <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
+            <a href="#" class="notification-item__icon  notification-item__icon--plus"></a>
+            <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
+            <div class="notification-item__wrapper  notification-item__wrapper--multiple-shadow">
+              <!-- обертка картинки, прямоугольная или круглая рамка добавляются модификаторами rectangle и round -->
+              <div class="notification-item__image-wrapper  notification-item__image-wrapper--round">
+                <img src="img/notification-avatar.png" alt="" class="notification-item__image">
+              </div>
+            </div>
+
+            <div class="notification-item__text-wrapper">
+
+              <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a>,  <a href="#" class="notification-item__link">ciaobellaaxoxo</a>, <a href="#" class="notification-item__link">Галина Петрова</a>,  <a href="#" class="notification-item__link">Катерина</a> подписались на вас</p>
+
+              <time class="notification-item__time">2 дня назад</time>
+            </div>
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col s-4">
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- блок не виден в десктопной версии -->
+        <div class="content-block  content-block--join-us">
+          <p class="content-block__text content-block__text--join-us">Присоединяйся к нам, и будешь видеть только нужные тебе вещи. Ещё сможешь общаться в сообществе и т д</p>
+          <a href="№" class="btn  btn--join-us  btn--orange">Присоединиться</a>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display">Информация</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Основная библиотека + основной файл jss -->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
