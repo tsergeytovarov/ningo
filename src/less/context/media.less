@@ -551,11 +551,9 @@
     .container {
       padding-left: 0;
       padding-right: 0;
-      padding-top: 40px;
 
       &--small {
         width: 95.333%;
-        overflow: hidden;
       }
     }
 
@@ -926,6 +924,30 @@
   }
 
   /////////////// стили страницы уведомлений
+
+  .notifications-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+
+    .notification-item {
+      padding-left: 4.35%;
+      padding-right: 4.35%;
+      width: 91.3%;
+
+      &__text-wrapper {
+        max-width: 79.72%;
+      }
+    }
+  }
 }
 
 
@@ -1191,4 +1213,38 @@
   }
 
   /////////////// стили страницы уведомлений
+
+  .notifications-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .notification-item {
+
+      &__text-wrapper {
+        max-width: 76%;
+      }
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: none;
+      }
+
+      &--join-us {
+        display: block;
+        padding: 35px 18px;
+        overflow: visible;
+      }
+    }
+  }
 }
