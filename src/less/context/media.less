@@ -9,6 +9,7 @@
       width: 94.668%;
     }
   }
+
   /////////////// стили страницы инфо
 
   .info-page {
@@ -216,14 +217,6 @@
     min-width: 750px;
     width: 100%;
 
-    //элементы выступают за пределы контейнера, каскад - чтобы перебить вес селектора
-    .content-block {
-
-      &--join-us {
-        overflow: visible;
-      }
-    }
-
     .container {
       padding-left: 0;
       padding-right: 0;
@@ -291,6 +284,7 @@
       padding: 26px 84px;
       text-align: center;
       z-index: 50;
+      overflow: visible;
 
       &:after {
         content: url("../img/speech-bubble.png");
@@ -332,6 +326,7 @@
 
       &--join-us {
         display: none;
+        overflow: visible;
       }
 
       &--why-ningo {
@@ -431,6 +426,7 @@
 
       &--join-us {
         display: none;
+        overflow: visible;
       }
 
       &--some-information {
@@ -541,6 +537,7 @@
 
       &--join-us {
         display: none;
+        overflow: visible;
       }
 
       &--why-ningo {
@@ -575,6 +572,87 @@
       &__text-wrapper {
         max-width: 79.72%;
       }
+    }
+  }
+
+  /////////////// стили страницы сообщений
+
+  .messages-page {
+    min-width: 750px;
+    width: 100%;
+
+    .content-block {
+      display: none;
+      overflow: hidden;
+
+      &--join-us {
+        overflow: visible;
+      }
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .gallery {
+
+    &--messages {
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .comment {
+
+    &:before {
+      width: 120%;
+    }
+
+    &__textarea {
+      width: 90%;
+    }
+
+    &--active {
+
+      .comment__form-wrapper {
+        background-size: 95% 61px;
+      }
+    }
+  }
+
+  .message-item {
+
+    &__title-wrapper {
+
+      &:after {
+        width: 120%;
+      }
+    }
+
+    &__comment-wrapper {
+      max-width: 80%;
+    }
+
+    &__comment-text {
+      max-width: 100%;
     }
   }
 }
@@ -948,6 +1026,87 @@
       }
     }
   }
+
+  /////////////// стили страницы сообщений
+
+  .messages-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+
+    .s-8 {
+      margin-bottom: 5px;
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: block;
+      }
+    }
+  }
+
+  .page-title {
+
+    &--messages {
+      float: none;
+      margin-bottom: 2px;
+      text-align: center;
+    }
+  }
+
+  .filter {
+
+    &--messages {
+      float: none;
+      margin-bottom: 15px;
+
+      .filter__list {
+        text-align: center;
+      }
+
+      .filter__item {
+
+        &--first {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .comment {
+
+    &--active {
+
+      .comment__form-wrapper {
+        background-image: url("../img/input-message-bg-480.png");
+        background-size: 93% 61px;
+      }
+
+      .comment__textarea {
+        max-width: 88%;
+      }
+    }
+  }
+
+  .message-item {
+
+    &__comment-author-location {
+      display: none;
+    }
+
+    &__comment-wrapper {
+      max-width: 83%;
+    }
+  }
 }
 
 
@@ -1244,6 +1403,62 @@
         display: block;
         padding: 35px 18px;
         overflow: visible;
+      }
+    }
+  }
+
+  /////////////// стили страницы сообщений
+
+  .messages-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .filter {
+
+      &__item {
+
+        &--desktop {
+          display: none;
+        }
+      }
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: none;
+      }
+
+      &--join-us {
+        display: block;
+      }
+
+      &--some-information {
+        display: block;
+      }
+    }
+  }
+
+  .comment {
+
+    &--active {
+
+      .comment__form-wrapper {
+        background-image: url("../img/input-message-bg-320.png");
+        background-size: 90% 61px;
+      }
+
+      .comment__textarea {
+        max-width: 81%;
       }
     }
   }
