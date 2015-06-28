@@ -1,0 +1,133 @@
+//форма комментария, открывающаяся по модификтору active
+.comment {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -18px;
+    width: 610px;
+    height: 1px;
+    background-color: #edf7f9;
+  }
+
+  //блок с формой по умолчанию скрыт
+  &__form-wrapper {
+    display: none;
+    padding-top: 30px;
+    text-align: right;
+  }
+
+  &__toggle-wrapper {
+    text-align: right;
+  }
+
+  &__toggle {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    color: @blue;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .7;
+      }
+
+    //текст виден при закрытом блоке формы
+    &--closed {
+      padding-top: 15px;
+      padding-bottom: 11px;
+
+      &:before {
+        content: url("../img/ico/ico-21.svg");
+        position: absolute;
+        top: 12px;
+        left: -17px;
+      }
+    }
+
+    //при закрытом блоке формы этот текст скрыт
+    &--opened {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    display: block;
+    width: 100%;
+  }
+
+  &__avatar-wrapper {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+	&__textarea {
+    float: right;
+    margin: 0;
+    margin-bottom: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    width: 515px;
+    max-height: 59px;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  &--active {
+
+    .comment {
+
+      &__form-wrapper {
+        display: block;
+        background-image: url("../img/input-message-bg.png");
+        background-repeat: no-repeat;
+        background-position: right 29px;
+      }
+
+      &__toggle {
+
+        &--closed {
+          display: none;
+        }
+
+        &--opened {
+          position: absolute;
+          bottom: 25px;
+          right: 158px;
+          display: inline-block;
+          vertical-align: top;
+
+          &:before {
+            content: url("../img/ico/ico-22.svg");
+            position: absolute;
+            top: -2px;
+            left: -17px;
+          }
+        }
+      }
+
+      &__avatar-wrapper {
+        float: left;
+      }
+
+      &__textarea {
+        float: right;
+        margin-right: 1px;
+      }
+    }
+  }
+}

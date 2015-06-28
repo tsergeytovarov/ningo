@@ -20,6 +20,38 @@
     padding-left: 22px;
     width: 315px;
   }
+
+  .filter {
+
+    &__list {
+      padding-right: 0;
+    }
+
+    &__item {
+      margin-left: 19px;
+    }
+  }
+
+  .btn {
+    margin-bottom: 18px;
+  }
+}
+
+.gallery {
+
+  &--messages {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -17px;
+      left: 0;
+      width: 610px;
+      height: 1px;
+      background-color: #d1f1ff;
+    }
+  }
 }
 
 //заголовок страницы
@@ -27,6 +59,6 @@
 
   &--messages {
     float: left;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   }
 }
