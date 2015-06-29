@@ -47,66 +47,67 @@
 
 
           <!-- контентный блок -->
-          <section class="content-block">
+          <section class="content-block  content-block--wallet">
 
-            <h2 class="content-block__title">Баланс</h2>
+            <h2 class="content-block__title  content-block__title--wallet">Баланс</h2>
 
-            <div class="content-block__section row">
+            <div class="content-block__section">
 
               <div class="content-block__section-title">Доступно</div>
-              <div class="content-block__section-content">4800 <span class="content-block__rouble-icon  content-block__rouble-icon--black">рублей</span></div>
+              <div class="content-block__section-content">4800<span class="content-block__rouble-icon  content-block__rouble-icon--black"> рублей</span></div>
 
             </div>
 
-            <div class="content-block__section row">
+            <div class="content-block__section">
 
               <div class="content-block__section-title  content-block__section-title--unfinished">В незаконченных сделках</div>
-              <div class="content-block__section-content  content-block__section-content--unfinished">1800 <span class="content-block__rouble-icon  content-block__rouble-icon--gray">рублей</span></div>
+              <div class="content-block__section-content  content-block__section-content--unfinished">1800<span class="content-block__rouble-icon  content-block__rouble-icon--gray"> рублей</span></div>
 
             </div>
 
-            <div class="content-block__section row">
+            <div class="content-block__section  content-block__section--last">
 
               <img class="content-block__payment-icons-image" src="img/payment-type-icons.png" alt="">
-              <button type="button" class="btn  btn--orange  btn--wallet">Пополнить</button>
+
+              <button type="button" class="btn  btn--orange  btn--wallet  btn--wallet-inline">Пополнить</button>
 
             </div>
 
           </section>
-          
-          <!-- контентный блок виден, если пользователь привязал карту к аккаунту -->
-          <section class="content-block">
 
-            <h2 class="content-block__title">Вывод средств</h2>
+          <!-- контентный блок виден, если пользователь привязал карту к аккаунту -->
+          <section class="content-block  content-block--wallet">
+
+            <h2 class="content-block__title  content-block__title--wallet">Вывод средств</h2>
 
             <div class="content-block__withdraw-money  content-block__withdraw-money--logged-in">
-              
+
               <div class="content-block__card-information">
                 <div class="content-block__card-number">На карту 4569 9844 2345 9876</div>
                 <a href="#" class="content-block__link">Изменить</a>
               </div>
 
-              <form action="#" method="post" class="content-block__withdraw-money-form">
+              <form action="#" method="post" class="content-block__withdraw-money-form  row">
 
                 <!-- на обертке висит иконка внутри инпута -->
                 <div class="content-block__input-wrapper">
-                  <input type="text" id="withdraw" name="withdraw" placeholder="0">
+                  <input type="text" id="withdraw" name="withdraw" class="content-block__text-input" placeholder="0">
                 </div>
-                <button type="submit" class="btn  btn--send-message">Вывести</button>
+                <button type="submit" class="btn  btn--wallet  btn--wallet--inline  btn--send-message">Вывести</button>
               </form>
             </div>
 
           </section>
 
           <!-- контентный блок виден, если пользователь не привязал карту к аккаунту -->
-          <section class="content-block">
+          <section class="content-block  content-block--wallet">
 
-            <h2 class="content-block__title">Вывод средств</h2>
+            <h2 class="content-block__title  content-block__title--wallet">Вывод средств</h2>
 
-            <div class="content-block__withdraw-money  content-block__withdraw-money--not-logged-in">
-              
-              <div class="content-block__text">Чтобы выводить средства на банковскую карту, её необходимо привезать к вашему аккаунту. Это займёт не более 3-х минут.</div>
-              <a href="#" class="btn  btn--send-message">Привязать карту</a>
+            <div class="content-block__withdraw-money  content-block__withdraw-money--not-logged-in  row">
+
+              <div class="content-block__text  content-block__text--wallet-not-logged-in">Чтобы выводить средства на банковскую карту, её необходимо привязать к вашему аккаунту. Это займёт не более 3-х минут.</div>
+              <a href="#" class="btn  btn--wallet  btn--send-message">Привязать карту</a>
             </div>
 
           </section>
