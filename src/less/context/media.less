@@ -271,7 +271,7 @@
 
   .content-block {
     position: relative;
-    z-index: 10000;
+    z-index: 500;
 
     &--why-ningo {
       display: none;
@@ -653,6 +653,61 @@
 
     &__comment-text {
       max-width: 100%;
+    }
+  }
+
+  /////////////// стили страницы кошелька
+
+  .wallet-page {
+    min-width: 750px;
+    width: 100%;
+
+    .content-block {
+      overflow: hidden;
+
+      &--join-us {
+        display: none;
+        overflow: visible;
+      }
+
+      &--some-information {
+        display: block;
+      }
+
+      &--active {
+        z-index: 1001;
+        top: -1000px
+      }
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .content-block {
+
+    &__card-information {
+      width: 23%;
+    }
+
+    &__withdraw-money-form {
+      width: 73%;
     }
   }
 }
@@ -1107,6 +1162,47 @@
       max-width: 83%;
     }
   }
+
+  /////////////// стили страницы кошелька
+
+  .wallet-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__payment-icons-image {
+      max-width: 53.5%;
+    }
+
+    &__card-information {
+      width: 50%;
+    }
+
+    &__withdraw-money-form {
+      width: 50%;
+    }
+
+    &__input-wrapper {
+      margin-right: 0;
+      margin-bottom: 17px;
+    }
+
+    &__text--wallet-not-logged-in {
+      padding-top: 0;
+      width: 53.5%;
+    }
+  }
 }
 
 
@@ -1461,5 +1557,90 @@
         max-width: 81%;
       }
     }
+  }
+
+  /////////////// стили страницы кошелька
+
+  .wallet-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 25px;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .btn {
+
+      &--orange {
+        position: relative;
+        top: -31px;
+      }
+    }
+
+    .content-block {
+
+      &--active {
+        top: -1200px;
+      }
+    }
+  }
+
+  .page-title {
+
+    &--wallet {
+      margin-bottom: 5px;
+    }
+  }
+
+  .btn {
+
+    &--wallet {
+      width: 100%;
+    }
+  }
+
+  .content-block {
+
+    &__payment-icons-image {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      top: 50px;
+      padding-right: 0;
+      max-width: 269px;
+      width: 269px;
+      text-align: center;
+    }
+
+    &__card-information {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    &__withdraw-money-form {
+      width: 100%;
+    }
+
+    &__input-wrapper {
+      width: 100%;
+    }
+
+    &__text {
+
+      &--wallet-not-logged-in {
+        margin-bottom: 17px;
+        width: 100%;
+      }
+    }
+  }
+
+  input[id="withdraw"] {
+    width: 100%;
   }
 }
