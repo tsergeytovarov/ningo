@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+   ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
+  / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
+  \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
+  (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
+  -->
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ningo - страница кошелька</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="wallet-page">
+
+
+
+  <div class="container container--small">
+
+
+
+
+    <header class="page-header"></header>
+
+
+
+
+    <div class="row">
+
+
+      <div class="col s-8">
+
+
+        <div class="title-block row">
+
+          <h1 class="page-title  page-title--wallet">Кошелёк</h1>
+
+          <a href="#" class="payment-history-toggle">История операций</a>
+
+        </div>
+
+
+
+        <div class="gallery  gallery--wallet">
+
+
+          <!-- контентный блок -->
+          <section class="content-block">
+
+            <h2 class="content-block__title">Баланс</h2>
+
+            <div class="content-block__section row">
+
+              <div class="content-block__section-title">Доступно</div>
+              <div class="content-block__section-content">4800 <span class="content-block__rouble-icon  content-block__rouble-icon--black">рублей</span></div>
+
+            </div>
+
+            <div class="content-block__section row">
+
+              <div class="content-block__section-title  content-block__section-title--unfinished">В незаконченных сделках</div>
+              <div class="content-block__section-content  content-block__section-content--unfinished">1800 <span class="content-block__rouble-icon  content-block__rouble-icon--gray">рублей</span></div>
+
+            </div>
+
+            <div class="content-block__section row">
+
+              <img class="content-block__payment-icons-image" src="img/payment-type-icons.png" alt="">
+              <button type="button" class="btn  btn--orange  btn--wallet">Пополнить</button>
+
+            </div>
+
+          </section>
+          
+          <!-- контентный блок виден, если пользователь привязал карту к аккаунту -->
+          <section class="content-block">
+
+            <h2 class="content-block__title">Вывод средств</h2>
+
+            <div class="content-block__withdraw-money  content-block__withdraw-money--logged-in">
+              
+              <div class="content-block__card-information">
+                <div class="content-block__card-number">На карту 4569 9844 2345 9876</div>
+                <a href="#" class="content-block__link">Изменить</a>
+              </div>
+
+              <form action="#" method="post" class="content-block__withdraw-money-form">
+
+                <!-- на обертке висит иконка внутри инпута -->
+                <div class="content-block__input-wrapper">
+                  <input type="text" id="withdraw" name="withdraw" placeholder="0">
+                </div>
+                <button type="submit" class="btn  btn--send-message">Вывести</button>
+              </form>
+            </div>
+
+          </section>
+
+          <!-- контентный блок виден, если пользователь не привязал карту к аккаунту -->
+          <section class="content-block">
+
+            <h2 class="content-block__title">Вывод средств</h2>
+
+            <div class="content-block__withdraw-money  content-block__withdraw-money--not-logged-in">
+              
+              <div class="content-block__text">Чтобы выводить средства на банковскую карту, её необходимо привезать к вашему аккаунту. Это займёт не более 3-х минут.</div>
+              <a href="#" class="btn  btn--send-message">Привязать карту</a>
+            </div>
+
+          </section>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col s-4">
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo  content-block--why-ningo-second">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- блок не виден в десктопной версии -->
+        <div class="content-block  content-block--join-us">
+          <p class="content-block__text content-block__text--join-us">Присоединяйся к нам, и будешь видеть только нужные тебе вещи. Ещё сможешь общаться в сообществе и т д</p>
+          <a href="№" class="btn  btn--join-us  btn--orange">Присоединиться</a>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display">Информация</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="color-overlay"></div>
+
+  <div class="modal-content  modal-content--payment-history"></div>
+
+
+  <!-- Основная библиотека + основной файл jss -->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
