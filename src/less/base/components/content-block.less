@@ -88,6 +88,14 @@
         left: -18px;
       }
     }
+
+    &--wallet-modal {
+      padding-top: 3px;
+
+      &:after {
+        bottom: -12px;
+      }
+    }
   }
 
   //подзаголовок в блоке "о проекте"
@@ -499,5 +507,113 @@
       font-size: 12px;
       line-height: 16px;
     }
+  }
+
+  &--modal-content {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -152px;
+    width: 268px;
+    z-index: 1001;
+    overflow: hidden;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &__close-btn {
+    position: absolute;
+    display: block;
+    top: 22px;
+    right: 13px;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+
+    &:before {
+      content: url("../img/ico/ico-32.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1002;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__transaction-block {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 9px;
+    font-size: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -18px;
+      width: 120%;
+      height: 1px;
+      background-color: #edf7f9;
+    }
+  }
+
+  &__transaction-description {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__transaction-cost {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: right;
+  }
+
+  &__amount {
+    position: relative;
+    padding-right: 18px;
+    font-size: 18px;
+    line-height: 26px;
+
+    &--spend {
+      color: @orange;
+
+      &:before {
+        content: url("../img/ico/ico-09.svg");
+        position: absolute;
+        top: -1px;
+        right: 0;
+      }
+    }
+
+    &--gain {
+      color: @blue;
+
+      &:before {
+        content: url("../img/ico/ico-08.svg");
+        position: absolute;
+        top: -1px;
+        right: 0;
+      }
+    }
+  }
+
+  &__transaction-date {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--payment-history {
+    padding-bottom: 0;
   }
 }
