@@ -21,6 +21,19 @@
     padding-left: 22px;
     width: 315px;
   }
+
+  &__total-wrapper {
+    font-size: 0;
+  }
+
+  &__total {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 5px;
+    width: 455px;
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
 .page-title {
@@ -28,7 +41,31 @@
   &--cart {
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 15px;
     width: 40%;
     text-align: left;
+  }
+}
+
+.btn {
+
+  &--checkout {
+    padding-bottom: 8px;
+    padding-top: 11px;
+    width: 150px;
+  }
+
+  &--confirm-delivery {
+    position: relative;
+    padding-left: 28px;
+    padding-right: 0;
+    width: 242px;
+
+    &:before {
+      content: url("../img/ico/ico-25.svg");
+      position: absolute;
+      top: 13px;
+      left: 20px;
+    }
   }
 }
