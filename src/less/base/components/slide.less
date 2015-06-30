@@ -2,6 +2,8 @@
   display: none;
 }
 
+//переключение табов на странице профиля
+
 #items:checked ~ .filter label[for="items"] {
   color: @blue;
   cursor: default;
@@ -17,5 +19,25 @@
 }
 
 #likes:checked ~ .slides .slide--likes {
+  display: block;
+}
+
+//переключение табов на странице корзины
+
+#checkout:checked ~ .page-title-wrapper label[for="checkout"] {
+  color: @blue;
+  cursor: default;
+}
+
+#delivery:checked ~ .page-title-wrapper label[for="delivery"] {
+  color: @blue;
+  cursor: default;
+}
+
+#checkout:checked ~ .slides .slide--checkout {
+  display: block;
+}
+
+#delivery:checked ~ .slides .slide--delivery {
   display: block;
 }

@@ -37,6 +37,10 @@
     padding-bottom: 25px;
   }
 
+  &--cart {
+    position: relative;
+  }
+
   //заголовки блоков
   &__title {
     position: relative;
@@ -615,5 +619,28 @@
 
   &--payment-history {
     padding-bottom: 0;
+  }
+
+  &__link-trash {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 11px;
+    height: 12px;
+
+    &:before {
+      content: url("../img/ico/ico-36.svg");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+
+      &:before {
+        opacity: .7;
+      }
+    }
   }
 }
