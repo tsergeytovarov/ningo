@@ -675,8 +675,9 @@
       }
 
       &--active {
+        position: fixed;
         z-index: 1001;
-        top: -1000px
+        top: 55px
       }
     }
 
@@ -730,8 +731,9 @@
       }
 
       &--active {
+        position: fixed;
         z-index: 1001;
-        top: -1000px
+        top: 55px
       }
     }
 
@@ -1298,12 +1300,87 @@
     width: 100%;
 
     .container {
+      padding-top: 25px;
       padding-left: 0;
       padding-right: 0;
 
       &--small {
         width: 95.833%;
       }
+    }
+
+    .content-block {
+
+      &--active {
+        top: 25px;
+        width: 420px;
+        margin-left: -228px;
+        padding: 30px 18px;
+      }
+
+      &__text-input {
+
+        &--margin-right {
+          margin-right: 3.5%;
+        }
+
+        &--third-width {
+          width: 47.8%;
+        }
+
+        &--two-thirds-width {
+          width: 47.8%;
+        }
+      }
+    }
+  }
+
+  .page-title {
+
+    &--cart {
+      text-align: left;
+    }
+  }
+
+  .content-block {
+
+    &__item-image-wrapper {
+      width: 133px;
+      height: 168px;
+    }
+
+    &__item-description-wrapper {
+      width: 58%;
+    }
+
+    &__payment-details-wrapper {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__total-price {
+      padding-right: 15px;
+
+      &:after {
+        right: 0;
+        top: 1px;
+      }
+    }
+
+    &__link {
+
+      &--refill {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .btn {
+
+    &--proceed-to-checkout {
+      display: block;
+      margin: 0 auto;
+      width: 203px;
     }
   }
 }
@@ -1685,13 +1762,6 @@
         top: -31px;
       }
     }
-
-    .content-block {
-
-      &--active {
-        top: -1200px;
-      }
-    }
   }
 
   .page-title {
@@ -1748,4 +1818,182 @@
   }
 
   /////////////// стили страницы корзины
+
+  .cart-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 25px;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    &__total {
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .content-block {
+
+      &--active {
+        top: 55px;
+        margin-left: -152px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 28px;
+        padding-top: 20px;
+        width: 274px;
+      }
+
+      &__close-btn {
+        top: 15px;
+        right: 13px;
+      }
+
+      &__text-input {
+
+        &--margin-right {
+          margin-right: 0;
+        }
+
+        &--half-width {
+          width: 100%;
+        }
+
+        &--third-width {
+          width: 100%;
+        }
+
+        &--two-thirds-width {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .content-block {
+    position: relative;
+
+    &__item-image-wrapper {
+      position: absolute;
+      top: 15px;
+      left: 14px;
+      width: 44px;
+      height: 61px;
+    }
+
+    &__image {
+      display: block;
+      width: 120%;
+    }
+
+    &--cart {
+      padding-top: 15px;
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    &__title {
+
+      &--cart {
+        padding-left: 60px;
+        padding-top: 13px;
+      }
+    }
+
+    &__hashtag {
+      display: block;
+      margin-left: 0;
+      padding-bottom: 15px;
+    }
+
+    &__link-trash {
+
+      &--cart {
+        top: 13px;
+        right: 13px;
+      }
+    }
+
+    &__footer {
+      text-align: center;
+    }
+
+    &__link {
+
+      &--buy-more {
+        position: relative;
+        top: 50px;
+        display: inline-block;
+        padding-left: 0;
+        width: auto;
+      }
+    }
+
+    &__item-description-wrapper {
+      width: 100%;
+    }
+
+    &__payment-date {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      float: none;
+      width: 65px;
+      text-align: right;
+      font-size: 12px;
+      line-height: 14px;
+
+      &--visible {
+        display: none;
+      }
+    }
+
+    &__payment-details-wrapper {
+      margin-bottom: 25px;
+    }
+
+    &__contact-details-wrapper {
+      margin-bottom: 9px;
+
+      &--address {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  .item-description-table {
+
+    &__text {
+
+      &--gray {
+
+        width: 84px;
+      }
+    }
+  }
+
+  .btn {
+
+    &--checkout {
+      float: none;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    &--confirm-delivery {
+      position: relative;
+      top: -35px;
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
