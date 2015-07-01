@@ -799,6 +799,48 @@
       float: right;
     }
   }
+
+  /////////////// стили хедера для незалогиненного пользователя
+
+  .main-header {
+    position: relative;
+
+    &__navigation {
+      display: none;
+    }
+
+    &__right {
+      display: none;
+    }
+
+    .mobile-menu-toggle {
+      display: block;
+      position: absolute;
+    }
+
+    .mobile-menu {
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 501;
+    }
+  }
+
+  .logo {
+
+    &--big {
+      position: relative;
+
+      &:after {
+        content: url("../img/logo-750.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+    }
+  }
 }
 
 
@@ -1383,6 +1425,8 @@
       width: 203px;
     }
   }
+
+  /////////////// стили хедера для незалогиненного пользователя
 }
 
 
@@ -1996,4 +2040,6 @@
       margin: 0 auto;
     }
   }
+
+  /////////////// стили хедера для незалогиненного пользователя
 }

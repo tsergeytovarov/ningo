@@ -56,6 +56,46 @@
         <img src="img/logo--big.png" alt="">
       </figure>
 
+      <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
+      <button class="mobile-menu-toggle"></button>
+
+      <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            Войти через:
+            <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--vk"></a>
+            <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--fb"></a>
+            <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--ok"></a>
+          </li>
+          <!-- переключатель и форма входа через email -->
+          <li class="mobile-menu__item">
+            <a href="#" class="login-by-email-toggle">Войти через Email</a>
+            <div class="login-by-email">
+              <form action="#" method="post" class="login-by-email__form">
+                <input type="text" id="email-login" name="email-login" class="login-by-email__text-input" placeholder="Email">
+                <input type="text" id="password-login" name="password-login" class="login-by-email__text-input" placeholder="Пароль">
+                <button class="btn btn--orange">Войти</button>
+              </form>
+               <a href="#" class="login-by-email__link">Регистрация</a>
+               <a href="#" class="login-by-email__link">Забыли пароль?</a>
+            </div>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="main-header__navigation row row--inline">
+        <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
+        <a href="#" class="btn btn--all-blue-soft">Каталог</a>
+        <a href="#" class="btn btn--all-blue-soft">О проекте</a>
+      </nav>
+
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
