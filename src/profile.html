@@ -15,16 +15,113 @@
 </head>
 <body class="profile-page">
 
+<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <header class="main-header">
+    <div class="main-header__right">
+      <div class="tooltip-container">
+        <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
+        <div class="tooltip-content tooltip-content--sticky">
+          <!-- тултип входа через соц-сети -->
+          <div class="tooltip-socio">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <div class="tooltip-socio__ico">
+              <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
+            </div>
+          </div>
+          <!-- тултип входа через email -->
+          <div class="tooltip-email">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <form action="/echo" method="POST">
+              <input type="text" placeholder="Email" class="error" required>
+              <p>Такой адрес не зарегистрирован</p>
+              <input type="password" placeholder="Пароль" required>
+              <button type="submit" class="btn btn--orange">Войти</button>
+            </form>
+            <div class="row tooltip-email__href">
+              <a href="#">Регистрация</a>
+              <a href="#">Забыли пароль?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn--all-blue">Продать</a>
+    </div>
 
+    <!-- левая часть нормальная -->
+    <div class="main-header__left main-header__left--open main-header__left--basic row">
+      <!-- логотип -->
+      <figure class="logo logo--big">
+        <img src="img/logo--big.png" alt="">
+      </figure>
+
+      <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
+      <a href="#" class="mobile-menu-toggle"></a>
+
+      <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu  mobile-menu--unlogged">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <span class="mobile-menu__text">Войти через:</span>
+            <div class="mobile-menu__social-icons">
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--vk"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--fb"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--ok"></a>
+            </div>
+          </li>
+          <!-- переключатель и форма входа через email -->
+          <li class="mobile-menu__item">
+            <!-- переключение по модификатору active -->
+            <a href="#" class="login-by-email-toggle">Войти через Email</a>
+            <div class="login-by-email">
+              <form action="#" method="post" class="login-by-email__form">
+                <input type="text" id="email-login" name="email-login" class="login-by-email__text-input" placeholder="Email">
+                <input type="text" id="password-login" name="password-login" class="login-by-email__text-input" placeholder="Пароль">
+                <button class="btn btn--orange">Войти</button>
+              </form>
+              <div class="login-by-email__wrapper">
+                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+               </div>
+            </div>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="main-header__navigation row row--inline">
+        <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
+        <a href="#" class="btn btn--all-blue-soft">Каталог</a>
+        <a href="#" class="btn btn--all-blue-soft">О проекте</a>
+      </nav>
+
+      <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
+
+    </div>
+
+    <!-- левая часть с поиском -->
+    <div class="main-header__left main-header__left--find">
+      <form action="/echo" method="POST" class="main-header__form">
+        <button type="button" class="main-header__close js-close-header-find"></button>
+        <select class="main-header__select">
+          <option value="1">Вещи</option>
+          <option value="2">Стулья</option>
+          <option value="3">Коробки</option>
+        </select>
+        <div class="main-header__input-container">
+          <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
+        </div>
+      </form>
+    </div>
+  </header>
 
   <div class="container container--small">
-
-
-
-
-    <header class="page-header"></header>
-
-
 
 
     <div class="row">
