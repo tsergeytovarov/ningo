@@ -46,6 +46,11 @@
     padding-bottom: 0;
   }
 
+  &--contact-details {
+    padding: 47px 57px;
+    padding-bottom: 57px;
+  }
+
   //заголовки блоков
   &__title {
     position: relative;
@@ -771,6 +776,57 @@
       width: 319px;
       font-size: 12px;
       line-height: 18px;
+    }
+  }
+
+  &__contact-details-wrapper {
+    margin-bottom: 19px;
+
+    &--address {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__payment-details-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 69%;
+  }
+
+  &__total-price {
+    position: relative;
+    float: right;
+    padding-right: 85px;
+    font-size: 18px;
+    line-height: 18px;
+
+    &:after {
+      content: url("../img/ico/ico-11.svg");
+      position: absolute;
+      top: -1px;
+      right: 70px;
+    }
+  }
+
+  &__money-available {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+  }
+
+  &__link--refill {
+    float: right;
+    padding-right: 70px;
+  }
+
+  &__your-money {
+    position: relative;
+
+    &:after {
+      content: url("../img/ico/ico-07.svg");
+      position: absolute;
+      top: -2px;
+      right: -10px;
     }
   }
 }
