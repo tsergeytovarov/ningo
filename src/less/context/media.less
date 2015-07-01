@@ -710,8 +710,93 @@
       width: 73%;
     }
   }
-  
+
   /////////////// стили страницы корзины
+
+  .cart-page {
+    min-width: 750px;
+    width: 100%;
+
+    .content-block {
+      overflow: hidden;
+
+      &--join-us {
+        display: none;
+        overflow: visible;
+      }
+
+      &--some-information {
+        display: block;
+      }
+
+      &--active {
+        z-index: 1001;
+        top: -1000px
+      }
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .gallery {
+
+    &--cart {
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__link {
+
+      &--buy-more {
+        margin-bottom: 12px;
+        width: 100px;
+        text-align: left;
+      }
+    }
+
+    &__footer {
+
+      &:before {
+        width: 120%;
+      }
+    }
+
+    &__item-price-wrapper {
+
+      &:before {
+        width: 120%;
+      }
+    }
+  }
+
+  .btn {
+
+    &--confirm-delivery {
+      float: right;
+    }
+  }
 }
 
 
@@ -1207,6 +1292,20 @@
   }
 
   /////////////// стили страницы корзины
+
+  .cart-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+  }
 }
 
 
