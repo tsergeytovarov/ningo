@@ -815,15 +815,6 @@
 
     .mobile-menu-toggle {
       display: block;
-      position: absolute;
-    }
-
-    .mobile-menu {
-      display: block;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      z-index: 501;
     }
   }
 
@@ -1427,6 +1418,63 @@
   }
 
   /////////////// стили хедера для незалогиненного пользователя
+
+  .main-header {
+
+  }
+
+  .mobile-menu {
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    width: 93%;
+    min-width: 320px;
+    overflow: hidden;
+
+    &__text {
+      width: 49%;
+    }
+
+    &__social-icons {
+      margin-left: 0;
+      width: 49%;
+    }
+
+    &__item {
+
+      &:after {
+        width: 120%;
+      }
+    }
+  }
+
+  .login-by-email {
+
+    input[type="text"] {
+      margin: 0 auto;
+      margin-bottom: 15px;
+      display: block;
+      width: 241px;
+    }
+
+    input[id="password-login"] {
+      margin-bottom: 22px;
+    }
+
+    .btn {
+
+      &--orange {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 241px;
+      }
+    }
+
+    &__wrapper {
+      margin: 0 auto;
+      width: 241px;
+    }
+  }
 }
 
 

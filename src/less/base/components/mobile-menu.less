@@ -1,0 +1,123 @@
+.mobile-menu {
+	display: none;
+  padding: 7px 18px;
+  padding-bottom: 0;
+  width: 268px;
+  background-color: #fff;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
+  z-index: 501;
+
+  &--active {
+    display: block;
+    position: absolute;
+  }
+
+  &--unlogged {
+    top: 50px;
+    left: 1px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 40px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -18px;
+      bottom: 0;
+      width: 304px;
+      height: 1px;
+      background-color: #edf7f9;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: @darkgray;
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  &__social-icons {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 30px;
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__social-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 18px;
+    width: 31px;
+    height: 31px;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &--vk {
+
+      &:before {
+        content: url("../img/ico/ico-26-small.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 31px;
+        height: 31px;
+      }
+    }
+
+    &--fb {
+
+      &:before {
+        content: url("../img/ico/ico-27-small.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 31px;
+        height: 31px;
+      }
+    }
+
+    &--ok {
+
+      &:before {
+        content: url("../img/ico/ico-28-small.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 31px;
+        height: 31px;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.mobile-menu-toggle {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  margin: 0;
+  padding: 0;
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 0.5px;
+  z-index: 101;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 23px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 0.5px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 23px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 0.5px;
+  }
+
+  //гамбургер меняется на крестик
+  &--active {
+    transform: rotate(45deg);
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}

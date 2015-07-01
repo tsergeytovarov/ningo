@@ -1,0 +1,106 @@
+.login-by-email-toggle {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: @darkgray;
+
+  + .login-by-email {
+    display: none;
+  }
+
+  &:after {
+    content: url("../img/ico/ico-20.svg");
+    position: absolute;
+    top: -4px;
+    right: 4px;
+  }
+
+  &:hover {
+    color: @blue;
+
+    &:after {
+      content: url("../img/ico/ico-21.svg");
+      position: absolute;
+      top: -4px;
+      right: 4px;
+    }
+  }
+
+  &--active {
+
+    + .login-by-email {
+      display: block;
+    }
+
+    &:after {
+      content: url("../img/ico/ico-20-gray.svg");
+      position: absolute;
+      top: -4px;
+      right: 4px;
+      opacity: .2;
+    }
+
+    &:hover {
+
+      &:after {
+        content: url("../img/ico/ico-22.svg");
+        position: absolute;
+        top: -4px;
+        right: 4px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.login-by-email {
+
+  &__form {
+    margin-top: 14px;
+  }
+  
+  input[type="text"] {
+    margin-top: 0;
+  }
+
+  input[id="password-login"] {
+    margin-bottom: 22px;
+  }
+
+  &__text-input {
+    margin-bottom: 15px;
+  }
+
+  .btn {
+
+    &--orange {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+}
