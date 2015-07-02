@@ -2,6 +2,7 @@
   margin-bottom: 24px;
   padding: 20px 22px;
   font-family: "Roboto", Arial, sans-serif;
+  color: @darkgray;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
@@ -59,6 +60,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+    color: @darkgray;
 
     //полоска-разделитель под заголовком
     &:after {
@@ -218,7 +220,7 @@
       text-align: right;
 
       .content-block__image {
-        padding-right: 40px;
+        padding-left: 40px;
       }
     }
   }
@@ -230,7 +232,7 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: 5px;
+      bottom: 0;
       left: 0;
       right: 0;
       width: 100%;
@@ -256,13 +258,9 @@
     }
   }
 
-  //отрицательный маргин последней картинки в блоках купить и продать
   &__image {
+    margin: 0 auto;
     display: block;
-
-    &--last {
-      margin-bottom: -6px;
-    }
   }
 
   //цвет ссылки в тексте
