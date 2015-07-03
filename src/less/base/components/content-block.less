@@ -6,6 +6,7 @@
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
+  overflow: hidden;
 
   //нижний маргин блока "как купить"
   &--how-to-buy {
@@ -38,11 +39,13 @@
     padding-bottom: 25px;
   }
 
+  //блоки на странице корзины
   &--cart {
     position: relative;
     padding-bottom: 16px;
   }
 
+  //блоки на странице корзины
   &--cart-paid {
     padding-bottom: 0;
   }
@@ -50,6 +53,26 @@
   &--contact-details {
     padding: 47px 57px;
     padding-bottom: 57px;
+  }
+
+  &--sell-item {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+
+    input[type="text"] {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &--sell-item-third {
+    margin-bottom: 34px;
+    padding-bottom: 10px;
+  }
+
+  &--sell-item-fourth {
+    margin-bottom: 34px;
+    padding-bottom: 27px;
   }
 
   //заголовки блоков
@@ -117,6 +140,14 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 18px;
+    }
+
+    &--sell-item {
+      margin-bottom: 36px;
+    }
+
+    &--sell-item-third {
+      margin-bottom: 22px;
     }
   }
 
@@ -274,6 +305,37 @@
     &:active {
       text-decoration: none;
       opacity: .9;
+    }
+
+    &--buy-more {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 5px;
+      padding-top: 10px;
+      width: 319px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &--refill {
+      float: right;
+      padding-right: 70px;
+    }
+
+    &--sell-item {
+      display: block;
+      text-align: right;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &--rules {
+      display: block;
+      margin: 0 auto;
+      width: 170px;
+      text-align: center;
+      font-size: 12px;
     }
   }
 
@@ -514,6 +576,12 @@
       position: absolute;
       top: 13px;
       right: 10px;
+    }
+
+    &--sell-item {
+      width: 53%;
+      margin-right: 4%;
+      margin-bottom: 16px;
     }
   }
 
@@ -764,19 +832,6 @@
     }
   }
 
-  &__link {
-
-    &--buy-more {
-      display: inline-block;
-      vertical-align: top;
-      padding-left: 5px;
-      padding-top: 10px;
-      width: 319px;
-      font-size: 12px;
-      line-height: 18px;
-    }
-  }
-
   &__contact-details-wrapper {
     margin-bottom: 19px;
 
@@ -812,11 +867,6 @@
     color: #999;
   }
 
-  &__link--refill {
-    float: right;
-    padding-right: 70px;
-  }
-
   &__your-money {
     position: relative;
 
@@ -826,5 +876,239 @@
       top: -2px;
       right: -10px;
     }
+  }
+
+  &__example-photo-container {
+    margin-right: -22px;
+    margin-bottom: -22px;
+    font-size: 0;
+  }
+
+  &__example-photo-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 22px;
+    margin-bottom: 22px;
+    width: 191px;
+    height: 256px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__flag {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    background-color: #6ecbed;
+    z-index: 50;
+
+    &:before {
+      content: url("../img/ico/ico-40.svg");
+      position: absolute;
+      top: 13px;
+      left: 54px;
+    }
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  &__image-capture {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    color: #5db8db;
+
+    &--front {
+      padding-top: 5px;
+      padding-left: 8px;
+      width: 91px;
+      height: 36px;
+      background-image: url("../img/example-icon-1.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--back {
+      top: 29px;
+      left: 9px;
+      padding-top: 5px;
+      padding-left: 7px;
+      width: 45px;
+      height: 49px;
+      background-image: url("../img/example-icon-2.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--total {
+      top: 8px;
+      padding-top: 5px;
+      padding-left: 7px;
+      width: 88px;
+      height: 52px;
+      background-image: url("../img/example-icon-3.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--label {
+      top: 22px;
+      left: 11px;
+      padding-top: 5px;
+      padding-left: 7px;
+      width: 91px;
+      height: 41px;
+      background-image: url("../img/example-icon-4.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    line-height: 29px;
+    
+    //лейблы для радиокнопок на странице подачи объявления и кастомные радиокнопки
+    &--delivery {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 33px;
+      padding-left: 28px;
+      font-size: 14px;
+      line-height: 32px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        border: 1px solid #e0e0e0;
+        border-radius: 1px;
+        background-color: #6dcbed;
+      }
+    }
+  }
+
+  &__select-wrapper {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    width: 100%;
+    height: 42px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  &__select {
+    font-size: 14px;
+    line-height: 40px;
+    color: #999;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  textarea[name="item-description"] {
+    margin-top: 0;
+    margin-bottom: 43px;
+  }
+
+  &__description-tip {
+    position: relative;
+    margin: 0;
+    margin-bottom: 23px;
+    padding: 11px 15px;
+    font-size: 12px;
+    line-height: 16px;
+    font-style: italic;
+    color: #5db8db;
+    border: 1px solid #c9f0ff;
+    border-radius: 4px;
+
+    &:before {
+      content: url("../img/speech-bubble-blue.jpg");
+      position: absolute;
+      bottom: -19px;
+      right: 70px;
+    }
+
+    &:after {
+      content: url("../img/thumbs-up.png");
+      position: absolute;
+      bottom: -90px;
+      right: 14px;
+    }
+  }
+
+  &__form-section-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+
+    .content-block__select-wrapper {
+      margin-bottom: 3px;
+    }
+
+    &--odd {
+      margin-right: 5%;
+    }
+  }
+
+  &__aside-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+  }
+}
+
+input[type="radio"]:checked + .content-block__label--delivery {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 1px;
+    background-color: #6dcbed;
+  }
+
+  &:after {
+    content: url("../img/ico/ico-24.svg");
+    position: absolute;
+    top: -1px;
+    left: 4px;
   }
 }
