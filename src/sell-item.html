@@ -112,13 +112,11 @@
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
         <button type="button" class="main-header__close js-close-header-find"></button>
-        <div class="content-block__select-wrapper">
-          <select class="main-header__select">
-            <option value="1">Вещи</option>
-            <option value="2">Стулья</option>
-            <option value="3">Коробки</option>
-          </select>
-        </div>
+        <select class="main-header__select">
+          <option value="1">Вещи</option>
+          <option value="2">Стулья</option>
+          <option value="3">Коробки</option>
+        </select>
         <div class="main-header__input-container">
           <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
         </div>
@@ -138,12 +136,12 @@
 
         <div class="col s-6 s-6--margin-right">
 
-          <section class="content-block  content-block--sell-item">
+          <section class="content-block  content-block--first  content-block--sell-item">
 
             <h2 class="content-block__title  content-block__title--sell-item">1. Загрузи фотографии</h2>
 
-            <div class="content-block__example-photo-container">
-              <div class="content-block__example-photo-wrapper">
+            <div class="content-block__example-photo-container  row">
+              <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-left">
                 <img src="img/example-photo-1.jpg" alt="" class="content-block__image">
                 <!-- абсолютно позиционированный блок с псевдоэлементом-картинкой и текстом -->
                 <div class="content-block__image-capture  content-block__image-capture--front">Основной вид</div>
@@ -151,7 +149,7 @@
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
 
-              <div class="content-block__example-photo-wrapper">
+              <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-right">
                 <img src="img/example-photo-2.jpg" alt="" class="content-block__image">
                 <!-- абсолютно позиционированный блок с псевдоэлементом-картинкой и текстом -->
                 <div class="content-block__image-capture  content-block__image-capture--back">Вид сзади</div>
@@ -159,14 +157,14 @@
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
 
-              <div class="content-block__example-photo-wrapper">
+              <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-left  content-block__example-photo-wrapper--last-row">
                 <img src="img/example-photo-3.jpg" alt="" class="content-block__image">
                 <div class="content-block__image-capture  content-block__image-capture--total">Покажи вещь отдельно</div>
                 <!-- синий флажок внизу картинки с псевдоэлементом-стрелкой -->
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
 
-              <div class="content-block__example-photo-wrapper">
+              <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-right  content-block__example-photo-wrapper--last-row">
                 <img src="img/example-photo-4.jpg" alt="" class="content-block__image">
                 <!-- абсолютно позиционированный блок с псевдоэлементом-картинкой и текстом -->
                 <div class="content-block__image-capture  content-block__image-capture--label">Покажи лейбл</div>
@@ -180,7 +178,7 @@
 
         <div class="col s-6">
 
-          <section class="content-block  content-block--sell-item">
+          <section class="content-block  content-block--second  content-block--sell-item">
 
             <h2 class="content-block__title  content-block__title--sell-item">2. Опиши вещь</h2>
 
@@ -221,7 +219,7 @@
       <div class="row">
 
 
-        <div class="col s-6 s-6--margin-right">
+        <div class="col s-6 s-6--margin-right  s-6--full-width">
           <section class="content-block  content-block--sell-item  content-block--sell-item-third">
             <h2 class="content-block__title  content-block__title--sell-item  content-block__title--sell-item-third">3. Характеристики</h2>
 
@@ -270,22 +268,27 @@
         </div>
 
 
-        <div class="col s-6">
+        <div class="col s-6  s-6--full-width">
           <section class="content-block  content-block--sell-item  content-block--sell-item-fourth">
             <h2 class="content-block__title  content-block__title--sell-item  content-block__title--sell-item-third">4. Стоимость и доставка</h2>
 
-            <label for="your-price" class="content-block__label">Ваша цена:</label>
+            <div class="content-block__column-wrapper  content-block__column-wrapper--first">
+              <label for="your-price" class="content-block__label">Ваша цена:</label>
 
-            <!-- на обертке висит иконка рубля внутри поля инпута -->
-            <div class="content-block__input-wrapper  content-block__input-wrapper--sell-item">
-              <input type="text" id="your-price" name="your-price" class="content-block__text-input" placeholder="Цена">
+              <!-- на обертке висит иконка рубля внутри поля инпута -->
+              <div class="content-block__input-wrapper  content-block__input-wrapper--sell-item">
+                <input type="text" id="your-price" name="your-price" class="content-block__text-input" placeholder="Цена">
+              </div>
+              <div class="content-block__aside-text">Комиссия сервиса составит - 150 р.</div>
             </div>
-            <div class="content-block__aside-text">Комиссия сервиса составит - 150 р.</div>
-            <div class="content-block__label">Доставка:</div>
-            <input type="radio" id="mail-service" name="delivery-method" checked>
-            <label for="mail-service" class="content-block__label  content-block__label--delivery">Почта России</label>
-            <input type="radio" id="personal-meeting" name="delivery-method" checked>
-            <label for="personal-meeting" class="content-block__label  content-block__label--delivery">Личная встреча</label>
+
+            <div class="content-block__column-wrapper  content-block__column-wrapper--second">
+              <div class="content-block__label  content-block__label--second">Доставка:</div>
+              <input type="radio" id="mail-service" name="delivery-method" checked>
+              <label for="mail-service" class="content-block__label  content-block__label--delivery">Почта России</label>
+              <input type="radio" id="personal-meeting" name="delivery-method" checked>
+              <label for="personal-meeting" class="content-block__label  content-block__label--delivery">Личная встреча</label>
+            </div>
           </section>
         </div>
       </div>

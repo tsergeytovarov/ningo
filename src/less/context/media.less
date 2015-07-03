@@ -824,6 +824,7 @@
     //маргин контейнера при скрытых кнопках "войти" и "продать"
     &__input-container {
       margin-right: 30px;
+      margin-left: 18px;
     }
   }
 
@@ -838,6 +839,142 @@
         top: 0;
         left: 0;
         z-index: 100;
+      }
+    }
+  }
+
+  /////////////// стили страницы подачи объявления
+
+  .sell-item-page {
+    min-width: 750px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+      }
+    }
+
+    .s-6 {
+      width: 48.6%;
+
+      &--margin-right {
+        margin-right: 2.8%;
+      }
+
+      &--full-width {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    .content-block {
+      padding: 18px;
+      padding-bottom: 27px;
+
+      input[type="text"] {
+        margin-bottom: 7px;
+      }
+
+      &__label {
+        line-height: 24px;
+      }
+
+      &--first {
+        min-height: 526px;
+      }
+
+      &__title {
+
+        &:after {
+          width: 130%;
+        }
+      }
+
+      &--sell-item-fourth {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__example-photo-container {
+      margin: 0 auto;
+      max-width: 355px;
+    }
+
+    &__example-photo-wrapper {
+      width: 47.5%;
+      max-width: 170px;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 18px;
+
+      &--to-left {
+        float: left;
+      }
+
+      &--to-right {
+        float: right;
+      }
+
+      &--last-row {
+        margin-bottom: 0;
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__flag {
+
+      &:before {
+        left: 22%;
+      }
+    }
+
+    textarea[name="item-description"] {
+      margin-bottom: 25px;
+      max-height: 87px;
+    }
+
+    &__select-wrapper {
+      margin-bottom: 7px;
+    }
+
+    &__column-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      
+      &--first {
+        width: 52%;
+      }
+
+      &--second {
+        width: 45%;
+      }
+    }
+
+    &__label {
+
+      &--delivery {
+        margin-right: 24px;
+      }
+
+      &--second {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__link {
+
+      &--sell-item {
+        line-height: 26px;
       }
     }
   }
@@ -1491,6 +1628,100 @@
       width: 241px;
     }
   }
+
+  ////////////// стили страницы подачи объявления
+
+  .sell-item-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+
+    .s-6 {
+      width: 100%;
+
+      &--margin-right {
+        margin-right: 0;
+      }
+    }
+
+    .content-block {
+      margin-bottom: 17px;
+      padding: 20px;
+      padding-bottom: 25px;
+
+      &__label {
+        line-height: 28px;
+
+        &--delivery {
+          margin-right: 33px;
+        }
+      }
+
+      input[type="text"] {
+        margin-bottom: 12px;
+      }
+
+      &__select-wrapper {
+        margin-bottom: 12px;
+      }
+
+      &--sell-item-third {
+        margin-bottom: 17px;
+        padding-bottom: 11px;
+      }
+
+      &--sell-item-fourth {
+        margin-bottom: 30px;
+      }
+
+      &--first {
+        min-height: 300px;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__example-photo-container {
+      max-width: 680px;
+    }
+
+    &__example-photo-wrapper {
+      max-width: 325px;
+    }
+
+    &__link {
+
+      &--sell-item {
+        line-height: 16px;
+      }
+    }
+
+    &__form-section-wrapper {
+      width: 100%;
+
+      &--odd {
+        margin-right: 0;
+      }
+    }
+
+    &__column-wrapper {
+      width: 100%;
+    }
+
+    &__aside-text {
+      padding-left: 4%;
+    }
+  }
 }
 
 
@@ -2117,4 +2348,85 @@
   }
 
   /////////////// стили хедера для незалогиненного пользователя
+
+  ////////////// стили страницы подачи объявления
+
+  .sell-item-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 25px;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+
+    .content-block {
+
+      &--sell-item-third {
+        padding-bottom: 18px;
+      }
+    }
+  }
+
+  .content-block {
+    padding: 18px;
+
+    &__flag {
+
+      &:before {
+        left: 15%;
+      }
+    }
+
+    &__input-wrapper {
+
+      &--sell-item {
+        width: 50%;
+      }
+    }
+
+    &__aside-text {
+      padding-left: 10px;
+      width: 44%;
+    }
+  }
+
+  .page-title {
+
+    &--sell-item {
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+
+
+//дополнительный брейкпоинт для выравнивания высоты контейнеров на странице подачи объявления
+@media (min-width: 840px) and (max-width: 969px) {
+
+  .sell-item-page {
+
+    .content-block {
+
+      &--first {
+        height: 526px;
+      }
+
+      &--second {
+        height: 526px;
+      }
+    }
+
+    textarea[name="item-description"] {
+      margin-bottom: 35px;
+    }
+  }
 }
