@@ -209,21 +209,46 @@
   }
 
   &__form{
-    padding: 3px 8px;
+    padding: 0 8px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+  }
+
+  &__select-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 145px;
+    height: 42px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
   }
 
   &__select{
-    width: 145px;
+    width: 143px;
+    height: 40px;
     float: left;
     margin-top: 0;
+    border: none;
+    outline: none;
+    color: #999;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
 
   &__input-container{
-    margin-left: 155px;
-    margin-right: 220px;
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    height: 44px;
   }
 
   input[type="text"].main-header__input{
+    display: block;
     background: #fff;
     border: none;
     width: 100%;

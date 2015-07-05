@@ -70,11 +70,13 @@
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
         <button type="button" class="main-header__close js-close-header-find"></button>
-        <select class="main-header__select">
-          <option value="1">Вещи</option>
-          <option value="2">Стулья</option>
-          <option value="3">Коробки</option>
-        </select>
+        <div class="main-header__select-wrapper">
+          <select class="main-header__select">
+            <option value="1">Вещи</option>
+            <option value="2">Стулья</option>
+            <option value="3">Коробки</option>
+          </select>
+        </div>
         <div class="main-header__input-container">
           <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
         </div>

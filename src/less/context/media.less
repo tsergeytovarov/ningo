@@ -817,14 +817,10 @@
       display: block;
     }
 
-    &__select {
-      display: none;
-    }
-
     //маргин контейнера при скрытых кнопках "войти" и "продать"
     &__input-container {
-      margin-right: 30px;
-      margin-left: 18px;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 
@@ -2348,6 +2344,17 @@
   }
 
   /////////////// стили хедера для незалогиненного пользователя
+
+  .main-header {
+
+    &__input-container {
+      width: 41.9%;
+    }
+
+    input[type="text"] {
+      font-size: 12px;
+    }
+  }
 
   ////////////// стили страницы подачи объявления
 
