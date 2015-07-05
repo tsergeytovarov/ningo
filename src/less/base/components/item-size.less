@@ -1,0 +1,95 @@
+.item-size {
+  position: relative;
+  padding-top: 21px;
+  padding-bottom: 30px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -22px;
+    right: 0;
+    width: 610px;
+    border-bottom: 1px solid #edf7fa;
+  }
+
+  &--last {
+    padding-bottom: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    font-size: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 31px;
+    width: 25%;
+    font-size: 14px;
+    line-height: 40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 1px;
+      background-color: #fafafa;
+    }
+
+    &:hover {
+      color: @blue;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid @blue;
+        border-radius: 1px;
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    color: @blue;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid @blue;
+      border-radius: 1px;
+      background-color: @blue;
+    }
+
+    &:after {
+      content: url("../img/ico/ico-24.svg");
+      position: absolute;
+      top: -1px;
+      left: 4px;
+    }
+  }
+}

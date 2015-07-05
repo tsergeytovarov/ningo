@@ -174,7 +174,7 @@
 
 
 
-        <section class="content-block  content-block--my-profile">
+        <section class="content-block  content-block--my-profile  content-block--settings">
 
           <h2 class="content-block__title  content-block__title--my-profile">Настройки профиля</h2>
 
@@ -328,42 +328,45 @@
                 </div>
               </div>
 
-              <!-- кнопка появляется после обновления данных -->
-              <button class="btn btn--blue btn--refresh">Обновить информацию</button>
+              <!-- на обертке висит полоска-разделитель. по умолчанию блок с кнопкой скрыт, появляется по модификатору active -->
+              <div class="content-block__refresh-button">
+                <!-- кнопка появляется после обновления данных -->
+                <button class="btn btn--refresh">Обновить информацию</button>
+              </div>
 
             </form>
           </div>
         </section>
 
 
-        <a href="#" class="my-profile__delete-link">Удалить мой аккаунт</a>
+        <a href="#" class="my-profile-page__delete-link">Удалить мой аккаунт</a>
 
 
         <section class="content-block  content-block--my-profile">
 
-          <h2 class="content-block__title  content-block--title">Мои предпочтения</h2>
+          <h2 class="content-block__title  content-block__title--my-profile">Мои предпочтения</h2>
 
           <section class="display-options">
 
             <form action="#" method="post">
 
               <input type="radio" name="options" id="show-all" checked>
-              <div class="display-options__text-wrapper">
-                <label for="show-all" class="display-options__label">Показывать всё</label>
+              <label for="show-all" class="display-options__text-wrapper">
+                <h3 class="display-options__label">Показывать всё</h3>
                 <p class="display-options__text">Много бюджетных брендов плюс сделки по середине дальности и роскошных этикеток</p>
-              </div>
+              </label>
 
               <input type="radio" name="options" id="show-medium">
-              <div class="display-options__text-wrapper">
-                <label for="show-medium" class="display-options__label">Показывать только качественные марки</label>
+              <label for="show-medium" class="display-options__text-wrapper">
+                <h3 class="display-options__label">Показывать только качественные марки</h3>
                 <p class="display-options__text">Нет бюджета бренды, если вы не следуют их. Еще в середине диапазона этикетки: местная соответствующие предложения быстрее. Наш полный выбор роскошных штук</p>
-              </div>
+              </label>
 
               <input type="radio" name="options" id="show-premium">
-              <div class="display-options__text-wrapper">
-                <label for="show-premium" class="display-options__label">Только Роскошные Бренды</label>
+              <label for="show-premium" class="display-options__text-wrapper">
+                <h3 class="display-options__label">Только Роскошные Бренды</h3>
                 <p class="display-options__text">Высокая мода этикетки только. Никакие другие бренды, если не последовало</p>
-              </div>
+              </label>
 
             </form>
 
@@ -478,187 +481,138 @@
                 <a href="#" class="brand-sticker__trash-icon"></a>
               </div>
 
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Adidas</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Nike</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Energie</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Garage</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">H&amp;M</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Jones New York</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
-              <!-- отдельный ярлык -->
-              <div class="brand-sticker">
-                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name">Kate Spade</div>
-                <a href="#" class="brand-sticker__trash-icon"></a>
-              </div>
-
               <!-- ярлык "добавить бренд" -->
               <div class="brand-sticker  brand-sticker--add-sticker">
                 <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
-                <div class="brand-sticker__name  brand-sticker__name--add-name">Добавить бренд</div>
+                <a href="#" class="brand-sticker__name  brand-sticker__name--add-name">Добавить бренд</a>
                 <a href="#" class="brand-sticker__add-icon"></a>
               </div>
 
             </div>
           </section>
 
-          <section class="clothes-size">
+          <section class="item-size">
 
-            <h3 class="clothes-size__title">Размер одежды</h3>
+            <h3 class="item-size__title">Размер одежды</h3>
 
-            <div class="clothes-size__wrapper">
+            <div class="item-size__wrapper">
 
               <form action="#" method="post">
 
                 <input type="checkbox" id="xxs" name="xxs" checked>
-                <label for="xxs" class="clothes-size__label">0/XXS</label>
+                <label for="xxs" class="item-size__label">0/XXS</label>
 
 
                 <input type="checkbox" id="xs" name="xs">
-                <label for="xs" class="clothes-size__label">2/XS</label>
+                <label for="xs" class="item-size__label">2/XS</label>
 
 
                 <input type="checkbox" id="4-s" name="4-s">
-                <label for="4-s" class="clothes-size__label">4/S</label>
+                <label for="4-s" class="item-size__label">4/S</label>
 
 
                 <input type="checkbox" id="6-s" name="6-s" checked>
-                <label for="6-s" class="clothes-size__label">6/S</label>
+                <label for="6-s" class="item-size__label">6/S</label>
 
                 <input type="checkbox" id="8-m" name="8-m">
-                <label for="8-m" class="clothes-size__label">8/M</label>
+                <label for="8-m" class="item-size__label">8/M</label>
 
                 <input type="checkbox" id="10-m" name="10-m">
-                <label for="10-m" class="clothes-size__label">10/M</label>
+                <label for="10-m" class="item-size__label">10/M</label>
 
                 <input type="checkbox" id="12-l" name="12-l">
-                <label for="12-l" class="clothes-size__label">12/L</label>
+                <label for="12-l" class="item-size__label">12/L</label>
 
                 <input type="checkbox" id="14-l" name="14-l">
-                <label for="14-l" class="clothes-size__label">14/L</label>
+                <label for="14-l" class="item-size__label">14/L</label>
 
                 <input type="checkbox" id="16-xl" name="16-xl">
-                <label for="16-xl" class="clothes-size__label">16/XL</label>
+                <label for="16-xl" class="item-size__label">16/XL</label>
 
                 <input type="checkbox" id="18-1x" name="18-1x">
-                <label for="18-1x" class="clothes-size__label">18/1X</label>
+                <label for="18-1x" class="item-size__label">18/1X</label>
 
                 <input type="checkbox" id="20-2x" name="20-2x">
-                <label for="20-2x" class="clothes-size__label">20/2X</label>
+                <label for="20-2x" class="item-size__label">20/2X</label>
 
                 <input type="checkbox" id="22-3x" name="22-3x">
-                <label for="22-3x" class="clothes-size__label">22/3X</label>
+                <label for="22-3x" class="item-size__label">22/3X</label>
 
                 <input type="checkbox" id="nosize" name="nosize">
-                <label for="nosize" class="clothes-size__label">Без размера</label>
+                <label for="nosize" class="item-size__label">Без размера</label>
 
                 <input type="checkbox" id="other" name="other">
-                <label for="other" class="clothes-size__label">Другое</label>
+                <label for="other" class="item-size__label">Другое</label>
 
               </form>
 
             </div>
           </section>
 
-          <section class="shoe-size">
+          <section class="item-size  item-size--last">
 
-            <h3 class="shoe-size__title">Размер обуви</h3>
+            <h3 class="item-size__title">Размер обуви</h3>
 
-            <div class="shoe-size__wrapper">
+            <div class="item-size__wrapper">
 
               <form action="#" method="post">
 
                 <input type="checkbox" id="3-5" name="3-5" checked>
-                <label for="3-5" class="shoe-size__label">3.5</label>
+                <label for="3-5" class="item-size__label">3.5</label>
 
                 <input type="checkbox" id="4" name="4">
-                <label for="4" class="shoe-size__label">4</label>
+                <label for="4" class="item-size__label">4</label>
 
                 <input type="checkbox" id="4-5" name="4-5">
-                <label for="4-5" class="shoe-size__label">4.5</label>
+                <label for="4-5" class="item-size__label">4.5</label>
 
                 <input type="checkbox" id="5" name="5" checked>
-                <label for="5" class="shoe-size__label">5</label>
+                <label for="5" class="item-size__label">5</label>
 
                 <input type="checkbox" id="5-5" name="5-5">
-                <label for="5-5" class="shoe-size__label">5.5</label>
+                <label for="5-5" class="item-size__label">5.5</label>
 
                 <input type="checkbox" id="6" name="6">
-                <label for="6" class="shoe-size__label">6</label>
+                <label for="6" class="item-size__label">6</label>
 
                 <input type="checkbox" id="6-5" name="6-5">
-                <label for="6-5" class="shoe-size__label">6.5</label>
+                <label for="6-5" class="item-size__label">6.5</label>
 
                 <input type="checkbox" id="7" name="7">
-                <label for="7" class="shoe-size__label">7</label>
+                <label for="7" class="item-size__label">7</label>
 
                 <input type="checkbox" id="7-5" name="7-5">
-                <label for="7-5" class="shoe-size__label">7.5</label>
+                <label for="7-5" class="item-size__label">7.5</label>
 
                 <input type="checkbox" id="8" name="8">
-                <label for="8" class="shoe-size__label">8</label>
+                <label for="8" class="item-size__label">8</label>
 
                 <input type="checkbox" id="8-5" name="8-5">
-                <label for="8-5" class="shoe-size__label">8.5</label>
+                <label for="8-5" class="item-size__label">8.5</label>
 
                 <input type="checkbox" id="9" name="9">
-                <label for="9" class="shoe-size__label">9</label>
+                <label for="9" class="item-size__label">9</label>
 
                 <input type="checkbox" id="10" name="10">
-                <label for="10" class="shoe-size__label">10</label>
+                <label for="10" class="item-size__label">10</label>
 
                 <input type="checkbox" id="10-5" name="10-5">
-                <label for="10-5" class="shoe-size__label">10.5</label>
+                <label for="10-5" class="item-size__label">10.5</label>
 
                 <input type="checkbox" id="11" name="11">
-                <label for="11" class="shoe-size__label">11</label>
+                <label for="11" class="item-size__label">11</label>
 
                 <input type="checkbox" id="11-5" name="11-5">
-                <label for="11-5" class="shoe-size__label">11.5</label>
+                <label for="11-5" class="item-size__label">11.5</label>
 
                 <input type="checkbox" id="12" name="12">
-                <label for="12" class="shoe-size__label">12</label>
+                <label for="12" class="item-size__label">12</label>
 
                 <input type="checkbox" id="nosize-shoes" name="nosize-shoes">
-                <label for="nosize-shoes" class="shoe-size__label">Без размера</label>
+                <label for="nosize-shoes" class="item-size__label">Без размера</label>
 
                 <input type="checkbox" id="other-shoes" name="other-shoes">
-                <label for="other-shoes" class="shoe-size__label">Другое</label>
+                <label for="other-shoes" class="item-size__label">Другое</label>
 
               </form>
 

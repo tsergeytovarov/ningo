@@ -225,7 +225,7 @@
       opacity: .9;
     }
   }
-  
+
   //большая кнопка на странице подачи объявления
   &--sell-item {
     display: block;
@@ -236,5 +236,36 @@
     width: 292px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  //кнопка "обновить информацию" на странице мой профиль
+  &--refresh {
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    padding-right: 0;
+    padding-left: 22px;
+    width: 271px;
+    background-color: @blue;
+    color: #fff;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &--hover{
+      background-color: #91d8f3;
+    }
+
+    &:active,
+    &--active{
+      opacity: .9;
+    }
+
+    &:before {
+      content: url("../img/ico/ico-25.svg");
+      position: absolute;
+      top: 11px;
+      left: 33px;
+    }
   }
 }
