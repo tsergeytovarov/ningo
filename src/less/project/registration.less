@@ -1,0 +1,87 @@
+.registration-page {
+	background-image: url("../img/bg-items-grid-blur.jpg");
+	background-repeat: repeat-y;
+	background-position: center;
+	background-size: cover;
+
+	.main-header {
+		position: relative;
+    height: 50px;
+		z-index: 500;
+
+    &__navigation {
+      display: none;
+    }
+
+    &__find {
+      display: none;
+    }
+
+    .tooltip-container {
+      display: none;
+    }
+
+    .btn {
+
+      &--all-blue {
+        display: none;
+      }
+    }
+
+    &__step-counter {
+      padding-right: 22px;
+      padding-top: 6px;
+      font-size: 14px;
+      line-height: 40px;
+      color: @blue;
+    }
+	}
+
+  .container {
+    padding-top: 42px;
+    padding-bottom: 142px;
+  }
+
+	.color-overlay {
+    opacity: .9;
+		z-index: 1;
+	}
+
+  &__screen {
+    z-index: 500;
+  }
+
+  .content-block {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 17px;
+    width: 610px;
+    z-index: 500;
+
+    &__btn-wrapper {
+      padding-top: 15px;
+      text-align: right;
+    }
+  }
+  
+  .display-options {
+    padding-bottom: 18px;
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}
+
+.page-title {
+
+  &--registration-page {
+    position: relative;
+    margin: 0;
+    margin-bottom: 31px;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+  }
+}

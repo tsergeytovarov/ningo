@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+   ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
+  / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
+  \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
+  (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ningo - страница "мой профиль"</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="registration-page">
+
+
+
+<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <header class="main-header">
+    <div class="main-header__right">
+      <div class="tooltip-container">
+        <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
+        <div class="tooltip-content tooltip-content--sticky">
+          <!-- тултип входа через соц-сети -->
+          <div class="tooltip-socio">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <div class="tooltip-socio__ico">
+              <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
+            </div>
+          </div>
+          <!-- тултип входа через email -->
+          <div class="tooltip-email">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <form action="/echo" method="POST">
+              <input type="text" placeholder="Email" class="error" required>
+              <p>Такой адрес не зарегистрирован</p>
+              <input type="password" placeholder="Пароль" required>
+              <button type="submit" class="btn btn--orange">Войти</button>
+            </form>
+            <div class="row tooltip-email__href">
+              <a href="#">Регистрация</a>
+              <a href="#">Забыли пароль?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn--all-blue">Продать</a>
+
+      <!-- счетчик шагов регистрации -->
+      <div class="main-header__step-counter">Шаг <span class="main-header__current-step">1</span> из <span class="main-header__total-steps">3</span></div>
+
+    </div>
+
+    <!-- левая часть нормальная -->
+    <div class="main-header__left main-header__left--open main-header__left--basic row">
+      <!-- логотип -->
+      <figure class="logo logo--big">
+        <img src="img/logo--big.png" alt="">
+      </figure>
+
+      <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
+      <a href="#" class="mobile-menu-toggle"></a>
+
+      <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu  mobile-menu--unlogged">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <span class="mobile-menu__text">Войти через:</span>
+            <div class="mobile-menu__social-icons">
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--vk"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--fb"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--ok"></a>
+            </div>
+          </li>
+          <!-- переключатель и форма входа через email -->
+          <li class="mobile-menu__item">
+            <!-- переключение по модификатору active -->
+            <a href="#" class="login-by-email-toggle">Войти через Email</a>
+            <div class="login-by-email">
+              <form action="#" method="post" class="login-by-email__form">
+                <input type="text" id="email-login" name="email-login" class="login-by-email__text-input" placeholder="Email">
+                <input type="text" id="password-login" name="password-login" class="login-by-email__text-input" placeholder="Пароль">
+                <button class="btn btn--orange">Войти</button>
+              </form>
+              <div class="login-by-email__wrapper">
+                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+               </div>
+            </div>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="main-header__navigation row row--inline">
+        <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
+        <a href="#" class="btn btn--all-blue-soft">Каталог</a>
+        <a href="#" class="btn btn--all-blue-soft">О проекте</a>
+      </nav>
+
+      <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
+
+    </div>
+
+    <!-- левая часть с поиском -->
+    <div class="main-header__left main-header__left--find">
+      <form action="/echo" method="POST" class="main-header__form">
+        <button type="button" class="main-header__close js-close-header-find"></button>
+        <div class="main-header__select-wrapper">
+          <select class="main-header__select">
+            <option value="1">Вещи</option>
+            <option value="2">Стулья</option>
+            <option value="3">Коробки</option>
+          </select>
+        </div>
+        <div class="main-header__input-container">
+          <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <!-- синий полупрозрачный блок под модальным окном, открывается по модификатору active -->
+  <div class="color-overlay  color-overlay--active"></div>
+
+  <div class="container container--small">
+
+    <div class="registration-page__screen  registration-page__screen--first">
+
+      <div class="page-title page-title--registration-page">Что вы предпочитаете?</div>
+
+
+      <section class="content-block  content-block--registration">
+
+        <form action="#" method="post">
+          <section class="display-options">
+
+            <input type="radio" name="options" id="show-all" checked>
+            <label for="show-all" class="display-options__text-wrapper">
+              <h3 class="display-options__label">Показывать всё</h3>
+              <p class="display-options__text">Много бюджетных брендов плюс сделки по середине дальности и роскошных этикеток</p>
+            </label>
+
+            <input type="radio" name="options" id="show-medium">
+            <label for="show-medium" class="display-options__text-wrapper">
+              <h3 class="display-options__label">Показывать только качественные марки</h3>
+              <p class="display-options__text">Нет бюджета бренды, если вы не следуют их. Еще в середине диапазона этикетки: местная соответствующие предложения быстрее. Наш полный выбор роскошных штук</p>
+            </label>
+
+            <input type="radio" name="options" id="show-premium">
+            <label for="show-premium" class="display-options__text-wrapper">
+              <h3 class="display-options__label">Только Роскошные Бренды</h3>
+              <p class="display-options__text">Высокая мода этикетки только. Никакие другие бренды, если не последовало</p>
+            </label>
+          </section>
+
+          <div class="content-block__btn-wrapper">
+            <button type="submit" class="btn btn--orange btn--next-step">Далее</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+
+
+    <div class="registration-page__screen  registration-page__screen--second">
+
+      <div class="page-title page-title--registration-page">Какие бренды вы любите?</div>
+
+
+      <section class="content-block  content-block--my-profile">
+
+        <form action="#" method="post">
+          <section class="my-brands">
+            <div class="my-brands__wrapper">
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Adidas</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Nike</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Energie</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Garage</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">H&amp;M</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Jones New York</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Kate Spade</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Loft</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Adidas</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Nike</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Energie</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Garage</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">H&amp;M</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Jones New York</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- отдельный ярлык -->
+              <div class="brand-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <div class="brand-sticker__name">Kate Spade</div>
+                <a href="#" class="brand-sticker__trash-icon"></a>
+              </div>
+
+              <!-- ярлык "добавить бренд" -->
+              <div class="brand-sticker  brand-sticker--add-sticker">
+                <!-- на обертке названия висит рамка, уголок-псевдоэлемент и круглый псевдоэлемент -->
+                <a href="#" class="brand-sticker__name  brand-sticker__name--add-name">Добавить бренд</a>
+                <a href="#" class="brand-sticker__add-icon"></a>
+              </div>
+
+            </div>
+          </section>
+
+          <div class="content-block__btn-wrapper">
+            <a href="#" class="content-block__link  content-block__link--back">Назад</a>
+            <button type="submit" class="btn btn--orange btn--next-step">Далее</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+
+
+    <div class="registration-page__screen  registration-page__screen--third">
+
+      <div class="page-title page-title--registration-page">Укажите ваши размеры</div>
+
+
+      <section class="content-block  content-block--my-profile">
+
+        <form action="#" method="post">
+          <section class="item-size">
+
+            <h3 class="item-size__title">Размер одежды</h3>
+
+            <div class="item-size__wrapper">
+
+              <form action="#" method="post">
+
+                <input type="checkbox" id="xxs" name="xxs" checked>
+                <label for="xxs" class="item-size__label">0/XXS</label>
+
+
+                <input type="checkbox" id="xs" name="xs">
+                <label for="xs" class="item-size__label">2/XS</label>
+
+
+                <input type="checkbox" id="4-s" name="4-s">
+                <label for="4-s" class="item-size__label">4/S</label>
+
+
+                <input type="checkbox" id="6-s" name="6-s" checked>
+                <label for="6-s" class="item-size__label">6/S</label>
+
+                <input type="checkbox" id="8-m" name="8-m">
+                <label for="8-m" class="item-size__label">8/M</label>
+
+                <input type="checkbox" id="10-m" name="10-m">
+                <label for="10-m" class="item-size__label">10/M</label>
+
+                <input type="checkbox" id="12-l" name="12-l">
+                <label for="12-l" class="item-size__label">12/L</label>
+
+                <input type="checkbox" id="14-l" name="14-l">
+                <label for="14-l" class="item-size__label">14/L</label>
+
+                <input type="checkbox" id="16-xl" name="16-xl">
+                <label for="16-xl" class="item-size__label">16/XL</label>
+
+                <input type="checkbox" id="18-1x" name="18-1x">
+                <label for="18-1x" class="item-size__label">18/1X</label>
+
+                <input type="checkbox" id="20-2x" name="20-2x">
+                <label for="20-2x" class="item-size__label">20/2X</label>
+
+                <input type="checkbox" id="22-3x" name="22-3x">
+                <label for="22-3x" class="item-size__label">22/3X</label>
+
+                <input type="checkbox" id="nosize" name="nosize">
+                <label for="nosize" class="item-size__label">Без размера</label>
+
+                <input type="checkbox" id="other" name="other">
+                <label for="other" class="item-size__label">Другое</label>
+
+              </form>
+
+            </div>
+          </section>
+
+          <section class="item-size">
+
+            <h3 class="item-size__title">Размер обуви</h3>
+
+            <div class="item-size__wrapper">
+
+              <form action="#" method="post">
+
+                <input type="checkbox" id="3-5" name="3-5" checked>
+                <label for="3-5" class="item-size__label">3.5</label>
+
+                <input type="checkbox" id="4" name="4">
+                <label for="4" class="item-size__label">4</label>
+
+                <input type="checkbox" id="4-5" name="4-5">
+                <label for="4-5" class="item-size__label">4.5</label>
+
+                <input type="checkbox" id="5" name="5" checked>
+                <label for="5" class="item-size__label">5</label>
+
+                <input type="checkbox" id="5-5" name="5-5">
+                <label for="5-5" class="item-size__label">5.5</label>
+
+                <input type="checkbox" id="6" name="6">
+                <label for="6" class="item-size__label">6</label>
+
+                <input type="checkbox" id="6-5" name="6-5">
+                <label for="6-5" class="item-size__label">6.5</label>
+
+                <input type="checkbox" id="7" name="7">
+                <label for="7" class="item-size__label">7</label>
+
+                <input type="checkbox" id="7-5" name="7-5">
+                <label for="7-5" class="item-size__label">7.5</label>
+
+                <input type="checkbox" id="8" name="8">
+                <label for="8" class="item-size__label">8</label>
+
+                <input type="checkbox" id="8-5" name="8-5">
+                <label for="8-5" class="item-size__label">8.5</label>
+
+                <input type="checkbox" id="9" name="9">
+                <label for="9" class="item-size__label">9</label>
+
+                <input type="checkbox" id="10" name="10">
+                <label for="10" class="item-size__label">10</label>
+
+                <input type="checkbox" id="10-5" name="10-5">
+                <label for="10-5" class="item-size__label">10.5</label>
+
+                <input type="checkbox" id="11" name="11">
+                <label for="11" class="item-size__label">11</label>
+
+                <input type="checkbox" id="11-5" name="11-5">
+                <label for="11-5" class="item-size__label">11.5</label>
+
+                <input type="checkbox" id="12" name="12">
+                <label for="12" class="item-size__label">12</label>
+
+                <input type="checkbox" id="nosize-shoes" name="nosize-shoes">
+                <label for="nosize-shoes" class="item-size__label">Без размера</label>
+
+                <input type="checkbox" id="other-shoes" name="other-shoes">
+                <label for="other-shoes" class="item-size__label">Другое</label>
+
+              </form>
+
+            </div>
+
+          </section>
+
+          <div class="content-block__btn-wrapper">
+            <a href="#" class="content-block__link  content-block__link--back">Назад</a>
+            <button type="submit" class="btn btn--orange btn--done">Готово!</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+
+  </div>
+
+
+  <!-- Основная библиотека + основной файл jss -->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

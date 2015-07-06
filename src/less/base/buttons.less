@@ -275,4 +275,29 @@
     padding-left: 0;
     width: 100%;
   }
+
+  //кнопки "далее" на странице регистрации
+  &--next-step {
+    position: relative;
+    padding-left: 0;
+    padding-right: 30px;
+    width: 149px;
+
+    &:after {
+      content: url("../img/ico/ico-54.svg");
+      position: absolute;
+      top: 12px;
+      right: 33px;
+    }
+  }
+
+  &--done {
+    padding-right: 0;
+    padding-left: 0;
+    width: 149px;
+
+    &:after {
+      display: none;
+    }
+  }
 }
