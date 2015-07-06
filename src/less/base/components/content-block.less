@@ -175,6 +175,21 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
+
+    &--my-profile {
+      position: relative;
+      margin-bottom: 0;
+      padding-bottom: 15px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -22px;
+        width: 120%;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
   }
 
   //заголовки секций блоков купить и продать
@@ -354,6 +369,14 @@
       width: 170px;
       text-align: center;
       font-size: 12px;
+    }
+
+    &--gray {
+      display: block;
+      text-align: right;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
     }
   }
 
@@ -612,6 +635,12 @@
       font-size: 12px;
       line-height: 16px;
     }
+
+    &--change-email {
+      margin-bottom: 10px;
+      line-height: 22px;
+      color: #999;
+    }
   }
 
   &--modal-content {
@@ -619,10 +648,16 @@
     position: fixed;
     top: 100px;
     left: 50%;
-    margin-left: -152px;
+    margin-left: -156px;
     width: 268px;
     z-index: 1001;
     overflow: hidden;
+  }
+
+  &--modal-content-my-profile {
+    top: 60px;
+    width: 260px;
+    margin-right: -152px;
   }
 
   &--active {
@@ -1188,6 +1223,10 @@
         right: 10px;
       }
     }
+
+    &--current-password {
+      margin-bottom: 5px;
+    }
   }
 
   &__avatar-wrapper {
@@ -1200,6 +1239,10 @@
     border: 1px solid #e0e0e0;
     border-radius: 50%;
     overflow: hidden;
+
+    &--change-avatar {
+      margin-bottom: 23px;
+    }
   }
 
   &__avatar {
@@ -1210,6 +1253,13 @@
     display: block;
     width: 118px;
     height: 125px;
+
+    &--modal-content {
+      top: -50%;
+      left: 0;
+      width: 180%;
+      height: auto;
+    }
   }
 
   &__upload-container {
@@ -1388,6 +1438,52 @@
 
   &__column-wrapper {
     width: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 10px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -22px;
+      width: 120%;
+      border-bottom: 1px solid #edf7fa;
+    }
+
+    &--last {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--scroll {
+      height: 368px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--change-email {
+      padding-bottom: 5px;
+    }
+
+    &--change-avatar {
+      padding-bottom: 5px;
+    }
+  }
+
+  &__alphabet-block {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 

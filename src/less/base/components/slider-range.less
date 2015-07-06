@@ -1,0 +1,59 @@
+.slider-range {
+  margin-bottom: 13px;
+
+  &__avatar-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 37px;
+    height: 37px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    margin-left: -14px;
+    display: block;
+    width: 28px;
+    height: 47px;
+
+    &--small {
+      top: 15px;
+      margin-left: -7px;
+      width: 14px;
+      height: 24px;
+    }
+  }
+
+  &__range-stripe {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-top: 13px;
+    width: 60%;
+    height: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  &__range-marker {
+    position: absolute;
+    top: -5px;
+    left: 40%;
+    width: 18px;
+    height: 18px;
+    background-color: @blue;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @orange;
+    }
+  }
+}

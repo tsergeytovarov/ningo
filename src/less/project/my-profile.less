@@ -1,4 +1,5 @@
 .my-profile-page {
+  position: relative;
   min-width: 970px;
   background-color: @bg-blue;
   color: @darkgray;
@@ -42,6 +43,23 @@
     &:active,
     &--active{
       opacity: .9;
+    }
+  }
+
+  .btn {
+
+    &--save-avatar {
+      position: relative;
+      margin-top: 15px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -22px;
+        width: 120%;
+        border-bottom: 1px solid #edf7fa;
+      }
     }
   }
 }
