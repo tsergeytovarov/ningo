@@ -135,7 +135,8 @@
 
   <div class="container container--small">
 
-    <div class="registration-page__screen  registration-page__screen--first">
+    <!-- по умолчанию экраны скрыты, показываются по модификатору visible -->
+    <div class="registration-page__screen  registration-page__screen--visible  registration-page__screen--first">
 
       <div class="page-title page-title--registration-page">Что вы предпочитаете?</div>
 
@@ -314,9 +315,10 @@
       <div class="page-title page-title--registration-page">Укажите ваши размеры</div>
 
 
-      <section class="content-block  content-block--my-profile">
+      <section class="content-block  content-block--size  content-block--my-profile">
 
         <form action="#" method="post">
+
           <section class="item-size">
 
             <h3 class="item-size__title">Размер одежды</h3>

@@ -1,8 +1,23 @@
+html {
+  background-color: transparent;
+
+}
 .registration-page {
+  min-height: 100%;
+  background-color: transparent;
 	background-image: url("../img/bg-items-grid-blur.jpg");
-	background-repeat: repeat-y;
 	background-position: center;
 	background-size: cover;
+  background-attachment: fixed;
+
+  &__screen {
+    display: none;
+    z-index: 500;
+
+    &--visible {
+      display: block;
+    }
+  }
 
 	.main-header {
 		position: relative;
@@ -39,17 +54,13 @@
 
   .container {
     padding-top: 42px;
-    padding-bottom: 142px;
+    padding-bottom: 42px;
   }
 
 	.color-overlay {
     opacity: .9;
 		z-index: 1;
 	}
-
-  &__screen {
-    z-index: 500;
-  }
 
   .content-block {
     box-sizing: border-box;

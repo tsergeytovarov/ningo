@@ -378,6 +378,28 @@
       line-height: 16px;
       color: #999;
     }
+
+    &--back {
+      position: relative;
+      float: left;
+      padding-top: 12px;
+      padding-left: 38px;
+      text-decoration: none;
+
+      &:before {
+        content: url("../img/ico/ico-53.svg");
+        position: absolute;
+        top: 12px;
+        left: 0;
+      }
+
+      &:hover {
+
+        &:before {
+          opacity: .6;
+        }
+      }
+    }
   }
 
   &__show-answer-btn {
@@ -1498,6 +1520,10 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+  }
+
+  &--size {
+    padding-top: 0;
   }
 }
 
