@@ -298,21 +298,25 @@
                   </div>
                 </div>
 
-                <div class="content-block__picture-upload-wrapper">
+                <div class="content-block__picture-upload-wrapper  row">
 
-                  <!-- обертка - круглая рамка -->
-                  <div class="content-block__avatar-wrapper">
-                    <img src="img/avatar-blank.png" alt="" class="content-block__avatar">
+                  <div class="content-block__column-wrapper  content-block__column-wrapper--right">
+                    <!-- обертка - круглая рамка -->
+                    <div class="content-block__avatar-wrapper">
+                      <img src="img/avatar-blank.png" alt="" class="content-block__avatar">
+                    </div>
+
+                    <!-- контейнер с невидимым инпутом и стилизованной кнопкой загрузки -->
+                    <div class="content-block__upload-container">
+                      <input type="file" id="upload-photo" name="upload-photo">
+                      <div class="content-block__select-link">Загрузить фотографию</div>
+                    </div>
                   </div>
 
-                  <!-- контейнер с невидимым инпутом и стилизованной кнопкой загрузки -->
-                  <div class="content-block__upload-container">
-                    <input type="file" id="upload-photo" name="upload-photo">
-                    <div class="content-block__select-link">Загрузить фотографию</div>
+                  <div class="content-block__column-wrapper  content-block__column-wrapper--left">
+                    <label for="personal-information" class="content-block__label  content-block__label--my-profile">Расскажите о себе</label>
+                    <textarea class="content-block__my-profile-textarea" name="personal-information" id="personal-information" rows="5" placeholder="Немного информации"></textarea>
                   </div>
-
-                  <label for="personal-information" class="content-block__label  content-block__label--my-profile">Расскажите о себе</label>
-                  <textarea class="content-block__my-profile-textarea" name="personal-information" id="personal-information" rows="5" placeholder="Немного информации"></textarea>
 
                 </div>
 

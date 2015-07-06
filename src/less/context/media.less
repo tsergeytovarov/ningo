@@ -946,7 +946,7 @@
     &__column-wrapper {
       display: inline-block;
       vertical-align: top;
-      
+
       &--first {
         width: 52%;
       }
@@ -972,6 +972,96 @@
       &--sell-item {
         line-height: 26px;
       }
+    }
+  }
+
+  /////////////// стили страницы "мой профиль"
+
+  .my-profile-page {
+    min-width: 750px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.333%;
+      }
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .content-block {
+
+    &__upload-container {
+      margin-bottom: 27px;
+    }
+
+    &__title {
+
+      &--my-profile {
+
+        &:after {
+          width: 120%;
+        }
+      }
+    }
+
+    &__profile-information-container {
+
+      &:after {
+        width: 120%;
+      }
+    }
+
+    &__refresh-button {
+
+      &:before {
+        width: 120%;
+      }
+    }
+
+    &__part {
+
+      &--first {
+
+        &:after {
+          width: 120%;
+        }
+      }
+    }
+
+    &__section-container {
+
+      &--privacy-settings {
+
+        &:after {
+          width: 120%;
+        }
+      }
+    }
+
+    &--who-can-see {
+      padding-bottom: 10px;
+    }
+  }
+
+  .display-options,
+  .my-brands,
+  .item-size {
+
+    &:after {
+      width: 120%;
     }
   }
 }
@@ -1718,6 +1808,86 @@
       padding-left: 4%;
     }
   }
+
+  /////////////// стили страницы "мой профиль"
+
+  .my-profile-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__profile-information-wrapper {
+      margin-bottom: 24px;
+      padding: 0;
+      width: 100%;
+    }
+
+    &__picture-upload-wrapper {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__column-wrapper {
+      box-sizing: border-box;
+      width: 50%;
+
+      &--right {
+        padding-top: 14px;
+        padding-left: 7px;
+        float: right;
+      }
+
+      &--left {
+        padding-right: 7px;
+        float: left;
+      }
+    }
+
+    &__my-profile-textarea {
+      min-height: 172px;
+    }
+
+    &--settings {
+      padding-bottom: 10px;
+    }
+  }
+
+  .social-links {
+
+    &__text-wrapper {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    &__icons-wrapper {
+      width: 100%;
+      text-align: left;
+    }
+
+    &__link {
+      margin-left: 0;
+      margin-right: 17px;
+    }
+  }
+
+  .item-size {
+
+    &__label {
+      width: 50%;
+    }
+  }
 }
 
 
@@ -2411,7 +2581,150 @@
       line-height: 30px;
     }
   }
+
+  /////////////// стили страницы "мой профиль"
+
+  .my-profile-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 25px;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__profile-information-wrapper {
+      margin-bottom: 0;
+    }
+
+    &__picture-upload-wrapper {
+      position: relative;
+    }
+
+    &__upload-container {
+      margin-bottom: 0;
+    }
+
+    &__column-wrapper {
+      float: none;
+      width: 100%;
+
+      &--right {
+        position: absolute;
+        bottom: 0;
+      }
+
+      &--left {
+        padding-bottom: 200px;
+      }
+    }
+
+    &__my-profile-textarea {
+      min-height: 85px;
+    }
+
+    &--settings {
+      padding-bottom: 5px;
+    }
+
+    &__checkbox-label {
+      margin-bottom: 20px;
+      line-height: 18px;
+
+      &:before {
+        top: 0;
+      }
+
+      &:hover {
+
+        &:before {
+          top: 0;
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked + .content-block__checkbox-label {
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        top: 0;
+      }
+    }
+
+    &__text-label {
+
+      &--who-can-see {
+        margin-bottom: 15px;
+        padding-top: 0;
+        width: 100%;
+      }
+    }
+
+    &__select-wrapper {
+
+      &--who-can-see {
+        width: 100%;
+      }
+    }
+
+    &--who-can-see {
+      padding-bottom: 15px;
+    }
+  }
+
+  .display-options {
+
+    &__text-wrapper {
+
+      &:before {
+        top: 3px;
+      }
+    }
+
+    &__label {
+      margin-bottom: 10px;
+      line-height: 18px;
+    }
+
+    #show-all:checked ~ label[for="show-all"] {
+
+      &:before {
+        top: 3px;
+      }
+    }
+
+    #show-medium:checked ~ label[for="show-medium"] {
+
+      &:before {
+        top: 3px;
+      }
+    }
+
+    #show-premium:checked ~ label[for="show-premium"] {
+
+      &:before {
+        top: 3px;
+      }
+    }
+  }
 }
+
+
+
+
+
+
 
 
 
