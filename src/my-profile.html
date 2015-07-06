@@ -194,13 +194,13 @@
                   </div>
 
                   <label for="account-mail" class="content-block__label  content-block__label--my-profile">Email</label>
-                  <div class="content-block__text-input-wrapper">
+                  <div class="content-block__text-input-wrapper  content-block__text-input-wrapper--pencil-icon">
                     <input type="text" id="account-mail" name="account-mail" class="content-block__input" placeholder="ivanova@gmail.com">
                   </div>
 
                   <label for="account-password" class="content-block__label  content-block__label--my-profile">Пароль</label>
-                  <div class="content-block__text-input-wrapper">
-                    <input type="password" id="account-password" name="account-password" class="content-block__input" placeholder="">
+                  <div class="content-block__text-input-wrapper  content-block__text-input-wrapper--pencil-icon">
+                    <input type="password" id="account-password" name="account-password" class="content-block__input" placeholder="• • • • • •">
                   </div>
 
                   <label for="birthday" class="content-block__label  content-block__label--my-profile">День рождения</label>
@@ -628,7 +628,7 @@
 
         <section class="content-block  content-block--my-profile">
 
-          <h2 class="content-block__title  content-block--title">Место доставки</h2>
+          <h2 class="content-block__title  content-block--title  content-block__title--delivery-address">Место доставки</h2>
 
           <form action="#" method="post">
 
@@ -653,20 +653,20 @@
 
           <form action="#" method="post">
 
-            <section class="content-block__part">
+            <section class="content-block__part  content-block__part--first">
 
-              <h3 class="content-block__section-title">Уведомления по электронной почте</h3>
+              <h3 class="content-block__section-subtitle">Уведомления по электронной почте</h3>
 
               <div class="content-block__section-container">
 
                 <input type="checkbox" id="ningo-notifications" name="ningo-notifications" checked>
-                <label for="ningo-notifications" class="content-block__label  content-block__label--my-profile">Я хотел бы получить Ningo yjdjcnb</label>
+                <label for="ningo-notifications" class="content-block__checkbox-label">Я хотел бы получить Ningo yjdjcnb</label>
 
                 <input type="checkbox" id="ningo-annonces" name="ningo-annonces">
-                <label for="ningo-annonces" class="content-block__label  content-block__label--my-profile">Отправить мне новые интересные объявления</label>
+                <label for="ningo-annonces" class="content-block__checkbox-label">Отправить мне новые интересные объявления</label>
 
                 <input type="checkbox" id="email-notifications" name="email-notifications">
-                <label for="email-notifications" class="content-block__label  content-block__label--my-profile">Включить уведомления по электронной почте</label>
+                <label for="email-notifications" class="content-block__checkbox-label">Включить уведомления по электронной почте</label>
 
               </div>
             </section>
@@ -674,33 +674,33 @@
 
             <section class="content-block__part">
 
-              <h3 class="content-block__section-title">Настройка почтовых уведомлений</h3>
+              <h3 class="content-block__section-subtitle">Настройка почтовых уведомлений</h3>
 
               <div class="content-block__section-container">
 
                 <input type="checkbox" id="new-message" name="new-message" checked>
-                <label for="new-message" class="content-block__label  content-block__label--my-profile">Новые сообщения</label>
+                <label for="new-message" class="content-block__checkbox-label">Новые сообщения</label>
 
                 <input type="checkbox" id="new-comment" name="new-comment">
-                <label for="new-comment" class="content-block__label  content-block__label--my-profile">Комментарии</label>
+                <label for="new-comment" class="content-block__checkbox-label">Комментарии</label>
 
                 <input type="checkbox" id="new-feedback" name="new-feedback">
-                <label for="new-feedback" class="content-block__label  content-block__label--my-profile">Новый отзыв</label>
+                <label for="new-feedback" class="content-block__checkbox-label">Новый отзыв</label>
 
                 <input type="checkbox" id="sales" name="sales">
-                <label for="sales" class="content-block__label  content-block__label--my-profile">Скидки</label>
+                <label for="sales" class="content-block__checkbox-label">Скидки</label>
 
                 <input type="checkbox" id="new-favourite" name="new-favourite">
-                <label for="new-favourite" class="content-block__label  content-block__label--my-profile">Добавление в избранное</label>
+                <label for="new-favourite" class="content-block__checkbox-label">Добавление в избранное</label>
 
                 <input type="checkbox" id="new-follower" name="new-follower">
-                <label for="new-follower" class="content-block__label  content-block__label--my-profile">Новые подписчики</label>
+                <label for="new-follower" class="content-block__checkbox-label">Новые подписчики</label>
 
                 <input type="checkbox" id="new-items" name="new-items">
-                <label for="new-items" class="content-block__label  content-block__label--my-profile">Новинки</label>
+                <label for="new-items" class="content-block__checkbox-label">Новинки</label>
 
                 <input type="checkbox" id="new-mention" name="new-mention">
-                <label for="new-mention" class="content-block__label  content-block__label--my-profile">Упоминания меня</label>
+                <label for="new-mention" class="content-block__checkbox-label">Упоминания меня</label>
 
               </div>
             </section>
@@ -711,33 +711,35 @@
 
 
 
-        <section class="content-block  content-block--my-profile">
+        <section class="content-block  content-block--my-profile  content-block--who-can-see">
 
-          <h2 class="content-block__title  content-block__title--feedback">Настройки приватности</h2>
+          <h2 class="content-block__title">Настройки приватности</h2>
 
           <form action="#" method="post">
 
-            <section class="content-block__section-container">
+            <section class="content-block__section-container  content-block__section-container--privacy-settings">
 
               <input type="checkbox" id="use-photos" name="use-photos" checked>
-              <label for="use-photos" class="content-block__label  content-block__label--my-profile">Разрешить Vinted использовать ваши фотографии в маркетинговых целях</label>
+              <label for="use-photos" class="content-block__checkbox-label">Разрешить Vinted использовать ваши фотографии в маркетинговых целях</label>
 
               <input type="checkbox" id="notify" name="notify">
-              <label for="notify" class="content-block__label  content-block__label--my-profile">Сообщите продавцов, когда любимое их элементы</label>
+              <label for="notify" class="content-block__checkbox-label">Сообщите продавцов, когда любимое их элементы</label>
 
               <input type="checkbox" id="hide-profile" name="hide-profile">
-              <label for="hide-profile" class="content-block__label  content-block__label--my-profile">Скрыть мой профиль, когда друзья меня искать на Vinted</label>
+              <label for="hide-profile" class="content-block__checkbox-label">Скрыть мой профиль, когда друзья меня искать на Vinted</label>
 
             </section>
 
-            <section class="content-block__section-container">
-              <label for="who-can-see" class="content-block__label  content-block__label--my-profile">Кто может видеть ваш возраст?</label>
-              <div class="content-block__select-wrapper">
-                <select name="who-can-see" id="who-can-see" class="content-block__select">
-                  <option value="1">Все</option>
-                  <option value="2">Некоторые</option>
-                  <option value="3">Никто</option>
-                </select>
+            <section class="content-block__section-container  content-block__section-container--who-can-see">
+              <div class="row">
+                <label for="who-can-see" class="content-block__text-label  content-block__text-label--who-can-see">Кто может видеть ваш возраст?</label>
+                <div class="content-block__select-wrapper  content-block__select-wrapper--who-can-see">
+                  <select name="who-can-see" id="who-can-see" class="content-block__select">
+                    <option value="1">Все</option>
+                    <option value="2">Некоторые</option>
+                    <option value="3">Никто</option>
+                  </select>
+                </div>
               </div>
             </section>
 

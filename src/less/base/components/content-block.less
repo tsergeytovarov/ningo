@@ -80,6 +80,10 @@
     padding-bottom: 17px;
   }
 
+  &--who-can-see {
+    padding-bottom: 5px;
+  }
+
   //заголовки блоков
   &__title {
     position: relative;
@@ -157,6 +161,10 @@
 
     &--my-profile {
       margin-bottom: 31px;
+    }
+
+    &--delivery-address {
+      margin-bottom: 38px;
     }
   }
 
@@ -1049,6 +1057,11 @@
     &--last {
       margin-right: 0;
     }
+
+    &--who-can-see {
+      float: right;
+      width: 138px;
+    }
   }
 
   &__select {
@@ -1164,6 +1177,17 @@
 
   &__text-input-wrapper {
     margin-bottom: 15px;
+
+    &--pencil-icon {
+      position: relative;
+
+      &:after {
+        content: url("../img/ico/ico-34.svg");
+        position: absolute;
+        top: 15px;
+        right: 10px;
+      }
+    }
   }
 
   &__avatar-wrapper {
@@ -1237,6 +1261,128 @@
 
     &--active {
       display: block;
+    }
+  }
+
+  &__section-subtitle {
+    margin: 0;
+    margin-bottom: 11px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 31px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 1px;
+      background-color: #fafafa;
+    }
+
+    &:hover {
+      color: @blue;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid @blue;
+        border-radius: 1px;
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked + .content-block__checkbox-label {
+    color: @blue;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid @blue;
+      border-radius: 1px;
+      background-color: @blue;
+    }
+
+    &:after {
+      content: url("../img/ico/ico-24.svg");
+      position: absolute;
+      top: -1px;
+      left: 4px;
+    }
+  }
+
+  &__part {
+
+    &--first {
+      position: relative;
+      margin-bottom: 40px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -19px;
+        left: -22px;
+        right: 0;
+        width: 610px;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
+  }
+
+  &__section-container {
+
+    &--privacy-settings {
+      position: relative;
+      margin-bottom: 20px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -19px;
+        left: -22px;
+        right: 0;
+        width: 610px;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
+
+    &--who-can-see {
+      padding-top: 16px;
+    }
+  }
+
+  &__text-label {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    width: 50%;
+
+    &--who-can-see {
+      float: left;
+      padding-top: 13px;
     }
   }
 }
