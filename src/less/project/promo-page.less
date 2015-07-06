@@ -1,0 +1,57 @@
+.promo-page {
+  position: relative;
+  min-height: 100%;
+  background-color: transparent;
+  /*background-image: url("../img/bg-items-grid-blur.jpg");
+  background-position: -180px -200px;
+  background-size: 1469px auto;
+  background-attachment: scroll;*/
+  overflow-x: hidden;
+
+  &__background-layer {
+    position: absolute;
+    top: -180px;
+    left: -200px;
+  }
+
+  .main-header {
+    position: relative;
+    height: 50px;
+    z-index: 500;
+  }
+
+  .color-overlay {
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    padding-top: 60px;
+    z-index: 500;
+
+    &--small {
+      width: 667px;
+    }
+  }
+
+  .gallery-item {
+    width: 228px;
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.page-title {
+
+  &--promo-page {
+    position: relative;
+    margin: 0;
+    margin-bottom: 89px;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+  }
+}
