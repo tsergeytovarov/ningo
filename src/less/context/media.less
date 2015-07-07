@@ -1096,6 +1096,30 @@
       }
     }
   }
+
+  ///////////////// стили страницы промо
+
+  .promo-page {
+
+    &__outer-container {
+      height: 1024px;
+    }
+
+    .container {
+      padding-top: 68px;
+    }
+
+    .page-title {
+      margin-bottom: 50px;
+    }
+
+    .promo-content {
+
+      &__card {
+        margin-bottom: 170px;
+      }
+    }
+  }
 }
 
 
@@ -1940,6 +1964,70 @@
 
     .content-block {
       width: 100%;
+    }
+  }
+
+  ///////////////// стили страницы промо
+
+  .promo-page {
+
+    &__background-layer {
+      top: -65px;
+      margin-left: -2164px;
+    }
+
+    .container {
+      padding-top: 40px;
+      width: 460px;
+    }
+
+    .promo-content {
+
+      &__image {
+        display: none;
+      }
+
+      &__card {
+        margin-left: 10px;
+        margin-bottom: 110px;
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 222px;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &__title {
+        margin-bottom: 10px;
+        line-height: 20px;
+
+        &--desktop {
+          display: none;
+        }
+
+        &--tablet {
+          display: block;
+        }
+      }
+
+      &__feature-item {
+        margin-bottom: 10px;
+        line-height: 16px;
+      }
+    }
+
+    .gallery-item {
+      margin-top: 0;
+      margin-right: 0;
+      width: 226px;
+    }
+
+    .page-title {
+      margin-bottom: 36px;
     }
   }
 }
@@ -2813,6 +2901,54 @@
       &--display-options {
         padding-top: 30px;
       }
+    }
+  }
+
+  ///////////////// стили страницы промо
+
+  .promo-page {
+
+    &__background-layer {
+      display: none;
+    }
+
+    &__outer-container {
+      height: 680px;
+    }
+
+    .container {
+      padding-top: 28px;
+      width: 305px;
+    }
+
+    .gallery-item {
+      display: none;
+    }
+
+    .promo-content {
+
+      &__card {
+        margin-left: 0;
+        margin-bottom: 20px;
+        padding-top: 28px;
+        padding-bottom: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 305px;
+      }
+
+      &__title {
+        margin-bottom: 25px;
+      }
+
+      &__feature-item {
+        margin-bottom: 18px;
+      }
+    }
+
+    .page-title {
+      margin-bottom: 20px;
+      line-height: 24px;
     }
   }
 }
