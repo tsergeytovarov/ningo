@@ -126,10 +126,10 @@
       </form>
     </div>
   </header>
-  
-  <div class="promo-page__background-layer">
+
+  <!-- <div class="promo-page__background-layer">
     <img src="img/bg-items-grid-blur.jpg" width="1469" height="1888" alt="" class="promo-page__background-image">
-  </div>
+  </div> -->
   <!-- синий полупрозрачный блок под модальным окном, открывается по модификатору active -->
   <div class="color-overlay  color-overlay--active"></div>
 
@@ -137,32 +137,56 @@
 
     <div class="page-title page-title--promo-page">Отлично! Ваша вещь уже в продаже!</div>
 
+    <!--  контейнер с промо-контентом -->
+    <div class="promo-content">
 
-    <div class="gallery-item  gallery-item--stroke">
+      <!-- карточка товара -->
+      <div class="gallery-item  gallery-item--stroke">
 
-            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
-            <div class="gallery-item__stroke"></div>
+        <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+        <div class="gallery-item__stroke"></div>
 
-            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
-            <a href="#" class="gallery-item__flag"></a>
+        <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+        <a href="#" class="gallery-item__flag"></a>
 
-            <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
+        <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
 
-            <div class="gallery-item__capture">
-              <div class="gallery-item__brand"></div>
-              <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
-              <div class="gallery-item__sizes">M, S</div>
-            </div>
+        <div class="gallery-item__capture">
+          <div class="gallery-item__brand"></div>
+          <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+          <div class="gallery-item__sizes">M, S</div>
+        </div>
 
-            <div class="gallery-item__comment-like  row">
-              <div class="gallery-item__comment">
-                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
-              </div>
-              <div class="gallery-item__like">
-                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
-              </div>
-            </div>
+        <div class="gallery-item__comment-like  row">
+          <div class="gallery-item__comment">
+            <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
           </div>
+          <div class="gallery-item__like">
+            <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <img src="img/promo-mouse.png" alt="" class="promo-content__image">
+
+      <div class="promo-content__card">
+
+        <div class="promo-content__title">Я могу помочь тебе продать эту вещь быстрее:</div>
+
+        <ul class="promo-content__features-list">
+          <li class="promo-content__feature-item  promo-content__feature-item--bright">Добавим яркую рамку вокруг твоей вещи и ёе будет трудно не заметить среди остальных</li>
+          <li class="promo-content__feature-item  promo-content__feature-item--show">Более 500000 показов в неделю на главной странице сайта и каталога</li>
+          <li class="promo-content__feature-item  promo-content__feature-item--mail-list">Специальная почтовая рассылка по 300 000 покупателям с твоей вещью в главной роли, в качестве   вещи дня</li>
+        </ul>
+
+        <a href="#" class="btn btn--orange btn--promotion">Купить продвижение (150р.)</a>
+        <a href="#" class="promo-content__link">Узнать подробнее</a>
+
+      </div>
+
+      <a href="#" class="promo-content__link  promo-content__link--white">Пропустить</a>
+
+    </div>
 
   </div>
 
