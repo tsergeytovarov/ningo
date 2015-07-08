@@ -1,3 +1,144 @@
 .item-page {
-	
+
+  .container {
+
+    &--small {
+      padding: 0 22px;
+      padding-top: 25px;
+      padding-bottom: 120px;
+      width: 926px;
+    }
+  }
+
+  .s-8 {
+    padding: 0;
+    width: 610px;
+  }
+
+  .s-4 {
+    padding: 0;
+    padding-right: 22px;
+    width: 315px;
+  }
+
+  .row {
+
+    &--first {
+      margin-bottom: 23px;
+    }
+  }
+
+  .item-description-table {
+
+    &__text {
+      width: 35%;
+      font-size: 14px;
+      line-height: 22px;
+
+      &--gray {
+        width: 14%;
+      }
+    }
+  }
+
+  .content-block {
+
+    &__item-description-wrapper {
+      width: 100%;
+    }
+
+    &__item-description {
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__hashtag {
+      margin-left: 0;
+      font-size: 14px;
+      color: @blue;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &__content {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -18px;
+        right: 0;
+        width: 120%;
+        border-bottom: 1px solid #edf7fa;
+      }
+    }
+  }
+
+  .gallery-item {
+
+    &__comment-like {
+
+      &--item-card {
+
+        .gallery-item {
+
+          &__comment-like {
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+          }
+
+          &__like {
+            float: left;
+          }
+
+          &__comment {
+            float: right;
+          }
+
+          &__icon {
+            width: 100%;
+
+            &--like {
+
+              &:after {
+                left: 19%;
+              }
+            }
+
+            &--comment {
+
+              &:after {
+                left: 28%;
+              }
+            }
+          }
+
+          &__comment-description {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-wrapper {
+  width: 293px;
+  height: 390px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.content-block {
+
+  &--item-card {
+    padding-bottom: 0;
+  }
 }

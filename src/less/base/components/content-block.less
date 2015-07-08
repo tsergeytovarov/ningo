@@ -84,6 +84,12 @@
     padding-bottom: 5px;
   }
 
+  &--item-page {
+    padding-top: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   //заголовки блоков
   &__title {
     position: relative;
@@ -165,6 +171,15 @@
 
     &--delivery-address {
       margin-bottom: 38px;
+    }
+
+    &--item-page {
+      margin-bottom: 20px;
+
+      &:after {
+        bottom: -8px;
+        width: 120%;
+      }
     }
   }
 
@@ -810,6 +825,7 @@
   &__hashtag {
     margin-left: 9px;
     font-weight: 400;
+    text-decoration: none;
   }
 
   &__item-image-wrapper {

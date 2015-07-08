@@ -127,48 +127,83 @@
 
   <div class="container container--small">
 
+    <!-- хлебные крошки -->
+    <div class="breadcrumbs-navigation">
+      <ul class="breadcrumbs-navigation__list">
+
+        <li class="breadcrumbs-navigation__list-item">
+          <a href="#" class="breadcrumbs-navigation__link">Каталог</a>
+        </li>
+
+        <li class="breadcrumbs-navigation__list-item">
+          <a href="#" class="breadcrumbs-navigation__link">Женские вещи</a>
+        </li>
+
+        <li class="breadcrumbs-navigation__list-item">
+          <a href="#" class="breadcrumbs-navigation__link">Обувь</a>
+        </li>
+
+        <li class="breadcrumbs-navigation__list-item">
+          <a href="#" class="breadcrumbs-navigation__link">Туфли</a>
+        </li>
+
+        <li class="breadcrumbs-navigation__list-item  breadcrumbs-navigation__list-item--current">
+          <a href="#" class="breadcrumbs-navigation__link  breadcrumbs-navigation__link--current">Christian Louboutin</a>
+        </li>
+      </ul>
+    </div>
+
     <!-- верхний блок со слйдером и описанием вещи -->
-    <div class="row">
+    <div class="row  row--first">
 
       <div class="col  s-4">
-        <!-- слайдер с изображениями вещи -->
-        <div class="banner">
-          <ul class="banner__list">
-            <li class="banner__list-item">
-              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
-            </li>
-            <li class="banner__list-item">
-              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
-            </li>
-            <li class="banner__list-item">
-              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
-            </li>
-            <li class="banner__list-item">
-              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
-            </li>
-            <li class="banner__list-item">
-              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
-            </li>
-          </ul>
-          <a href="#" class="unslider-arrow prev">Previous slide</a>
-          <a href="#" class="unslider-arrow next">Next slide</a>
+
+        <!-- прямоугольная рамка со скругленными углами -->
+        <div class="banner-wrapper">
+          <!-- слайдер с изображениями вещи -->
+          <div class="banner">
+            <ul class="banner__list">
+              <li class="banner__list-item">
+                <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+              </li>
+              <li class="banner__list-item">
+                <img src="img/gallery-item-1.jpg"  class="banner__image" alt="">
+              </li>
+              <li class="banner__list-item">
+                <img src="img/gallery-item-2.jpg"  class="banner__image" alt="">
+              </li>
+              <li class="banner__list-item">
+                <img src="img/gallery-item-5.jpg"  class="banner__image" alt="">
+              </li>
+              <li class="banner__list-item">
+                <img src="img/gallery-item-6.jpg"  class="banner__image" alt="">
+              </li>
+            </ul>
+            <a href="#" class="unslider-arrow prev">Previous slide</a>
+            <a href="#" class="unslider-arrow next">Next slide</a>
+            <!-- счетчик слайдов -->
+            <div class="banner__counter">
+              <span class="banner__current-slide">1</span>/
+              <span class="banner__total-slides">5</span>
+            </div>
+          </div>
         </div>
       </div>
 
 
       <div class="col  s-8">
 
-        <!-- карточка товара в корзине -->
-        <section class="content-block  content-block--cart  content-block--cart-paid">
+        <!-- карточка вещи -->
+        <section class="content-block  content-block--item-page  content-block--item-card">
 
-          <h2 class="content-block__title  content-block__title--cart">Туфли <a href="#" class="content-block__hashtag">#Christian Louboutin</a></h2>
+          <h2 class="content-block__title  content-block__title--item-page">Туфли <a href="#" class="content-block__hashtag">#Christian Louboutin</a></h2>
 
           <div class="content-block__content">
 
 
             <div class="content-block__item-description-wrapper">
 
-              <div class="content-block__item-description">Louboutins (лабутены) люксовая подделка. Ни разу не одевала. К сожалению не подошли по размеру! Каблук 12 см</div>
+              <div class="content-block__item-description  content-block__item-description--item-page">Louboutins (лабутены) люксовая подделка. Ни разу не одевала. К сожалению не подошли по размеру! Каблук 12 см</div>
 
 
               <div class="content-block__table-wrapper">
@@ -218,12 +253,18 @@
           </div>
 
           <!-- блок с комментариями и лайками -->
-          <div class="gallery-item__comment-like  row">
+          <div class="gallery-item__comment-like  gallery-item__comment-like--item-card  row">
             <div class="gallery-item__like">
-              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span><span class="gallery-item__comment-count  gallery-item__comment-description">Добавить в избранное</span></a>
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like">
+                <span class="gallery-item__comment-count  gallery-item__comment-count--like"></span>
+                <span class="gallery-item__comment-description  gallery-item__comment-description--like">Добавить в избранное</span>
+              </a>
             </div>
             <div class="gallery-item__comment">
-              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span><span class="gallery-item__comment-count  gallery-item__comment-description">Задать вопрос</span></a>
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment">
+                <span class="gallery-item__comment-count"></span>
+                <span class="gallery-item__comment-description  gallery-item__comment-description--comment">Задать вопрос</span>
+              </a>
             </div>
           </div>
 
@@ -1040,23 +1081,7 @@
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
   <!-- слайдер -->
-  <script src="//unslider.com/unslider.min.js"></script>
-  <script>
-  $(function() {
-    $('.banner').unslider({
-      fluid: true
-    });
-  });
-  </script>
-  <script>
-    var unslider = $('.banner').unslider();
-    
-    $('.unslider-arrow').click(function() {
-      var fn = this.className.split(' ')[1];
-        
-      //  Either do unslider.data('unslider').next() or .prev() depending on the className
-      unslider.data('unslider')[fn]();
-    });
-  </script>
+  <script src="js/unslider.js"></script>
+
 </body>
 </html>
