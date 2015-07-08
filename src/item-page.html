@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+   ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
+  / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
+  \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
+  (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ningo - страница вещи</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<!-- по модификатору edit открывается страница управления вещью -->
+<body class="item-page">
+
+<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <header class="main-header">
+    <div class="main-header__right">
+      <div class="tooltip-container">
+        <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
+        <div class="tooltip-content tooltip-content--sticky">
+          <!-- тултип входа через соц-сети -->
+          <div class="tooltip-socio">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <div class="tooltip-socio__ico">
+              <a href="#"><img src="img/ico/ico-26.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-27.svg" alt=""></a>
+              <a href="#"><img src="img/ico/ico-28.svg" alt=""></a>
+            </div>
+          </div>
+          <!-- тултип входа через email -->
+          <div class="tooltip-email">
+            <p class="tooltip-content__title">Войти через социальную сеть:</p>
+            <form action="/echo" method="POST">
+              <input type="text" placeholder="Email" class="error" required>
+              <p>Такой адрес не зарегистрирован</p>
+              <input type="password" placeholder="Пароль" required>
+              <button type="submit" class="btn btn--orange">Войти</button>
+            </form>
+            <div class="row tooltip-email__href">
+              <a href="#">Регистрация</a>
+              <a href="#">Забыли пароль?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn--all-blue">Продать</a>
+    </div>
+
+    <!-- левая часть нормальная -->
+    <div class="main-header__left main-header__left--open main-header__left--basic row">
+      <!-- логотип -->
+      <figure class="logo logo--big">
+        <img src="img/logo--big.png" alt="">
+      </figure>
+
+      <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
+      <a href="#" class="mobile-menu-toggle"></a>
+
+      <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu  mobile-menu--unlogged">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <span class="mobile-menu__text">Войти через:</span>
+            <div class="mobile-menu__social-icons">
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--vk"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--fb"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--ok"></a>
+            </div>
+          </li>
+          <!-- переключатель и форма входа через email -->
+          <li class="mobile-menu__item">
+            <!-- переключение по модификатору active -->
+            <a href="#" class="login-by-email-toggle">Войти через Email</a>
+            <div class="login-by-email">
+              <form action="#" method="post" class="login-by-email__form">
+                <input type="text" id="email-login" name="email-login" class="login-by-email__text-input" placeholder="Email">
+                <input type="text" id="password-login" name="password-login" class="login-by-email__text-input" placeholder="Пароль">
+                <button class="btn btn--orange">Войти</button>
+              </form>
+              <div class="login-by-email__wrapper">
+                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+               </div>
+            </div>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="main-header__navigation row row--inline">
+        <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
+        <a href="#" class="btn btn--all-blue-soft">Каталог</a>
+        <a href="#" class="btn btn--all-blue-soft">О проекте</a>
+      </nav>
+
+      <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
+
+    </div>
+
+    <!-- левая часть с поиском -->
+    <div class="main-header__left main-header__left--find">
+      <form action="/echo" method="POST" class="main-header__form">
+        <button type="button" class="main-header__close js-close-header-find"></button>
+        <div class="main-header__select-wrapper">
+          <select class="main-header__select">
+            <option value="1">Вещи</option>
+            <option value="2">Стулья</option>
+            <option value="3">Коробки</option>
+          </select>
+        </div>
+        <div class="main-header__input-container">
+          <input type="text" class="main-header__input" placeholder="Например: Юбка, черная, Москва">
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <div class="container container--small">
+
+    <!-- верхний блок со слйдером и описанием вещи -->
+    <div class="row">
+
+      <div class="col  s-4">
+        <!-- слайдер с изображениями вещи -->
+        <div class="banner">
+          <ul class="banner__list">
+            <li class="banner__list-item">
+              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+            </li>
+            <li class="banner__list-item">
+              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+            </li>
+            <li class="banner__list-item">
+              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+            </li>
+            <li class="banner__list-item">
+              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+            </li>
+            <li class="banner__list-item">
+              <img src="img/item-icon-big.jpg"  class="banner__image" alt="">
+            </li>
+          </ul>
+          <a href="#" class="unslider-arrow prev">Previous slide</a>
+          <a href="#" class="unslider-arrow next">Next slide</a>
+        </div>
+      </div>
+
+
+      <div class="col  s-8">
+
+        <!-- карточка товара в корзине -->
+        <section class="content-block  content-block--cart  content-block--cart-paid">
+
+          <h2 class="content-block__title  content-block__title--cart">Туфли <a href="#" class="content-block__hashtag">#Christian Louboutin</a></h2>
+
+          <div class="content-block__content">
+
+
+            <div class="content-block__item-description-wrapper">
+
+              <div class="content-block__item-description">Louboutins (лабутены) люксовая подделка. Ни разу не одевала. К сожалению не подошли по размеру! Каблук 12 см</div>
+
+
+              <div class="content-block__table-wrapper">
+
+                <table class="item-description-table">
+
+                  <tr>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Размер</td>
+
+                    <td class="item-description-table__text">34, 35, 36, 37</td>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Состояние</td>
+
+                    <td class="item-description-table__text">Новое</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Цвет</td>
+
+                    <td class="item-description-table__text">Чёрный, Красный</td>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Город</td>
+
+                    <td class="item-description-table__text">Москва</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Материал</td>
+
+                    <td class="item-description-table__text">Искусственная кожа</td>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Доставка</td>
+
+                    <td class="item-description-table__text">Почта России, самовывоз</td>
+
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- блок с комментариями и лайками -->
+          <div class="gallery-item__comment-like  row">
+            <div class="gallery-item__like">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span><span class="gallery-item__comment-count  gallery-item__comment-description">Добавить в избранное</span></a>
+            </div>
+            <div class="gallery-item__comment">
+              <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span><span class="gallery-item__comment-count  gallery-item__comment-description">Задать вопрос</span></a>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="like-item row">
+
+          <img src="img/user-avatar-2.jpg" class="like-item__avatar" alt="">
+
+          <div class="like-item__info row">
+
+            <div class="like-item__name">Мария Иванова</div>
+
+            <div class="rating-box  rating-box--blue">
+              <a href="#" class="rating-box__star  rating-box__star--blue"></a>
+              <a href="#" class="rating-box__star  rating-box__star--blue"></a>
+              <a href="#" class="rating-box__star  rating-box__star--blue"></a>
+              <a href="#" class="rating-box__star  rating-box__star--blue  rating-box__star--blue-disabled"></a>
+              <a href="#" class="rating-box__star  rating-box__star--blue  rating-box__star--blue-disabled"></a>
+            </div>
+            <a href="#" class="btn btn--like">+ Нравится</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- нижний блок с комментариями, галереей и информационными блоками -->
+    <div class="row">
+
+
+      <div class="col s-8">
+
+        <div class="gallery  gallery--messages">
+
+
+
+          <!-- по модификатору comments у блока с комментариями увеличивается верхний паддинг -->
+          <section class="message-item  message-item--comments">
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">37 есть? Наложкой отправите?</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">можем.)</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Анастасия, в понедельник 9.03 отправим. и пришлю номер проверочного кода.)</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Написать</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-1">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-1" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+
+
+          <section class="message-item">
+
+
+            <!-- блок обсуждаемого предмета - картинка, название, хэштег. есть не в каждом message-item. на нем также висит полоска-разделитель внизу -->
+            <div class="message-item__title-wrapper">
+
+              <div class="message-item__image-wrapper">
+                <img src="img/item-icon.jpg" alt="" class="message-item__image">
+              </div>
+
+              <div class="message-item__text-wrapper">
+
+                <h3 class="message-item__title">Туфли</h3>
+
+                <p class="message-item__hashtag">#Christian Louboutin</p>
+
+              </div>
+            </div>
+
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">37 есть? Наложкой отправите?</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">можем.)</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Написать</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-2">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-2" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+
+
+          <section class="message-item">
+
+
+            <!-- блок обсуждаемого предмета - картинка, название, хэштег. есть не в каждом message-item. на нем также висит полоска-разделитель внизу -->
+            <div class="message-item__title-wrapper">
+
+              <div class="message-item__image-wrapper">
+                <img src="img/item-icon.jpg" alt="" class="message-item__image">
+              </div>
+
+              <div class="message-item__text-wrapper">
+
+                <h3 class="message-item__title">Туфли</h3>
+
+                <p class="message-item__hashtag">#Christian Louboutin</p>
+
+                <p class="message-item__subject">
+                  <!-- на спане висит иконка валюты -->
+                  <span class="message-item__text  message-item__text--striked">1800</span>
+                  <span class="message-item__arrow-icon"></span>
+                  <!-- на спане висит иконка валюты -->
+                  <span class="message-item__text  message-item__text--bold">1500</span>
+                </p>
+
+              </div>
+            </div>
+
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Если уступите, сразу забираю</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Написать</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-3">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-3" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+
+
+          <section class="message-item  message-item--comments">
+
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">37 есть? Наложкой отправите?</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">можем.)</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Анастасия, в понедельник 9.03 отправим. и пришлю номер проверочного кода.)</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment  comment--active">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Написать</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-4">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-4" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+        <div class="filter-block row">
+
+
+          <div class="filter  filter--messages">
+
+            <ul class="filter__list">
+
+              <li class="filter__item  filter__item--first"><a href="#" class="filter__link  filter__link--active">Все диалоги</a></li>
+
+              <li class="filter__item"><a href="#" class="filter__link">Личные</a></li>
+
+              <li class="filter__item"><a href="#" class="filter__link">Комментарии</a></li>
+
+              <li class="filter__item  filter__item--desktop"><a href="#" class="filter__link">Администрация</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- галерея отображается при отмеченном пункте "вещи" в навигации -->
+        <div class="gallery  gallery--profile-items">
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-1.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-2.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-5.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-6.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Guess</div>
+              <div class="gallery-item__price">3200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-1.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-2.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-5.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-6.jpg" width="136" height="205" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Guess</div>
+              <div class="gallery-item__price">3200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col s-4">
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display"></span>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display"></span>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display"></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Основная библиотека + основной файл jss -->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+  <!-- слайдер -->
+  <script src="//unslider.com/unslider.min.js"></script>
+  <script>
+  $(function() {
+    $('.banner').unslider({
+      fluid: true
+    });
+  });
+  </script>
+  <script>
+    var unslider = $('.banner').unslider();
+    
+    $('.unslider-arrow').click(function() {
+      var fn = this.className.split(' ')[1];
+        
+      //  Either do unslider.data('unslider').next() or .prev() depending on the className
+      unslider.data('unslider')[fn]();
+    });
+  </script>
+</body>
+</html>
