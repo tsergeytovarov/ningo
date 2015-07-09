@@ -11,7 +11,9 @@
   }
 
   .s-8 {
-    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 610px;
   }
 
@@ -24,6 +26,7 @@
   .row {
 
     &--first {
+      position: relative;
       margin-bottom: 23px;
     }
 
@@ -45,7 +48,7 @@
   .item-description-table {
 
     &__text {
-      width: 35%;
+      width: 39%;
       font-size: 14px;
       line-height: 22px;
 
@@ -113,27 +116,36 @@
           }
 
           &__icon {
-            width: 100%;
 
             &--like {
 
               &:after {
-                left: 19%;
+                left: -60px;
               }
             }
 
             &--comment {
 
               &:after {
-                left: 28%;
+                left: -40px;
               }
             }
           }
 
           &__comment-description {
+            position: absolute;
             display: block;
+            width: 150px;
             font-size: 12px;
             line-height: 16px;
+
+            &--like {
+              left: -50px;
+            }
+
+            &--comment {
+              left: -45px;
+            }
           }
 
           &__comment-count {
@@ -146,7 +158,7 @@
 
   .like-item {
     margin-right: 0;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     width: 100%;
 
     &__info {
@@ -385,7 +397,7 @@
               &--like {
 
                 &:after {
-                  left: 42%;
+                  left: -15px;
                 }
               }
 
@@ -507,8 +519,7 @@
 .buttons-wrapper {
   position: absolute;
   bottom: 0;
-  left: 0;
   right: 0;
-  width: 100%;
+  width: 610px;
   font-size: 0;
 }

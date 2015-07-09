@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <!-- по модификатору edit открывается страница управления вещью -->
-<body class="item-page">
+<body class="item-page  item-page--edit">
 
 <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
@@ -193,6 +193,7 @@
 
       <div class="col  s-8  item-page__item-card-wrapper">
 
+        <div class="item-page__item-card-container">
         <!-- карточка вещи -->
         <section class="content-block  content-block--item-page  content-block--item-card">
 
@@ -216,10 +217,6 @@
 
                     <td class="item-description-table__text">34, 35, 36, 37</td>
 
-                    <td class="item-description-table__text  item-description-table__text--gray">Состояние</td>
-
-                    <td class="item-description-table__text">Новое</td>
-
                   </tr>
 
                   <tr>
@@ -228,10 +225,6 @@
 
                     <td class="item-description-table__text">Чёрный, Красный</td>
 
-                    <td class="item-description-table__text  item-description-table__text--gray">Город</td>
-
-                    <td class="item-description-table__text">Москва</td>
-
                   </tr>
 
                   <tr>
@@ -239,6 +232,30 @@
                     <td class="item-description-table__text  item-description-table__text--gray">Материал</td>
 
                     <td class="item-description-table__text">Искусственная кожа</td>
+
+                  </tr>
+
+                </table>
+
+                <table class="item-description-table">
+
+                  <tr>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Состояние</td>
+
+                    <td class="item-description-table__text">Новое</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td class="item-description-table__text  item-description-table__text--gray">Город</td>
+
+                    <td class="item-description-table__text">Москва</td>
+
+                  </tr>
+
+                  <tr>
 
                     <td class="item-description-table__text  item-description-table__text--gray">Доставка</td>
 
@@ -290,11 +307,16 @@
 
         </div>
 
-        <div class="buttons-wrapper">
+        </div>
 
-          <!-- голубая кнопка "редактировать", видна в режиме редактирования вещи -->
-          <a href="#" class="btn btn--blue btn--edit">Редактировать</a>
+      </div>
 
+      <div class="buttons-wrapper">
+
+        <!-- голубая кнопка "редактировать", видна в режиме редактирования вещи -->
+        <a href="#" class="btn btn--blue btn--edit">Редактировать</a>
+
+        <div class="item-price-btn-wrapper">
           <!-- белая кнопка с ценой. на обертке кнопки висит псевдоэлемент-уголок. кнопка торг появляется по модификатору bidding к item-price-btn -->
           <div class="item-price-btn  item-price-btn--bidding">
             <div class="item-price-btn__current-price">4800</div>
@@ -304,13 +326,13 @@
               <a href="#" class="item-price-btn__link  item-price-btn__link--discount">Сделать скидку</a>
             </div>
           </div>
-
-          <a href="#" class="btn btn--orange btn--add-to-cart">Добавить в корзину</a>
-
-          <!-- голубая кнопка "продать быстрее", видна в режиме редактирования вещи -->
-          <a href="#" class="btn btn--orange btn--quick-sell">Продать быстрее</a>
-
         </div>
+
+        <a href="#" class="btn btn--orange btn--add-to-cart">Добавить в корзину</a>
+
+        <!-- голубая кнопка "продать быстрее", видна в режиме редактирования вещи -->
+        <a href="#" class="btn btn--orange btn--quick-sell">Продать быстрее</a>
+
       </div>
     </div>
 
