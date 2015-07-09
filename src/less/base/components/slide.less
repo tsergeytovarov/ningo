@@ -41,3 +41,23 @@
 #delivery:checked ~ .slides .slide--delivery {
   display: block;
 }
+
+//переключение табов на странице вещи
+
+#similar:checked ~ .filter label[for="similar"] {
+  color: @blue;
+  cursor: default;
+}
+
+#user-items:checked ~ .filter label[for="user-items"] {
+  color: @blue;
+  cursor: default;
+}
+
+#similar:checked ~ .slides .slide--similar {
+  display: block;
+}
+
+#user-items:checked ~ .slides .slide--user-items {
+  display: block;
+}

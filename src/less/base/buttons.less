@@ -81,7 +81,7 @@
 
     &:hover,
     &--hover{
-      background-color: #91d8f3;
+      background-color: #2b7997;
     }
 
     &:active,
@@ -298,6 +298,71 @@
 
     &:after {
       display: none;
+    }
+  }
+  
+  //большая оранжевая кнопка "добавить в корзину""
+  &--add-to-cart {
+    position: relative;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 35px;
+    padding-right: 0;
+    width: 292px;
+
+    &:before {
+      content: url("../img/ico/ico-31-white.svg");
+      position: absolute;
+      top: 22px;
+      left: 63px;
+      opacity: .6;
+    }
+  }
+
+  //большая голубая кнопка "редактировать"
+  &--edit {
+    position: relative;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 35px;
+    padding-right: 0;
+    width: 292px;
+    background-color: @blue;
+
+    &:hover,
+    &--hover{
+      background-color: #91d8f3;
+    }
+
+    &:active,
+    &--active{
+      opacity: .9;
+    }
+
+    &:before {
+      content: url("../img/ico/ico-33-white.svg");
+      position: absolute;
+      top: 25px;
+      left: 78px;
+      opacity: .6;
+    }
+  }
+
+  //большая оранжева кнопка "продать быстрее"
+  &--quick-sell {
+    position: relative;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 37px;
+    padding-right: 0;
+    width: 292px;
+
+    &:before {
+      content: url("../img/ico/ico-40.svg");
+      position: absolute;
+      top: 27px;
+      left: 78px;
+      opacity: .6;
     }
   }
 }

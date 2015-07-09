@@ -26,6 +26,20 @@
     &--first {
       margin-bottom: 23px;
     }
+
+    &--second {
+
+      .s-4 {
+        padding-right: 0;
+        padding-left: 22px;
+      }
+    }
+  }
+
+  &__item-card-wrapper {
+    position: relative;
+    padding-bottom: 82px;
+    min-height: 390px;
   }
 
   .item-description-table {
@@ -83,15 +97,12 @@
     &__comment-like {
 
       &--item-card {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
 
         .gallery-item {
-
-          &__comment-like {
-            display: block;
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-          }
 
           &__like {
             float: left;
@@ -120,14 +131,274 @@
           }
 
           &__comment-description {
+            display: block;
             font-size: 12px;
             line-height: 16px;
+          }
+
+          &__comment-count {
+            display: none;
           }
         }
       }
     }
   }
+
+  .like-item {
+    margin-right: 0;
+    margin-bottom: 36px;
+    width: 100%;
+
+    &__info {
+      position: relative;
+      margin: 0;
+      padding-top: 2px;
+      width: auto;
+      font-size: 0;
+    }
+
+    &__name {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &__text-gray {
+      color: #999;
+    }
+
+    &__avatar {
+      margin-right: 15px;
+    }
+
+    .btn {
+      float: none;
+
+      &--like {
+        display: inline-block;
+        vertical-align: top;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .rating-box {
+
+    &--blue {
+      position: absolute;
+      bottom: -12px;
+    }
+  }
+
+  .item-price-btn {
+    box-sizing: border-box;
+
+    &__link {
+      display: block;
+
+      &--discount {
+        display: none;
+        padding-top: 21px;
+      }
+
+      &--bidding {
+        padding-top: 29px;
+      }
+    }
+
+    &--bidding {
+      padding-right: 56px;
+    }
+
+    &__bidding-link-wrapper {
+      width: 56px;
+      max-height: 70px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 56px;
+        width: 1px;
+        height: 70px;
+        background-color: #edf7f9;
+      }
+    }
+  }
+
+  .btn {
+
+    &--quick-sell {
+      display: none;
+    }
+
+    &--edit {
+      display: none;
+    }
+
+    &--send-message {
+
+      &:hover {
+        background-color: #2b7997;
+      }
+    }
+  }
+
+  &__content-footer {
+    margin-bottom: 13px;
+    color: @blue;
+  }
+
+  &__content-footer-links {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #d1f1ff;
+    }
+  }
+
+  &__content-footer-link {
+    font-size: 12px;
+    line-height: 16px;
+    color: @darkgray;
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //по модификатору edit к .item-page меняются некоторые стили и открываются опции управления вещью
+  &--edit {
+
+    .btn {
+
+      &--quick-sell {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      &--edit {
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        top: -82px;
+        right: 0;
+      }
+
+      &--add-to-cart {
+        display: none;
+      }
+    }
+
+    .item-price-btn {
+      box-sizing: border-box;
+
+      &__link {
+        display: none;
+
+        &--discount {
+          display: block;
+        }
+      }
+    }
+
+    .gallery-item {
+
+      &__comment-like {
+
+        //в карточке вещи появляется количество комментариев и лайков и пропадает текст
+        &--item-card {
+
+          .gallery-item {
+
+            &__comment-description {
+              display: none;
+            }
+
+            &__comment-count {
+              display: block;
+              left: 19px;
+
+              &--like {
+                left: 2px;
+              }
+            }
+
+            &__icon {
+
+              &--like {
+
+                &:after {
+                  left: 42%;
+                }
+              }
+
+              &--comment {
+
+                &:after {
+                  left: 51%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .like-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 318px;
+
+      .btn {
+
+        &--like {
+          display: none;
+        }
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .banner-wrapper {
   width: 293px;
@@ -139,6 +410,24 @@
 .content-block {
 
   &--item-card {
+    position: relative;
     padding-bottom: 0;
+    overflow: visible;
+
+    &:after {
+      content: url("../img/speech-bubble-white-no-border.png");
+      position: absolute;
+      bottom: -25px;
+      left: 30px;
+    }
   }
+}
+
+.buttons-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 0;
 }
