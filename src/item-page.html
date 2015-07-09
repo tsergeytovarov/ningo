@@ -1256,6 +1256,50 @@
     </div>
   </div>
 
+  <!-- синий полупрозрачный блок под модальным окном, открывается по модификатору active -->
+  <div class="color-overlay"></div>
+
+  <!-- модальное окно "предложить цену", открывается по модификатору active, видно на странице вещи без опций управления -->
+  <div class="content-block  content-block--modal-content  content-block--modal-content-item-page  content-block--make-a-bid">
+
+    <a href="#" class="content-block__close-btn">Закрыть</a>
+
+    <div class="content-block__title  content-block__title--item-page  content-block__title--item-page-modal">Предложить свою цену</div>
+
+    <div class="content-block__form-wrapper">
+      <form action="#" method="post">
+
+        <label for="new-price" class="content-block__text-label content-block__text-label--item-page-modal">1800</label>
+        <div class="content-block__input-wrapper  content-block__input-wrapper--item-page-modal">
+          <input type="text" id="new-price" placeholder="0">
+        </div>
+        <textarea name="price-comments" id="price-comments" rows="3" class="content-block__textarea-modal" placeholder="Комментарий"></textarea>
+        <button type="submit" class="btn btn--orange btn--item-page-modal">Отправить предложение</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- модальное окно "сделать скидку", открывается по модификатору active, видно на странице вещи с включенными опциями управления -->
+  <div class="content-block  content-block--modal-content  content-block--modal-content-item-page    content-block--modal-content-item-page--edit  content-block--discount">
+
+    <a href="#" class="content-block__close-btn">Закрыть</a>
+
+    <div class="content-block__title  content-block__title--item-page  content-block__title--item-page-modal">Сделать скидку</div>
+
+    <div class="content-block__form-wrapper">
+      <form action="#" method="post">
+
+        <label for="new-price-accepted" class="content-block__text-label content-block__text-label--item-page-modal">1800</label>
+        <div class="content-block__input-wrapper  content-block__input-wrapper--item-page-modal">
+          <input type="text" id="new-price-accepted" placeholder="0">
+        </div>
+        <button type="submit" class="btn btn--orange btn--item-page-modal">Готово</button>
+      </form>
+    </div>
+
+  </div>
+
 
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>

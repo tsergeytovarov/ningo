@@ -181,6 +181,16 @@
         width: 120%;
       }
     }
+
+    &--item-page-modal {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 18px;
+
+      &:after {
+        bottom: -11px;
+      }
+    }
   }
 
   //подзаголовок в блоке "о проекте"
@@ -471,6 +481,11 @@
     }
   }
 
+  &__textarea-modal {
+    margin-bottom: 19px;
+    max-height: 67px;
+  }
+
   //фиксированная высота пустого блока
   &--why-ningo {
     margin-bottom: 17px;
@@ -661,6 +676,17 @@
       margin-right: 4%;
       margin-bottom: 16px;
     }
+
+    &--item-page-modal {
+      margin-right: 0;
+      margin-left: 10px;
+      margin-bottom: 12px;
+      width: 157px;
+
+      input[type="text"] {
+        font-size: 18px;
+      }
+    }
   }
 
   &__text {
@@ -695,6 +721,11 @@
     top: 60px;
     width: 260px;
     margin-right: -152px;
+  }
+
+  &--modal-content-item-page {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   &--active {
@@ -1485,6 +1516,31 @@
       float: left;
       padding-top: 13px;
       width: 60%;
+    }
+
+    &--item-page-modal {
+      position: relative;
+      padding-top: 13px;
+      padding-left: 5px;
+      padding-right: 50px;
+      text-decoration: line-through;
+      font-size: 18px;
+      line-height: 22px;
+      color: #999;
+
+      &:before {
+        content: url("../img/ico/ico-06.svg");
+        position: absolute;
+        top: 13px;
+        right: 35px;
+      }
+
+      &:after {
+        content: url("../img/ico/ico-55.svg");
+        position: absolute;
+        top: 13px;
+        right: 0;
+      }
     }
   }
 
