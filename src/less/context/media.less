@@ -26,6 +26,17 @@
       padding-right: 0;
       width: 100%;
     }
+
+    .content-block {
+
+      &__image {
+        width: 70%;
+
+        &--bigger {
+          width: 50%;
+        }
+      }
+    }
   }
 
   //скрытая навигация
@@ -1428,7 +1439,12 @@
     .content-block {
 
       &__image {
+        width: 100%;
         padding-left: 0;
+
+        &--bigger {
+          width: 80%;
+        }
       }
 
       &__image-wrapper {
@@ -2310,6 +2326,21 @@
   }
 
   /////////////// стили страницы вещи
+
+  .item-page {
+    min-width: 480px;
+    width: 100%;
+
+    .container {
+      padding-top: 25px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--small {
+        width: 95.833%;
+      }
+    }
+  }
 }
 
 
@@ -2366,7 +2397,12 @@
     .content-block {
 
       &__image {
+        width: 120%;
         padding-left: 0;
+
+        &--bigger {
+          width: 100%;
+        }
       }
 
       &__image-wrapper {
@@ -2376,6 +2412,14 @@
         &--sell {
           padding-left: 0;
         }
+      }
+
+      &--how-to-buy {
+        padding-bottom: 0;
+      }
+
+      &--how-to-sell {
+        padding-bottom: 0;
       }
     }
   }
