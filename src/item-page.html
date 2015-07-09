@@ -324,6 +324,7 @@
 
         <div class="gallery">
 
+          <!-- блок комментариев без модификатора edit виден на странице вещи не в режиме управления -->
           <section class="message-item  message-item--comment-box">
 
             <div class="message-item__title  message-item__title--item-page">Комментарии (<span class="message-item__comments-counter">6</span>)</div>
@@ -517,6 +518,264 @@
             </div>
           </section>
 
+          <!-- блок комментариев с модификатором edit виден на странице вещи в режиме управления -->
+          <section class="message-item  message-item--edit  message-item--comments">
+
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">37 есть? Наложкой отправите?</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">можем.)</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text">Город Тамбов Улица Августа Бебеля дом 18 кВ 82 индекс 392000 Ефремова Анастасия Геннадьевна 37 размер отправте пожалуйста очень хочу их</div>
+
+                </div>
+
+              </section>
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-2.jpg" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Мария Иванова </span><span class="message-item__comment-author-location">/ Москва </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Анастасия, в понедельник 9.03 отправим. и пришлю номер проверочного кода.)</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Ответить</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-4">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-4" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- блок комментариев с модификатором edit виден на странице вещи в режиме управления -->
+          <section class="message-item  message-item--bidding  message-item--edit">
+
+
+            <!-- блок обсуждаемого предмета - картинка, название, хэштег. есть не в каждом message-item. на нем также висит полоска-разделитель внизу -->
+            <div class="message-item__title-wrapper">
+
+
+              <div class="message-item__text-wrapper">
+
+                <p class="message-item__subject">
+                  <!-- на спане висит иконка валюты -->
+                  <span class="message-item__text  message-item__text--striked">1800</span>
+                  <span class="message-item__arrow-icon"></span>
+                  <!-- на спане висит иконка валюты -->
+                  <span class="message-item__text  message-item__text--bold">1500</span>
+                </p>
+
+              </div>
+            </div>
+
+
+            <!-- обертка для последовательности комментариев -->
+            <div class="message-item__comments">
+
+              <!-- отдельный комментарий -->
+              <section class="message-item__comment">
+
+                <!-- на внешней обертке висит белая плашка под аватаром -->
+                <div class="message-item__comment-image-wrapper">
+                  <!-- внутренняя обертка - круглая рамка для аватара -->
+                  <div class="message-item__avatar-wrapper">
+                    <img src="img/user-avatar-3.png" alt="" class="message-item__avatar">
+                  </div>
+                </div>
+
+                <div class="message-item__comment-wrapper">
+
+                  <div class="message-item__comment-author">
+
+                    <span class="message-item__comment-author-name">Rina Opryshko </span><span class="message-item__comment-author-location">/ Тамбов </span>/ <span class="message-item__comment-time">27.03.2015 15:29 </span>
+
+                  </div>
+
+                  <div class="message-item__comment-text  message-item__comment-text--last">Если уступите, сразу забираю</div>
+
+                </div>
+
+              </section>
+            </div>
+
+
+            <!-- иконка корзины добавляется псевдоэлементом -->
+            <a href="#" class="notification-item__link-trash"></a>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Ответить</span>
+                <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-3">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-3" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section class="message-item  message-item--edit    message-item--write-comment  message-item--comment-box">
+
+            <div class="message-item__title  message-item__title--item-page">Оставить комментарий</div>
+
+            <!-- форма для комментария открывается по модификатору active -->
+            <div class="comment  comment--active">
+
+              <div class="comment__toggle-wrapper">
+                <span class="comment__toggle  comment__toggle--closed">Ответить</span> <span class="comment__toggle  comment__toggle--opened">Скрыть</span>
+              </div>
+
+              <!-- форма с комментарием -->
+              <div class="comment__form-wrapper">
+
+                <form class="comment__form  row" action="#" method="post">
+
+                  <div class="comment__avatar-wrapper">
+                    <label for="comment-field-1">
+                      <img src="img/user-avatar.png" class="comment__avatar" alt="">
+                    </label>
+                  </div>
+
+                  <textarea id="comment-field-1" name="comment-field" class="comment__textarea" placeholder="Напишите комментарий"></textarea>
+
+                  <button type="submit" class="btn  btn--send-message">Написать</button>
+
+                </form>
+              </div>
+
+            </div>
+          </section>
+
         </div>
 
         <!-- техническая обертка блока с навигацией -->
@@ -529,7 +788,7 @@
           <!-- навигация стилизуется по классам фильтра со страницы мои вещи, т.к. выглядит идентично -->
           <div class="filter  filter--item-page">
             <label for="similar" class="filter__item  filter__item--first  filter__link">Похожие вещи</label>
-            <label for="user-items" class="filter__item  filter__link">Вещи пользователя</label>
+            <label for="user-items" class="filter__item  filter__item--second  filter__link">Вещи пользователя</label>
           </div>
 
           <!-- техническая обертка для переключения пунктов навигации -->

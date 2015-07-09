@@ -188,6 +188,30 @@
     }
   }
 
+  .comment {
+
+    &--active {
+
+      .comment {
+
+        &__form-wrapper {
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .message-item {
+
+    &--edit {
+      display: none;
+    }
+
+    &--comment-box {
+      padding-bottom: 0;
+    }
+  }
+
   .rating-box {
 
     &--blue {
@@ -295,7 +319,7 @@
 
 
 
-  //по модификатору edit к .item-page меняются некоторые стили и открываются опции управления вещью
+  //по модификатору edit к body.item-page меняются некоторые стили и открываются опции управления вещью
   &--edit {
 
     .btn {
@@ -385,6 +409,59 @@
         }
       }
     }
+
+    .message-item {
+      display: none;
+
+      &--edit {
+        display: block;
+      }
+
+      &--bidding {
+        padding-top: 20px;
+      }
+
+      &--write-comment {
+        padding-bottom: 0;
+
+        .message-item__title {
+          margin-bottom: 11px;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .notification-item {
+
+      &__link-trash {
+        top: 13px;
+        right: 12px;
+      }
+    }
+
+    .filter {
+
+      &__item {
+
+        &--second {
+          display: none;
+        }
+      }
+    }
+
+    .item-page {
+
+      &__content-footer {
+        display: none;
+      }
+
+      &__content-footer-links {
+        display: none;
+      }
+    }
   }
 }
 
@@ -398,7 +475,7 @@
 
 
 
-
+//стили блоков, применяемые не только в контексте страницы вещи
 
 .banner-wrapper {
   width: 293px;
