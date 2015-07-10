@@ -48,10 +48,18 @@
 
   .item-description-table {
 
-    &__text {
-      width: 39%;
+    &__text-wrapper {
+      min-width: 200px;
       font-size: 14px;
       line-height: 22px;
+
+      &--gray {
+        min-width: 80px;
+      }
+    }
+
+    &__text {
+      width: 39%;
 
       &--gray {
         width: 14%;
@@ -60,6 +68,14 @@
   }
 
   .content-block {
+
+    &--join-us {
+      display: none;
+    }
+
+    &--some-information-mobile {
+      display: none;
+    }
 
     &__item-description-wrapper {
       width: 100%;

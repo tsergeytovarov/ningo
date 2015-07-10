@@ -1291,7 +1291,16 @@
     .item-price-btn {
 
       &--bidding {
+        padding-right: 75px;
         width: 100%;
+      }
+
+      &__bidding-link-wrapper {
+        width: 75px;
+
+        &:before {
+          right: 75px;
+        }
       }
     }
 
@@ -2383,8 +2392,9 @@
     }
 
     .buttons-wrapper {
+      position: absolute;
       top: 589px;
-      height: 100%;
+      z-index: 1;
     }
 
     .btn {
@@ -2392,6 +2402,10 @@
       &--edit {
         display: none;
         width: 100%;
+
+        &:before {
+          left: 35%;
+        }
       }
 
       &--add-to-cart {
@@ -2403,17 +2417,22 @@
         }
       }
 
+      &--add-to-cart-mobile {
+        z-index: 100;
+      }
+
       &--quick-sell {
         display: none;
+        width: 100%;
+
+        &:before {
+          left: 35%;
+        }
       }
 
       &--add-to-cart-mobile {
         display: inline-block;
         vertical-align: top;
-      }
-
-      &--quick-sell {
-        width: 100%;
       }
     }
 
@@ -2422,7 +2441,47 @@
     }
 
     .like-item {
+      position: relative;
       margin-bottom: 36px;
+      z-index: 100;
+    }
+
+    .gallery {
+      margin-bottom: 80px;
+
+      &--item-page {
+        margin-bottom: 20px;
+        margin-right: -3%;
+      }
+    }
+
+    .gallery-item {
+      margin-right: 3%;
+      width: 46.8%;
+    }
+
+    .content-block {
+
+      &--why-ningo {
+        display: none;
+      }
+
+      &--some-information {
+        display: none;
+      }
+
+      &--some-information-mobile {
+        display: block;
+      }
+
+      &--join-us {
+        display: block;
+        overflow: visible;
+      }
+
+      &--item-card {
+        overflow: visible;
+      }
     }
 
     &--edit {
@@ -2442,11 +2501,25 @@
           display: inline-block;
           vertical-align: top;
           margin-bottom: 13px;
+          z-index: 100;
         }
 
         &--quick-sell-mobile {
           display: inline-block;
           vertical-align: top;
+          z-index: 100;
+        }
+      }
+
+      .like-item {
+        position: relative;
+        z-index: 100;
+      }
+
+      .row {
+
+        &--first {
+          margin-bottom: 102px;
         }
       }
     }
@@ -3100,7 +3173,7 @@
 
       &--gray {
 
-        width: 84px;
+        min-width: 84px;
       }
     }
   }
@@ -3413,6 +3486,21 @@
   }
 
   /////////////// стили страницы вещи
+
+  .item-page {
+    min-width: 320px;
+    width: 100%;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 25px;
+
+      &--small {
+        width: 95.313%;
+      }
+    }
+  }
 }
 
 

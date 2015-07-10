@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <!--
+    <!--
    ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
   / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
   \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
   (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
-  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Ningo - страница уведомлений</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
-  <link rel="stylesheet" href="css/style.min.css">
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ningo - страница уведомлений</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="notifications-page">
 
-<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+<body class="notifications-page">
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
     <div class="main-header__right">
       <div class="tooltip-container">
@@ -49,17 +50,14 @@
       </div>
       <a href="#" class="btn btn--all-blue">Продать</a>
     </div>
-
     <!-- левая часть нормальная -->
     <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
-
       <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
       <a href="#" class="mobile-menu-toggle"></a>
-
       <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
       <nav class="mobile-menu  mobile-menu--unlogged">
         <ul class="mobile-menu__list">
@@ -82,9 +80,9 @@
                 <button class="btn btn--orange">Войти</button>
               </form>
               <div class="login-by-email__wrapper">
-                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
-                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
-               </div>
+                <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+              </div>
             </div>
           </li>
           <li class="mobile-menu__item">
@@ -95,17 +93,13 @@
           </li>
         </ul>
       </nav>
-
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
-
       <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
-
     </div>
-
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
@@ -123,28 +117,13 @@
       </form>
     </div>
   </header>
-
   <div class="container container--small">
-
-
-
     <div class="row">
-
-
       <div class="col s-8">
-
-
         <h1 class="page-title  page-title--notifications">Уведомления</h1>
-
-
-
-
         <div class="gallery  gallery--notifications">
-
-
           <!-- карточка уведомления -->
           <div class="notification-item row">
-
             <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
             <span class="notification-item__icon  notification-item__icon--arrow-up"></span>
             <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
@@ -154,21 +133,15 @@
                 <img src="img/item-icon.jpg" alt="" class="notification-item__image">
               </div>
             </div>
-
             <div class="notification-item__text-wrapper">
-
               <p class="notification-item__text">Ваш друг <a href="#" class="notification-item__link">ilovehapaclothing</a> загрузил новую вещь <a href="#" class="notification-item__link">Туфли Christian Louboutin</a></p>
-
               <p class="notification-item__time">3 часа назад</p>
             </div>
-
             <!-- иконка корзины добавляется псевдоэлементом -->
             <a href="#" class="notification-item__link-trash"></a>
           </div>
-
           <!-- карточка уведомления -->
           <div class="notification-item row">
-
             <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
             <span class="notification-item__icon  notification-item__icon--plus"></span>
             <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
@@ -178,21 +151,15 @@
                 <img src="img/user-avatar-3.png" alt="" class="notification-item__image">
               </div>
             </div>
-
             <div class="notification-item__text-wrapper">
-
               <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a> подписалась на вас</p>
-
               <p class="notification-item__time">4 часа назад</p>
             </div>
-
             <!-- иконка корзины добавляется псевдоэлементом -->
             <a href="#" class="notification-item__link-trash"></a>
           </div>
-
           <!-- карточка уведомления -->
           <div class="notification-item row">
-
             <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
             <span class="notification-item__icon  notification-item__icon--plus"></span>
             <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
@@ -202,49 +169,35 @@
                 <img src="img/user-avatar-3.png" alt="" class="notification-item__image">
               </div>
             </div>
-
             <div class="notification-item__text-wrapper">
-
-              <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a>,  <a href="#" class="notification-item__link">ciaobellaaxoxo</a>, <a href="#" class="notification-item__link">Галина Петрова</a>,  <a href="#" class="notification-item__link">Катерина</a> подписались на вас</p>
-
+              <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a>, <a href="#" class="notification-item__link">ciaobellaaxoxo</a>, <a href="#" class="notification-item__link">Галина Петрова</a>, <a href="#" class="notification-item__link">Катерина</a> подписались на вас</p>
               <p class="notification-item__time">2 дня назад</p>
             </div>
-
             <!-- иконка корзины добавляется псевдоэлементом -->
             <a href="#" class="notification-item__link-trash"></a>
           </div>
-
         </div>
       </div>
-
-
-
-
       <div class="col s-4">
-
         <!-- просто блок с текстом -->
         <div class="content-block  content-block--why-ningo">
           <p class="content-block__text">Почему лучше покупать через Ningo?</p>
         </div>
-
         <!-- блок не виден в десктопной версии -->
         <div class="content-block  content-block--join-us">
           <p class="content-block__text content-block__text--join-us">Присоединяйся к нам, и будешь видеть только нужные тебе вещи. Ещё сможешь общаться в сообществе и т д</p>
           <a href="№" class="btn  btn--join-us  btn--orange">Присоединиться</a>
         </div>
-
         <!-- пустой блок для какой-то информации -->
         <div class="content-block  content-block--some-information">
           <span class="content-block__text  content-block__text--display">Информация</span>
         </div>
-
       </div>
     </div>
   </div>
-
-
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

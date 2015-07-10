@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <!--
+    <!--
    ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
   / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
   \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
   (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
-  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Ningo - промо-страница"</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
-  <link rel="stylesheet" href="css/style.min.css">
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ningo - промо-страница"</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+<link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="promo-page">
-
-
-
-<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
     <div class="main-header__right">
       <div class="tooltip-container">
@@ -50,19 +49,15 @@
         </div>
       </div>
       <a href="#" class="btn btn--all-blue">Продать</a>
-
     </div>
-
     <!-- левая часть нормальная -->
     <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
-
       <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
       <a href="#" class="mobile-menu-toggle"></a>
-
       <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
       <nav class="mobile-menu  mobile-menu--unlogged">
         <ul class="mobile-menu__list">
@@ -85,9 +80,9 @@
                 <button class="btn btn--orange">Войти</button>
               </form>
               <div class="login-by-email__wrapper">
-                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
-                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
-               </div>
+                <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+              </div>
             </div>
           </li>
           <li class="mobile-menu__item">
@@ -98,17 +93,13 @@
           </li>
         </ul>
       </nav>
-
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
-
       <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
-
     </div>
-
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
@@ -126,40 +117,29 @@
       </form>
     </div>
   </header>
-
   <!-- контейнер задает странице высоту и обрезает страницу по обеим осям - ширина 100% и фиксированная высота -->
   <div class="promo-page__outer-container">
-
     <div class="container container--small">
-
       <div class="promo-page__background-layer">
         <img src="img/bg-items-grid-blur.jpg" alt="">
       </div>
       <!-- синий полупрозрачный блок под контентом -->
       <div class="color-overlay  color-overlay--active"></div>
-
       <div class="page-title  page-title--promo-page">Отлично! Ваша вещь уже в продаже!</div>
-
       <!--  контейнер с промо-контентом -->
       <div class="promo-content">
-
         <!-- карточка товара -->
         <div class="gallery-item  gallery-item--stroke">
-
           <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
           <div class="gallery-item__stroke"></div>
-
           <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
           <a href="#" class="gallery-item__flag"></a>
-
           <img src="img/favourites-gallery-item.jpg" width="194" height="255" alt="" class="gallery-item__image">
-
           <div class="gallery-item__capture">
             <div class="gallery-item__brand"></div>
             <div class="gallery-item__price">1200 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
             <div class="gallery-item__sizes">M, S</div>
           </div>
-
           <div class="gallery-item__comment-like  row">
             <div class="gallery-item__comment">
               <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
@@ -169,37 +149,25 @@
             </div>
           </div>
         </div>
-
         <img src="img/promo-mouse.png" alt="" class="promo-content__image">
-
         <div class="promo-content__card">
-
           <div class="promo-content__title  promo-content__title--desktop">Я могу помочь тебе продать эту вещь быстрее:</div>
-
           <div class="promo-content__title  promo-content__title--tablet">Можем помочь продать быстрее:</div>
-
           <ul class="promo-content__features-list">
             <li class="promo-content__feature-item  promo-content__feature-item--bright">Добавим яркую рамку вокруг твоей вещи и ёе будет трудно не заметить среди остальных</li>
             <li class="promo-content__feature-item  promo-content__feature-item--show">Более 500000 показов в неделю на главной странице сайта и каталога</li>
-            <li class="promo-content__feature-item  promo-content__feature-item--mail-list">Специальная почтовая рассылка по 300 000 покупателям с твоей вещью в главной роли, в качестве   вещи дня</li>
+            <li class="promo-content__feature-item  promo-content__feature-item--mail-list">Специальная почтовая рассылка по 300 000 покупателям с твоей вещью в главной роли, в качестве вещи дня</li>
           </ul>
-
           <a href="#" class="btn btn--orange btn--promotion">Купить продвижение (150р.)</a>
           <a href="#" class="promo-content__link">Узнать подробнее</a>
-
         </div>
-
         <a href="#" class="promo-content__link  promo-content__link--white">Пропустить</a>
-
       </div>
-
     </div>
-
   </div>
-
-
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <!--
+    <!--
    ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
   / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
   \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
   (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
-  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Ningo - страница кошелька</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
-  <link rel="stylesheet" href="css/style.min.css">
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ningo - страница кошелька</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+<link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="wallet-page">
 
-<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+<body class="wallet-page">
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
     <div class="main-header__right">
       <div class="tooltip-container">
@@ -49,17 +50,14 @@
       </div>
       <a href="#" class="btn btn--all-blue">Продать</a>
     </div>
-
     <!-- левая часть нормальная -->
     <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
-
       <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
       <a href="#" class="mobile-menu-toggle"></a>
-
       <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
       <nav class="mobile-menu  mobile-menu--unlogged">
         <ul class="mobile-menu__list">
@@ -82,9 +80,9 @@
                 <button class="btn btn--orange">Войти</button>
               </form>
               <div class="login-by-email__wrapper">
-                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
-                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
-               </div>
+                <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+              </div>
             </div>
           </li>
           <li class="mobile-menu__item">
@@ -95,17 +93,13 @@
           </li>
         </ul>
       </nav>
-
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
-
       <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
-
     </div>
-
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
@@ -123,72 +117,39 @@
       </form>
     </div>
   </header>
-
   <div class="container container--small">
-
-
     <div class="row">
-
-
       <div class="col s-8">
-
-
         <div class="title-block row">
-
           <h1 class="page-title  page-title--wallet">Кошелёк</h1>
-
           <a href="#" class="payment-history-toggle">История операций</a>
-
         </div>
-
-
-
         <div class="gallery  gallery--wallet">
-
-
           <!-- контентный блок -->
           <section class="content-block  content-block--wallet">
-
             <h2 class="content-block__title  content-block__title--wallet">Баланс</h2>
-
             <div class="content-block__section">
-
               <div class="content-block__section-title">Доступно</div>
               <div class="content-block__section-content">4800<span class="content-block__rouble-icon  content-block__rouble-icon--black"> рублей</span></div>
-
             </div>
-
             <div class="content-block__section">
-
               <div class="content-block__section-title  content-block__section-title--unfinished">В незаконченных сделках</div>
               <div class="content-block__section-content  content-block__section-content--unfinished">1800<span class="content-block__rouble-icon  content-block__rouble-icon--gray"> рублей</span></div>
-
             </div>
-
             <div class="content-block__section  content-block__section--last">
-
               <img class="content-block__payment-icons-image" src="img/payment-type-icons.png" alt="">
-
               <button type="button" class="btn  btn--orange  btn--wallet btn--refill  btn--wallet-inline">Пополнить</button>
-
             </div>
-
           </section>
-
           <!-- контентный блок виден, если пользователь привязал карту к аккаунту -->
           <section class="content-block  content-block--wallet">
-
             <h2 class="content-block__title  content-block__title--wallet">Вывод средств</h2>
-
             <div class="content-block__withdraw-money  content-block__withdraw-money--logged-in">
-
               <div class="content-block__card-information">
                 <div class="content-block__card-number">На карту 4569 9844 2345 9876</div>
                 <a href="#" class="content-block__link">Изменить</a>
               </div>
-
               <form action="#" method="post" class="content-block__withdraw-money-form  row">
-
                 <!-- на обертке висит иконка внутри инпута -->
                 <div class="content-block__input-wrapper">
                   <input type="text" id="withdraw" name="withdraw" class="content-block__text-input" placeholder="0">
@@ -196,162 +157,98 @@
                 <button type="submit" class="btn  btn--wallet  btn--wallet--inline  btn--send-message">Вывести</button>
               </form>
             </div>
-
           </section>
-
           <!-- контентный блок виден, если пользователь не привязал карту к аккаунту -->
           <section class="content-block  content-block--wallet">
-
             <h2 class="content-block__title  content-block__title--wallet">Вывод средств</h2>
-
             <div class="content-block__withdraw-money  content-block__withdraw-money--not-logged-in  row">
-
               <div class="content-block__text  content-block__text--wallet-not-logged-in">Чтобы выводить средства на банковскую карту, её необходимо привязать к вашему аккаунту. Это займёт не более 3-х минут.</div>
               <a href="#" class="btn  btn--wallet  btn--send-message">Привязать карту</a>
             </div>
-
           </section>
-
         </div>
       </div>
-
-
-
-
       <div class="col s-4">
-
         <!-- просто блок с текстом -->
         <div class="content-block  content-block--why-ningo">
           <p class="content-block__text">Почему лучше покупать через Ningo?</p>
         </div>
-
         <!-- просто блок с текстом -->
         <div class="content-block  content-block--why-ningo  content-block--why-ningo-second">
           <p class="content-block__text">Почему лучше покупать через Ningo?</p>
         </div>
-
         <!-- блок не виден в десктопной версии -->
         <div class="content-block  content-block--join-us">
           <p class="content-block__text content-block__text--join-us">Присоединяйся к нам, и будешь видеть только нужные тебе вещи. Ещё сможешь общаться в сообществе и т д</p>
           <a href="№" class="btn  btn--join-us  btn--orange">Присоединиться</a>
         </div>
-
         <!-- пустой блок для какой-то информации -->
         <div class="content-block  content-block--some-information">
           <span class="content-block__text  content-block__text--display">Информация</span>
         </div>
-
       </div>
     </div>
   </div>
-
-
-
   <!-- синий полупрозрачный блок под модальным окном, открывается по модификатору active -->
   <div class="color-overlay"></div>
-
-
   <!-- модальное окно "история платежей", открывается по модификатору active -->
   <div class="content-block  content-block--wallet  content-block--modal-content  content-block--payment-history">
-
     <a href="#" class="content-block__close-btn">Закрыть</a>
-
     <h2 class="content-block__title  content-block__title--wallet  content-block__title--wallet-modal">История платежей</h2>
-
     <div class="content-block__transaction-block">
-
       <div class="content-block__transaction-description">
-
         <div class="content-block__caption">Туфли</div>
-
         <div class="content-block__hashtag">#Gabana</div>
-
       </div>
-
       <div class="content-block__transaction-cost">
-
         <div class="content-block__amount  content-block__amount--spend">-500</div>
-
         <div class="content-block__transaction-date">27.03.2015 15:29</div>
       </div>
     </div>
-
     <div class="content-block__transaction-block">
-
       <div class="content-block__transaction-description">
-
         <div class="content-block__caption">Штаны</div>
-
         <div class="content-block__hashtag">#Dior</div>
-
       </div>
-
       <div class="content-block__transaction-cost">
-
         <div class="content-block__amount  content-block__amount--spend">-200</div>
-
         <div class="content-block__transaction-date">27.03.2015 15:29</div>
       </div>
     </div>
-
     <div class="content-block__transaction-block">
-
       <div class="content-block__transaction-description">
-
         <div class="content-block__caption">Рубаха</div>
-
         <div class="content-block__hashtag">#Boss</div>
-
       </div>
-
       <div class="content-block__transaction-cost">
-
         <div class="content-block__amount  content-block__amount--spend">-800</div>
-
         <div class="content-block__transaction-date">27.03.2015 15:29</div>
       </div>
     </div>
-
     <div class="content-block__transaction-block">
-
       <div class="content-block__transaction-description">
-
         <div class="content-block__caption">Поступление</div>
-
         <div class="content-block__hashtag">Киви кошелёк</div>
-
       </div>
-
       <div class="content-block__transaction-cost">
-
         <div class="content-block__amount  content-block__amount--gain">+3400</div>
-
         <div class="content-block__transaction-date">27.03.2015 15:29</div>
       </div>
     </div>
-
     <div class="content-block__transaction-block">
-
       <div class="content-block__transaction-description">
-
         <div class="content-block__caption">Дырявые колготки</div>
-
         <div class="content-block__hashtag">#Sisi</div>
-
       </div>
-
       <div class="content-block__transaction-cost">
-
         <div class="content-block__amount  content-block__amount--spend">-4500</div>
-
         <div class="content-block__transaction-date">27.03.2015 15:29</div>
       </div>
     </div>
   </div>
-
-
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

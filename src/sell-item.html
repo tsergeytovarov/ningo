@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <!--
+    <!--
    ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
   / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
   \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
   (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
-  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Ningo - страница подачи объявления</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
-  <link rel="stylesheet" href="css/style.min.css">
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ningo - страница подачи объявления</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+<link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="sell-item-page">
-
-
-
-<!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
     <div class="main-header__right">
       <div class="tooltip-container">
@@ -51,17 +50,14 @@
       </div>
       <a href="#" class="btn btn--all-blue">Продать</a>
     </div>
-
     <!-- левая часть нормальная -->
     <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
-
       <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
       <a href="#" class="mobile-menu-toggle"></a>
-
       <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
       <nav class="mobile-menu  mobile-menu--unlogged">
         <ul class="mobile-menu__list">
@@ -84,9 +80,9 @@
                 <button class="btn btn--orange">Войти</button>
               </form>
               <div class="login-by-email__wrapper">
-                 <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
-                 <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
-               </div>
+                <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+              </div>
             </div>
           </li>
           <li class="mobile-menu__item">
@@ -97,17 +93,13 @@
           </li>
         </ul>
       </nav>
-
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
-
       <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
-
     </div>
-
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">
@@ -125,23 +117,13 @@
       </form>
     </div>
   </header>
-
-
   <div class="container container--small">
-
     <div class="page-title page-title--sell-item">4 простых шага до продажи вашей вещи:</div>
-
     <form action="#" method="post" class="content-block__form">
-
       <div class="row">
-
-
         <div class="col s-6 s-6--margin-right">
-
           <section class="content-block  content-block--first  content-block--sell-item">
-
             <h2 class="content-block__title  content-block__title--sell-item">1. Загрузи фотографии</h2>
-
             <div class="content-block__example-photo-container  row">
               <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-left">
                 <img src="img/example-photo-1.jpg" alt="" class="content-block__image">
@@ -150,7 +132,6 @@
                 <!-- синий флажок внизу картинки с псевдоэлементом-стрелкой -->
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
-
               <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-right">
                 <img src="img/example-photo-2.jpg" alt="" class="content-block__image">
                 <!-- абсолютно позиционированный блок с псевдоэлементом-картинкой и текстом -->
@@ -158,14 +139,12 @@
                 <!-- синий флажок внизу картинки с псевдоэлементом-стрелкой -->
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
-
               <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-left  content-block__example-photo-wrapper--last-row">
                 <img src="img/example-photo-3.jpg" alt="" class="content-block__image">
                 <div class="content-block__image-capture  content-block__image-capture--total">Покажи вещь отдельно</div>
                 <!-- синий флажок внизу картинки с псевдоэлементом-стрелкой -->
                 <a href="#" class="content-block__flag">Загрузить</a>
               </div>
-
               <div class="content-block__example-photo-wrapper  content-block__example-photo-wrapper--to-right  content-block__example-photo-wrapper--last-row">
                 <img src="img/example-photo-4.jpg" alt="" class="content-block__image">
                 <!-- абсолютно позиционированный блок с псевдоэлементом-картинкой и текстом -->
@@ -176,22 +155,13 @@
             </div>
           </section>
         </div>
-
-
         <div class="col s-6">
-
           <section class="content-block  content-block--second  content-block--sell-item">
-
             <h2 class="content-block__title  content-block__title--sell-item">2. Опиши вещь</h2>
-
             <div class="content-block__form-wrapper">
-
               <label for="item-name" class="content-block__label">Название</label>
-
               <input type="text" id="item-name" name="item-name" class="content-block__text-input" placeholder="Например: Красное платье">
-
               <label for="item-type" class="content-block__label">Название</label>
-
               <div class="content-block__select-wrapper">
                 <select name="item-type" id="item-type" class="content-block__select">
                   <option value="1">Выбрать категорию</option>
@@ -201,30 +171,20 @@
                   <option value="5"></option>
                 </select>
               </div>
-
               <label for="item-brand" class="content-block__label">Бренд</label>
-
               <input type="text" id="item-brand" name="item-brand" class="content-block__text-input" placeholder="Без названия">
-
               <label for="item-brand" class="content-block__label">Описание</label>
-
               <textarea id="item-description" name="item-description" class="content-block__sell-item-textarea" placeholder="Несколько слов об этой вещи. Какие у неё есть достоинства?" rows="4"></textarea>
-
               <!-- на этом абзаце висит псевдоэлемент-мышонок, фон - картинка -->
               <p class="content-block__description-tip">Опиши свою вещь сказочно. Почему продаешь? Чем вещь хороша? Похвали как следует – вдохнови покупателей! Описание должно быть длиннее 3, но не более 500 символов</p>
-
             </div>
           </section>
         </div>
       </div>
-
       <div class="row">
-
-
         <div class="col s-6 s-6--margin-right  s-6--full-width">
           <section class="content-block  content-block--sell-item  content-block--sell-item-third">
             <h2 class="content-block__title  content-block__title--sell-item  content-block__title--sell-item-third">3. Характеристики</h2>
-
             <div class="content-block__form-section-wrapper  content-block__form-section-wrapper--odd">
               <label for="item-size" class="content-block__label">Размер</label>
               <div class="content-block__select-wrapper">
@@ -236,7 +196,6 @@
               </div>
               <a href="#" class="content-block__link  content-block__link--sell-item">+ Добавить размер</a>
             </div>
-
             <div class="content-block__form-section-wrapper">
               <label for="item-color" class="content-block__label">Цвет</label>
               <div class="content-block__select-wrapper">
@@ -248,12 +207,10 @@
               </div>
               <a href="#" class="content-block__link  content-block__link--sell-item">+ Добавить цвет</a>
             </div>
-
             <div class="content-block__form-section-wrapper  content-block__form-section-wrapper--odd">
               <label for="item-material" class="content-block__label">Материал</label>
               <input type="text" id="item-material" name="item-material" class="content-block__input" placeholder="Как на бирке">
             </div>
-
             <div class="content-block__form-section-wrapper">
               <label for="item-condition" class="content-block__label">Состояние</label>
               <div class="content-block__select-wrapper">
@@ -265,25 +222,19 @@
                 </select>
               </div>
             </div>
-
           </section>
         </div>
-
-
         <div class="col s-6  s-6--full-width">
           <section class="content-block  content-block--sell-item  content-block--sell-item-fourth">
             <h2 class="content-block__title  content-block__title--sell-item  content-block__title--sell-item-third">4. Стоимость и доставка</h2>
-
             <div class="content-block__column-wrapper  content-block__column-wrapper--first">
               <label for="your-price" class="content-block__label">Ваша цена:</label>
-
               <!-- на обертке висит иконка рубля внутри поля инпута -->
               <div class="content-block__input-wrapper  content-block__input-wrapper--sell-item">
                 <input type="text" id="your-price" name="your-price" class="content-block__text-input" placeholder="Цена">
               </div>
               <div class="content-block__aside-text">Комиссия сервиса составит - 150 р.</div>
             </div>
-
             <div class="content-block__column-wrapper  content-block__column-wrapper--second">
               <div class="content-block__label  content-block__label--second">Доставка:</div>
               <input type="radio" id="mail-service" name="delivery-method" checked>
@@ -294,16 +245,13 @@
           </section>
         </div>
       </div>
-
       <button class="btn btn--orange btn--sell-item">Продать вещь</button>
       <a href="#" class="content-block__link  content-block__link--rules">Все правила и условия</a>
-
     </form>
   </div>
-
-
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>
