@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/style.min.css">
 </head>
 <!-- по модификатору edit открывается страница управления вещью -->
-<body class="item-page">
+<body class="item-page  item-page--edit">
   <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header">
     <div class="main-header__right">
@@ -140,7 +140,7 @@
     </div>
     <!-- верхний блок со слйдером и описанием вещи -->
     <div class="row  row--first">
-      <div class="col  s-4">
+      <div class="col  s-4  item-page__banner-container">
         <!-- прямоугольная рамка со скругленными углами -->
         <div class="banner-wrapper">
           <!-- слайдер с изображениями вещи -->
@@ -295,7 +295,7 @@
     <!-- нижний блок с комментариями, галереей и информационными блоками -->
     <div class="row  row--second">
       <div class="col s-8">
-        <div class="gallery">
+        <div class="gallery gallery--comments">
           <!-- блок комментариев без модификатора edit виден на странице вещи не в режиме управления -->
           <section class="message-item  message-item--comment-box">
             <div class="message-item__title  message-item__title--item-page">Комментарии (<span class="message-item__comments-counter">6</span>)</div>
