@@ -1,5 +1,6 @@
 // главный экран на индексной странице
 .index-screen{
+  position: relative;
   height: 100%;
   background: @main-page-top;
   padding: 20px 0 200px;
@@ -64,41 +65,56 @@
     position: relative;
   }
 
+  &__input-wrapper {
+    position: relative;
+
+    &:before {
+      content: url("../img/search-input-bg.png");
+      position: absolute;
+      top: 0;
+      left: -7px;
+      z-index: 1;
+    }
+  }
+
   input[type="text"].index-screen__input{
+    position: relative;
     box-sizing: border-box;
-    width: 100%;
+    width: 730px;
     font-size: 22px;
     line-height: 40px;
-    color: #313131;
-    font-weight: 300;
-    padding: 20px 60px 20px 30px;
+    color: @orange;
+    font-weight: 100;
+    padding: 20px 60px 18px 30px;
     border-radius: 5px;
     background: #fff;
     box-shadow: none;
     border: none;
-    box-shadow: 0 0 20px 21px rgba(106,195,227, 0.13);
+    z-index: 50;
+    /*box-shadow: 0 0 20px 21px rgba(106,195,227, 0.13);*/
 
     &::-webkit-input-placeholder{
-      color: #f3bd01;
+      color: @orange;
+      font-weight: 100;
     }
 
     &::-moz-placeholder{
-      color: #f3bd01;
+      color: @orange;
+      font-weight: 100;
     }
 
     &:hover{
-      box-shadow: 0 0 20px 21px rgba(255,255,255, 0.25);
+      box-shadow: 0 0 40px 21px rgba(255,255,255, 0.25);
     }
 
     &:focus{
-      box-shadow: 0 0 20px 21px rgba(255,255,255, 0.25);
 
       &::-webkit-input-placeholder{
-        color: #818181;
+        color: @orange;
       }
 
       &::-moz-placeholder{
-        color: #818181;
+        color: @orange;
       }
     }
   }
@@ -111,8 +127,9 @@
     background: url("../img/ico/ico-01.svg") no-repeat center;
 
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 30px;
+    right: 14px;
+    z-index: 50;
   }
 
   &__more{

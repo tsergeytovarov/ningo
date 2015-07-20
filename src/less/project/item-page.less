@@ -4,7 +4,7 @@
 
     &--small {
       padding: 0 22px;
-      padding-top: 25px;
+      padding-top: 75px;
       padding-bottom: 120px;
       width: 926px;
       overflow: hidden;
@@ -243,6 +243,15 @@
     &--comment-box {
       padding-bottom: 0;
     }
+
+    &__text-wrapper {
+      margin-left: 0;
+    }
+
+    &__text {
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 
   .rating-box {
@@ -397,6 +406,7 @@
 
     .item-price-btn {
       box-sizing: border-box;
+      padding-right: 77px;
 
       &__link {
         display: none;
@@ -404,6 +414,18 @@
         &--discount {
           display: block;
         }
+      }
+
+      &__bidding-link-wrapper {
+        width: 77px;
+
+        &:before {
+          right: 77px;
+        }
+      }
+
+      &__old-price {
+        display: none;
       }
     }
 
@@ -551,7 +573,7 @@
     &:after {
       content: url("../img/speech-bubble-white-no-border.png");
       position: absolute;
-      bottom: -25px;
+      bottom: -23px;
       left: 30px;
     }
   }

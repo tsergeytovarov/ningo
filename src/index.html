@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow">
   <title>Ningo - главная страница</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -136,13 +136,44 @@
       <div class="index-screen__form-container">
         <div class="index-screen__form">
           <form action="#" method="POST">
-            <input type="text" class="index-screen__input" placeholder="Поиск одежды от хенд-мейда до известных брендов">
-            <button type="submit" class="index-screen__button"></button>
+            <!-- обертка для создания нестандартной формы поля ввода -->
+            <div class="index-screen__input-wrapper">
+              <input type="text" class="index-screen__input" placeholder="Поиск одежды от хенд-мейда до известных брендов" autofocus>
+              <button type="submit" class="index-screen__button"></button>
+            </div>
           </form>
           <a href="#" class="index-screen__more">Расширенный поиск</a>
         </div>
       </div>
     </div>
+
+    <!-- прилипающий к низу футер -->
+  <footer class="main-footer main-footer--sticky">
+    <div class="main-footer__content">
+      <div class="container row">
+        <div class="col s-3">
+          <div class="main-footer__item main-footer__item-1">
+            <p>Найди то что<br>ты хочешь</p>
+          </div>
+        </div>
+        <div class="col s-3">
+          <div class="main-footer__item main-footer__item-2">
+            <p>Уточни детали<br>у продавца</p>
+          </div>
+        </div>
+        <div class="col s-3">
+          <div class="main-footer__item main-footer__item-3">
+            <p>Просто оплати<br>покупку</p>
+          </div>
+        </div>
+        <div class="col s-3">
+          <div class="main-footer__item main-footer__item-4">
+            <p>Получи товар<br>(с коробкой)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
 
   <div class="index-content container row">
@@ -365,34 +396,6 @@
     </div>
   </div>
 
-
-  <!-- прилипающий к низу футер -->
-  <footer class="main-footer main-footer--sticky">
-    <div class="main-footer__content">
-      <div class="container row">
-        <div class="col s-3">
-          <div class="main-footer__item main-footer__item-1">
-            <p>Найди то что<br>ты хочешь</p>
-          </div>
-        </div>
-        <div class="col s-3">
-          <div class="main-footer__item main-footer__item-2">
-            <p>Уточни детали<br>у продавца</p>
-          </div>
-        </div>
-        <div class="col s-3">
-          <div class="main-footer__item main-footer__item-3">
-            <p>Просто оплати<br>покупку</p>
-          </div>
-        </div>
-        <div class="col s-3">
-          <div class="main-footer__item main-footer__item-4">
-            <p>Получи товар<br>(с коробкой)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
