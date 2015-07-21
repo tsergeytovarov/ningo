@@ -16,6 +16,11 @@
     min-width: 750px;
     width: 100%;
 
+    .container {
+
+      padding-top: 25px;
+    }
+
     .s-4 {
       padding-right: 0;
       padding-left: 0;
@@ -59,69 +64,7 @@
 
   //кнопка включения мобильного меню
   .navigation-toggle {
-    position: relative;
     display: block;
-    margin-bottom: 18px;
-    padding: 8px 13px;
-    width: 100%;
-    text-align: left;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 18px;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
-
-    //стрелка вниз на кнопке меню
-    &:after {
-      content: url(../img/ico/ico-20.svg);
-      position: absolute;
-      top: 8px;
-      right: 16px;
-    }
-
-    &:hover {
-      box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.2);
-
-      //стрелка вниз на кнопке меню меняет цвет
-      &:after {
-        content: url(../img/ico/ico-21.svg);
-        position: absolute;
-        top: 8px;
-        right: 16px;
-      }
-    }
-
-    &:active {
-      box-shadow: 0px 1px 3px 0px rgba(8,68,95,0);
-      opacity: .8;
-    }
-
-    &--active {
-
-      //стрелка вверх на активной кнопке включения меню
-      &:after {
-        content: url(../img/ico/ico-20-gray.svg);
-        position: absolute;
-        top: 7px;
-        right: 16px;
-        opacity: .2;
-      }
-
-      &:hover {
-
-        //стрелка вверх на активной кнопке включения меню
-        &:after {
-          content: url(../img/ico/ico-22.svg);
-          position: absolute;
-          top: 7px;
-          right: 16px;
-          opacity: 1;
-        }
-      }
-    }
   }
 
   //контентные блоки на стр.инфо
@@ -499,10 +442,6 @@
     .like-item {
       margin-right: 1.958%;
       width: 31.3%;
-
-      &__info {
-        float: right;
-      }
     }
 
     .rating-box {

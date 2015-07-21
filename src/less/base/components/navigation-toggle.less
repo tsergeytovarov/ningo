@@ -1,4 +1,40 @@
 //в десктопной версии кнопка не отображается
 .navigation-toggle {
   display: none;
+  position: relative;
+  margin-bottom: 18px;
+  padding: 8px 13px;
+  width: 100%;
+  text-align: left;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.1);
+  background-image: url("../img/ico/ico-20.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px top 16px;
+
+  &:hover {
+    box-shadow: 0px 1px 3px 0px rgba(8,68,95,0.2);
+    background-image: url("../img/ico/ico-21.svg");
+  }
+
+  &:active {
+    box-shadow: 0px 1px 3px 0px rgba(8,68,95,0);
+    opacity: .8;
+  }
+
+  &--active {
+    background-image: url("../img/ico/ico-20-gray.svg");
+    background-repeat: no-repeat;
+    background-position: right 16px top 16px;
+
+    &:hover {
+      background-image: url("../img/ico/ico-22.svg");
+    }
+  }
 }
