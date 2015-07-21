@@ -25,22 +25,50 @@
   }
 
   &__select-wrapper {
+    position: relative;
     box-sizing: border-box;
     margin-bottom: 6px;
-    padding-top: 11px;
-    padding-bottom: 9px;
     width: 194px;
     height: 40px;
     background-color: #fafafa;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+
+    &:after {
+      content: url("../img/ico/ico-20.svg");
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    &:hover {
+
+      &:after {
+        content: url("../img/ico/ico-21.svg");
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
   }
 
   &__select {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 40px;
     font-size: 12px;
-    line-height: 24px;
+    line-height: 40px;
     background-color: transparent;
     border: none;
+    /*for WebKit*/
+    -webkit-appearance: none;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
 
     &:focus {
       outline: none;

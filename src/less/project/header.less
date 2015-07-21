@@ -232,6 +232,7 @@
   }
 
   &__select-wrapper {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
@@ -240,6 +241,23 @@
     background-color: #fafafa;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+
+    &:after {
+      content: url("../img/ico/ico-20.svg");
+      position: absolute;
+      top: 9px;
+      right: 10px;
+    }
+
+    &:hover {
+
+      &:after {
+        content: url("../img/ico/ico-21.svg");
+        position: absolute;
+        top: 9px;
+        right: 10px;
+      }
+    }
   }
 
   &__select{
@@ -250,6 +268,15 @@
     border: none;
     outline: none;
     color: #999;
+    /*for WebKit*/
+    -webkit-appearance: none;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
 
     &:focus {
       border: none;
