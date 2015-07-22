@@ -13,7 +13,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="main-page">
 
   <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
   <header class="main-header main-header--sticky js-main-header main-header--hidden">
@@ -55,6 +55,44 @@
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
+
+      <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
+      <a href="#" class="mobile-menu-toggle"></a>
+      <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu  mobile-menu--unlogged">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <span class="mobile-menu__text">Войти через:</span>
+            <div class="mobile-menu__social-icons">
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--vk"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--fb"></a>
+              <a href="#" class="mobile-menu__social-icon  mobile-menu__social-icon--ok"></a>
+            </div>
+          </li>
+          <!-- переключатель и форма входа через email -->
+          <li class="mobile-menu__item">
+            <!-- переключение по модификатору active -->
+            <a href="#" class="login-by-email-toggle">Войти через Email</a>
+            <div class="login-by-email">
+              <form action="#" method="post" class="login-by-email__form">
+                <input type="text" id="email-login" name="email-login" class="login-by-email__text-input" placeholder="Email">
+                <input type="text" id="password-login" name="password-login" class="login-by-email__text-input" placeholder="Пароль">
+                <button class="btn btn--orange">Войти</button>
+              </form>
+              <div class="login-by-email__wrapper">
+                <a href="#" class="login-by-email__link  login-by-email__link--left">Регистрация</a>
+                <a href="#" class="login-by-email__link  login-by-email__link--right">Забыли пароль?</a>
+              </div>
+            </div>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
 
       <nav class="main-header__navigation row row--inline">
         <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
@@ -141,6 +179,10 @@
               <input type="text" class="index-screen__input" placeholder="Поиск одежды от хенд-мейда до известных брендов" autofocus>
               <button type="submit" class="index-screen__button"></button>
             </div>
+            <div class="index-screen__input-wrapper index-screen__input-wrapper--mobile">
+              <input type="text" class="index-screen__input" placeholder="Поиск одежды" autofocus>
+              <button type="submit" class="index-screen__button"></button>
+            </div>
           </form>
           <a href="#" class="index-screen__more">Расширенный поиск</a>
         </div>
@@ -179,6 +221,8 @@
   <div class="index-content container row">
     <!-- колонка с фильтрами и каталогом -->
     <div class="col s-8">
+
+      <div class="page-title page-title--main-page">Умный сервис по покупке и продаже одежды, от хенд-мейда до известных брендов.</div>
 
       <!-- filters -->
       <div class="filters">
@@ -224,7 +268,7 @@
 
 
       <!-- galery -->
-      <div class="gallery row row--inline">
+      <div class="gallery gallery--main-page row row--inline">
         <div class="gallery-item gallery-item--stroke">
 
           <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->

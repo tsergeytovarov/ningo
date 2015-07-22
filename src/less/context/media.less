@@ -1,3 +1,25 @@
+
+@media (max-width: 1170px) {
+  .main-page {
+
+    .container {
+      padding: 0 22px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 969px) {
 
   .container {
@@ -7,6 +29,103 @@
 
     &--small {
       width: 94.668%;
+    }
+  }
+
+
+  /////////////// стили главной
+
+  .main-page {
+
+    .main-header {
+      position: fixed;
+    }
+
+    .container {
+      max-width: 926px;
+    }
+
+    .index-screen {
+
+      &__input-wrapper {
+        margin: 0 auto;
+        width: 85%;
+        background-image: url("../img/input-corner.png");
+        background-repeat: no-repeat;
+        background-position: top 0 right 0;
+        background-color: rgba(106,195,227, 0.13);
+        box-shadow: 0 0 20px 21px rgba(106,195,227, 0.13);
+
+        &:before {
+          display: none;
+        }
+      }
+
+      input.index-screen__input[type="text"] {
+        padding-right: 0;
+        width: 90%;
+        letter-spacing: -0.4px;
+      }
+
+      &__more {
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 85%;
+      }
+    }
+
+    .main-footer {
+
+      &__item-1 {
+
+        &:before {
+          background-size: 80%;
+        }
+      }
+
+      &__item-2 {
+
+        &:before {
+          background-size: 80%;
+        }
+      }
+
+      &__item-3 {
+
+        &:before {
+          background-size: 80%;
+        }
+      }
+
+      &__item-4 {
+
+        &:before {
+          background-size: 80%;
+        }
+      }
+    }
+
+    .gallery {
+
+      &--main-page {
+        margin-right: -3%;
+      }
+
+      .gallery-item {
+        margin-right: 3%;
+        width: 30.15%;
+      }
+    }
+
+    .content-block {
+
+      &--join-us {
+        padding: 25px;
+      }
+
+      &--some-information {
+        display: block;
+      }
     }
   }
 
@@ -1381,6 +1500,119 @@
       width: 87.5%;
     }
   }
+
+  /////////////// стили главной
+
+  .main-page {
+
+    .container {
+      padding: 0;
+      width: 95.33%;
+    }
+
+    .s-8 {
+      padding: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .s-4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    .index-screen {
+
+      .logo {
+        margin-right: 10px;
+      }
+
+      nav {
+
+        a {
+
+          margin-right: 15px;
+        }
+      }
+
+      &__login {
+
+        .tooltip-container {
+
+          .btn {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+
+      &__input-wrapper {
+        display: none;
+
+        &--mobile {
+          display: block;
+        }
+      }
+    }
+
+    .filters {
+
+      &__text {
+        padding-right: 10px;
+        font-size: 12px;
+
+        @media (min-width: 481px) and (max-width: 545px) {
+          font-size: 10px;
+          letter-spacing: -0.3px;
+        }
+      }
+    }
+
+    .main-footer {
+
+      &__item {
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      &__item-1 {
+
+        &:before {
+          background-size: 75%;
+        }
+      }
+
+      &__item-2 {
+
+        &:before {
+          background-size: 75%;
+        }
+      }
+
+      &__item-3 {
+
+        &:before {
+          background-size: 75%;
+        }
+      }
+
+      &__item-4 {
+
+        &:before {
+          background-size: 75%;
+        }
+      }
+    }
+
+    .content-block {
+
+      &--join-us {
+        overflow: visible;
+      }
+    }
+  }
   /////////////// стили страницы инфо
 
   .info-page {
@@ -2514,6 +2746,92 @@
       width: 87.5%;
     }
   }
+
+
+  /////////////// стили главной
+  
+  .main-page {
+
+    .container {
+      padding-top: 80px;
+    }
+
+    .main-header {
+
+      &__select-wrapper {
+        width: 100%;
+
+        .main-header {
+
+          &__select {
+            width: 100%;
+          }
+        }
+      }
+
+      &__close {
+        position: absolute;
+        bottom: 14px;
+        right: 0;
+      }
+
+      &__input-container {
+        width: 100%;
+      }
+
+      input.main-header__input[type="text"] {
+        font-size: 14px;
+      }
+    }
+
+    .index-screen {
+      display: none;
+    }
+
+    .page-title {
+
+      &--main-page {
+        display: block;
+        margin-bottom: 30px;
+        line-height: 30px;
+      }
+    }
+
+    .filters {
+      margin-bottom: 15px;
+
+      &__item {
+        margin-right: 2.5%;
+        margin-bottom: 15px;
+        width: 23%;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+
+      &__text {
+
+        @media (min-width: 321px) and (max-width: 370px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .gallery {
+      margin-bottom: 10px;
+
+      &--main-page {
+
+        .gallery-item {
+          margin-right: 2%;
+          width: 47.5%;
+        }
+      }
+    }
+  }
+
+
   /////////////// стили страницы инфо
 
   .info-page {
@@ -3555,6 +3873,42 @@
 
 
 
+@media (max-width: 320px) {
+
+  .main-page {
+
+    .container {
+      min-width: 265px;
+    }
+
+    .filters {
+
+      &__item {
+        width: 31.54%;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 2.5%;
+        }
+      }
+    }
+
+    .gallery {
+
+      &--main-page {
+        margin-right: 0;
+
+        .gallery-item {
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -3562,6 +3916,54 @@
 
 
 
+
+
+
+
+
+
+//доп. брейкпоинты для текста на плашках фильтра на главной
+
+@media (max-width: 900px) {
+
+  .filters {
+
+    &__text {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+
+  .filters {
+
+    &__text {
+      padding-left: 5px;
+      font-size: 10px;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+//доп.брейкпоинт для стилизации хедера на главной
+@media (max-width: 545px) {
+
+  .main-page {
+
+    .index-screen {
+
+      &__top {
+        opacity: 0;
+      }
+    }
+
+    .main-header {
+      position: fixed;
+      display: block;
+    }
+  }
+}
 
 //дополнительный брейкпоинт для выравнивания высоты контейнеров на странице подачи объявления
 @media (min-width: 840px) and (max-width: 969px) {
