@@ -21,21 +21,14 @@ $(function(){
     $(".main-header__left--find").removeClass("main-header__left--open");
   })
 
-  // появление хедера
-  $(window).on("scroll", function(){
-    var header = $('.js-main-header').offset().top;
-    var input = $(".index-screen__input").offset().top;
-
-    if( header > input){
-      $('.js-main-header').removeClass('main-header--hidden');
-    } else {
-      $('.js-main-header').addClass('main-header--hidden');
-    }
+  //
+  $(".navigation-toggle").on("click", function(){
+    $('.info-navigation__list').toggleClass("info-navigation__list--active");
   })
 
   //
-  $(".navigation-toggle").on("click", function(){
-    $('.info-navigation').toggleClass("active");
+  $(".mobile-menu-toggle").on("click", function(){
+    $(".mobile-menu--unlogged").toggleClass("mobile-menu--active")
   })
 
 })
