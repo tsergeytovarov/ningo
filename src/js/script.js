@@ -32,4 +32,10 @@ $(function(){
       $('.js-main-header').addClass('main-header--hidden');
     }
   })
+
+  //
+  $(".navigation-toggle").on("click", function(){
+    $('.info-navigation').toggleClass("active");
+  })
+
 })

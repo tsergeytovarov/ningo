@@ -444,5 +444,18 @@
   <!-- Основная библиотека + основной файл jss -->
   <script src="js/jquery.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  // появление хедера
+  $(window).on("scroll", function(){
+      var header = $('.js-main-header').offset().top;
+      var input = $(".index-screen__input").offset().top;
+
+      if( header > input){
+        $('.js-main-header').removeClass('main-header--hidden');
+      } else {
+        $('.js-main-header').addClass('main-header--hidden');
+      }
+  })
+  </script>
 </body>
 </html>
