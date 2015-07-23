@@ -39,14 +39,20 @@ $(function(){
       var target = $(".js-for-link-"+i).offset().top;
       var area = $(window).scrollTop();
       if ( target > area ){
-        console.log(target);
-        console.log(area);
         $(".info-navigation__link").removeClass("info-navigation__link--current");
         $(".link-" + i).addClass("info-navigation__link--current");
         break;
       }
     }
+  })
 
+  //
+
+  $(".faq__toggle").on("click", function(){
+    var father = $(this).parents(".faq");
+    if( !father.hasClass("faq--active") ){
+      console.log("work");
+    }
   })
 
 })
