@@ -31,4 +31,22 @@ $(function(){
     $(".mobile-menu--unlogged").toggleClass("mobile-menu--active")
   })
 
+  //
+  $(window).on("scroll", function(){
+    var col = $(".content-block").length;
+
+    for (var i = 1; i <= col ; i++){
+      var target = $(".js-for-link-"+i).offset().top;
+      var area = $(window).scrollTop();
+      if ( target > area ){
+        console.log(target);
+        console.log(area);
+        $(".info-navigation__link").removeClass("info-navigation__link--current");
+        $(".link-" + i).addClass("info-navigation__link--current");
+        break;
+      }
+    }
+
+  })
+
 })
