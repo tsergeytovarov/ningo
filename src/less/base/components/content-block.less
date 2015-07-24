@@ -1058,7 +1058,6 @@
   &__image-capture {
     position: absolute;
     top: 10px;
-    left: 10px;
     font-size: 12px;
     line-height: 14px;
     font-style: italic;
@@ -1066,6 +1065,7 @@
     color: #5db8db;
 
     &--front {
+      left: 10px;
       padding-top: 5px;
       padding-left: 8px;
       width: 91px;
@@ -1076,8 +1076,7 @@
     }
 
     &--back {
-      top: 29px;
-      left: 9px;
+      left: 10px;
       padding-top: 5px;
       padding-left: 7px;
       width: 45px;
@@ -1088,7 +1087,7 @@
     }
 
     &--total {
-      top: 8px;
+      left: 10px;
       padding-top: 5px;
       padding-left: 7px;
       width: 88px;
@@ -1099,8 +1098,8 @@
     }
 
     &--label {
-      top: 22px;
-      left: 11px;
+      top: 10px;
+      right: 3px;
       padding-top: 5px;
       padding-left: 7px;
       width: 91px;
@@ -1198,6 +1197,31 @@
     &--who-can-see {
       float: right;
       width: 138px;
+
+      &:after {
+        top: 8px;
+      }
+
+      &:hover {
+
+        &:after {
+          top: 8px;
+        }
+      }
+    }
+
+    &--delivery-address {
+
+      &:after {
+        top: 8px;
+      }
+
+      &:hover {
+
+        &:after {
+          top: 8px;
+        }
+      }
     }
   }
 

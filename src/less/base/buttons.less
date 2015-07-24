@@ -99,6 +99,7 @@
     padding: 14px 25px 15px;
     font-weight: 300;
     border-right: 1px solid #edf7fa;
+    border-left: 1px solid #edf7fa;
 
     &:hover,
     &--hover{
@@ -125,7 +126,15 @@
     line-height: 21px;
     padding: 14px 25px 15px;
     font-weight: 300;
-    border-right: 1px solid #edf7fa;
+    border-left: 1px solid #edf7fa;
+
+    &:last-child {
+      border-right: 1px solid #edf7fa;
+
+      &.main-header__find {
+        border-right: none;
+      }
+    }
 
     &:hover,
     &--hover{
@@ -136,6 +145,10 @@
     &--active{
       opacity: .9;
     }
+  }
+
+  &--timeline {
+    padding-left: 130px;
   }
 
   //оранжевая кнопка на стр.избранного
