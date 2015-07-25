@@ -919,6 +919,48 @@
     }
   }
 
+  /////////////// стили хедера для авторизованного пользователя
+
+  .main-header {
+    position: relative;
+
+    &__right {
+      display: inline-block;
+      vertical-align: top;
+
+      .btn {
+
+        &--all-blue {
+          display: none;
+        }
+      }
+
+      .tooltip-container {
+        position: absolute;
+        top: 0;
+        left: 168px;
+
+        .user-options {
+          border: none;
+        }
+
+        .notifications {
+          border: none;
+          z-index: 100;
+        }
+
+        .user-menu-container {
+          display: none;
+        }
+      }
+    }
+
+    &__input {
+      position: relative;
+      z-index: 101;
+    }
+  }
+
   /////////////// стили страницы подачи объявления
 
   .sell-item-page {
