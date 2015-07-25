@@ -115,6 +115,7 @@
   }
 
   &__icon {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -125,9 +126,13 @@
     z-index: 102;
 
     &--rubl {
-      background-image: url("../img/ico/ico-11.svg");
-      background-repeat: no-repeat;
-      background-position: 0 1px;
+
+      &:after {
+        content: url("../img/ico/ico-11.svg");
+        position: absolute;
+        top: 2px;
+        left: 0;
+      }
     }
 
     &--comment {
