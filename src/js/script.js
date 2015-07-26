@@ -7,9 +7,11 @@ $(function(){
     $(this).parents(".tooltip-container").toggleClass("tooltip-container--active");
   })
 
-  $("body").on("click", function(){
+  $(document).click(function(event) {
+    if ($(event.target).closest(".js-tooltip-toggle").length) return;
     $(".tooltip-container").removeClass("tooltip-container--active");
-  })
+    event.stopPropagation();
+  });
 
   // js-open-header-find
   $(".js-open-header-find").on("click", function(event){
