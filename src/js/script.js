@@ -7,6 +7,10 @@ $(function(){
     $(this).parents(".tooltip-container").toggleClass("tooltip-container--active");
   })
 
+  $("body").on("click", function(){
+    $(".tooltip-container").removeClass("tooltip-container--active");
+  })
+
   // js-open-header-find
   $(".js-open-header-find").on("click", function(event){
     event.preventDefault();
