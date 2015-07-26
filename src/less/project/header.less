@@ -6,15 +6,20 @@
   padding: 20px 0 200px;
   box-sizing: border-box;
 
+  .tooltip-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .user-options {
+    display: none;
+  }
+
   &--logged-in {
 
     .tooltip-container{
       display: inline-block;
       vertical-align: top;
-
-      .user-options {
-        display: none;
-      }
 
       .btn {
         display: none;
@@ -511,6 +516,15 @@
   }
 
   &--hidden{
+    display: none;
+  }
+
+  .tooltip-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .user-options {
     display: none;
   }
 
