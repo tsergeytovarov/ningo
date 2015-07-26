@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+   ____  ____  ____   ___  ____  _  _  ____   __  ____   __   _  _
+  / ___)(  __)(  _ \ / __)(  __)( \/ )(  _ \ /  \(  _ \ /  \ / )( \
+  \___ \ ) _)  )   /( (_ \ ) _)  )  /  ) __/(  O )) __/(  O )\ \/ /
+  (____/(____)(__\_) \___/(____)(__/  (__)   \__/(__)   \__/  \__/
+  -->
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ningo - страница моих вещей</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="my-items  my-items--grid-test">
+
+
+
+  <div class="container container--small">
+
+
+
+
+    <header class="page-header"></header>
+
+
+
+
+    <div class="row">
+
+
+      <div class="col s-8">
+
+
+        <div class="filter-block row">
+
+
+          <h1 class="page-title  page-title--my-items">Мои вещи</h1>
+
+
+          <div class="filter">
+
+            <ul class="filter__list">
+
+              <li class="filter__item"><a href="#" class="filter__link  filter__link--active">Все вещи</a></li>
+
+              <li class="filter__item"><a href="#" class="filter__link">На продаже</a></li>
+
+              <li class="filter__item"><a href="#" class="filter__link">Продано</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="gallery  gallery--my-items  grid">
+
+
+          <!-- в версии 750-969 видны только карточки товара с модификатором tablet, от 970 - с модификатором desktop -->
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--blue  gallery-item__flag--checkin"></a>
+
+            <img src="img/gallery-item-test-1.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--yellow  gallery-item__flag--quick-sell"></a>
+
+            <img src="img/gallery-item-test-2.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--square  gallery-item__flag--yellow  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-3.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-test-4.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--yellow  gallery-item__flag--quick-sell  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-4.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--square  gallery-item__flag--yellow  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-5.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--green  gallery-item__flag--delivery"></a>
+
+            <img src="img/gallery-item-test-6.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- в версии 750-969 видны только карточки товара с модификатором tablet, от 970 - с модификатором desktop -->
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--blue  gallery-item__flag--checkin"></a>
+
+            <img src="img/gallery-item-test-1.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--yellow  gallery-item__flag--quick-sell"></a>
+
+            <img src="img/gallery-item-test-2.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--square  gallery-item__flag--yellow  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-3.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag"></a>
+
+            <img src="img/gallery-item-test-4.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--yellow  gallery-item__flag--quick-sell  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-4.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--square  gallery-item__flag--yellow  gallery-item__flag--arrow"></a>
+
+            <img src="img/gallery-item-test-5.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand">Michael Kors</div>
+              <div class="gallery-item__price">2300 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  gallery-item  gallery-item--desktop">
+
+            <!-- пустой абсолютно позиционированный блок, по модификатору stroke к gallery-item добавляет обводку -->
+            <div class="gallery-item__stroke"></div>
+
+            <!-- полупрозрачный флажок сверху карточки. по модификаторам blue yellow green включается цвет, по модификаторам fullsize и square - размер,  по модификаторам добавляется текст: checkin - на проверке, quick-sell - продать быстрее, delivery - доставка, по модификатору arrow добавляется иконка стрелки -->
+            <a href="#" class="gallery-item__flag  gallery-item__flag--fullsize  gallery-item__flag--green  gallery-item__flag--delivery"></a>
+
+            <img src="img/gallery-item-test-6.jpg" alt="" class="gallery-item__image">
+
+            <div class="gallery-item__capture">
+              <div class="gallery-item__brand"></div>
+              <div class="gallery-item__price">1800 <span class="gallery-item__icon  gallery-item__icon--rubl">рублей</span></div>
+              <div class="gallery-item__sizes">M, S, XS</div>
+            </div>
+
+            <div class="gallery-item__comment-like  row">
+              <div class="gallery-item__comment">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--comment"><span class="gallery-item__comment-count"></span></a>
+              </div>
+              <div class="gallery-item__like">
+                <a href="#" class="gallery-item__link  gallery-item__icon  gallery-item__icon--like"><span class="gallery-item__comment-count  gallery-item__comment-count--like"></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item  add-item">
+
+            <a href="#" class="add-item__link"><img src="img/add-item.png" alt="" class="add-item__image"></a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col s-4">
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- просто блок с текстом -->
+        <div class="content-block  content-block--why-ningo  content-block--why-ningo-second">
+          <p class="content-block__text">Почему лучше покупать через Ningo?</p>
+        </div>
+
+        <!-- блок не виден в десктопной версии -->
+        <div class="content-block  content-block--join-us">
+          <p class="content-block__text content-block__text--join-us">Присоединяйся к нам, и будешь видеть только нужные тебе вещи. Ещё сможешь общаться в сообществе и т д</p>
+          <a href="№" class="btn  btn--join-us  btn--orange">Присоединиться</a>
+        </div>
+
+        <!-- пустой блок для какой-то информации -->
+        <div class="content-block  content-block--some-information">
+          <span class="content-block__text  content-block__text--display">Информация</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Основная библиотека + основной файл jss -->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+  <!-- скрипт сетки -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"></script>
+  <script src="js/grid-initialize.js"></script>
+</body>
+</html>
