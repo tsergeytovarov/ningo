@@ -521,7 +521,16 @@
       vertical-align: top;
 
       .user-options {
+        position: relative;
         display: none;
+        height: 50px;
+        border-right: 1px solid #edf7fa;
+        border-left: 1px solid #edf7fa;
+
+        &--open {
+          display: inline-block;
+          vertical-align: top;
+        }
       }
 
       .btn {
@@ -530,14 +539,6 @@
 
       .tooltip-content {
         display: none;
-      }
-
-      .user-options {
-        display: inline-block;
-        vertical-align: top;
-        height: 50px;
-        border-right: 1px solid #edf7fa;
-        border-left: 1px solid #edf7fa;
       }
     }
 
