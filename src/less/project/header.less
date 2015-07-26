@@ -6,6 +6,31 @@
   padding: 20px 0 200px;
   box-sizing: border-box;
 
+  &--logged-in {
+
+    .tooltip-container{
+      display: inline-block;
+      vertical-align: top;
+
+      .user-options {
+        display: none;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      .tooltip-content {
+        display: none;
+      }
+
+      .user-options {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
   .container{
     height: 100%;
   }
@@ -39,31 +64,6 @@
 
   &__login{
     float: right;
-
-    .tooltip-container{
-      display: inline-block;
-      vertical-align: top;
-
-      .user-options {
-        display: none;
-      }
-
-      &--logged-in {
-
-        .btn {
-          display: none;
-        }
-
-        .tooltip-content {
-          display: none;
-        }
-
-        .user-options {
-          display: inline-block;
-          vertical-align: top;
-        }
-      }
-    }
   }
 
   &__form-container{
@@ -514,9 +514,7 @@
     display: none;
   }
 
-  &__right{
-    float: right;
-    font-size: 0;
+  &--logged-in {
 
     .tooltip-container{
       display: inline-block;
@@ -526,25 +524,34 @@
         display: none;
       }
 
-      &--logged-in {
+      .btn {
+        display: none;
+      }
 
-        .btn {
-          display: none;
-        }
+      .tooltip-content {
+        display: none;
+      }
 
-        .tooltip-content {
-          display: none;
-        }
-
-        .user-options {
-          display: inline-block;
-          vertical-align: top;
-          height: 50px;
-          border-right: 1px solid #edf7fa;
-          border-left: 1px solid #edf7fa;
-        }
+      .user-options {
+        display: inline-block;
+        vertical-align: top;
+        height: 50px;
+        border-right: 1px solid #edf7fa;
+        border-left: 1px solid #edf7fa;
       }
     }
+
+    .main-header {
+
+      &__input-container {
+        width: 45%;
+      }
+    }
+  }
+
+  &__right{
+    float: right;
+    font-size: 0;
   }
 
   &__left{

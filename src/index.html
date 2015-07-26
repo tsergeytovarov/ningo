@@ -16,11 +16,10 @@
 </head>
 <body class="main-page">
 
-  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
-  <header class="main-header main-header--sticky js-main-header main-header--hidden">
+  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. модификатор logged-in меняет состояния элементов-->
+  <header class="main-header main-header--logged-in main-header--sticky js-main-header main-header--hidden">
     <div class="main-header__right">
-      <!-- по модификатору logged-in меняется состояние tooltip-container -->
-      <div class="tooltip-container tooltip-container--logged-in">
+      <div class="tooltip-container">
         <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
         <div class="tooltip-content tooltip-content--sticky">
           <!-- тултип входа через соц-сети -->
@@ -230,8 +229,8 @@
     </div>
   </header>
 
-  <!-- главный экран -->
-  <div class="index-screen">
+  <!-- главный экран, по модификатору logged-in меняются состояния элементов хедера -->
+  <div class="index-screen index-screen--logged-in">
     <div class="container">
       <!-- верхняя часть -->
       <div class="index-screen__top row">
@@ -246,8 +245,7 @@
         </nav>
         <!-- блок авторизации -->
         <div class="index-screen__login">
-          <!-- по модификатору logged-in меняется состояние tooltip-container -->
-          <div class="tooltip-container tooltip-container--logged-in">
+          <div class="tooltip-container">
             <a href="#" class="btn btn--transparent js-tooltip-toggle">Войти</a>
             <div class="tooltip-content tooltip-content--triangle">
               <!-- тултип входа через соц-сети -->

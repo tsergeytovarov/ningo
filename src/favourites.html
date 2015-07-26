@@ -17,11 +17,10 @@
 </head>
 
 <body class="favourites-page">
-  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
-  <header class="main-header main-header--sticky">
+  <!-- основной хедер. модификатор logged-in меняет состояния элементов-->
+  <header class="main-header main-header--logged-in main-header--sticky">
     <div class="main-header__right">
-      <!-- по модификатору logged-in меняется состояние tooltip-container -->
-      <div class="tooltip-container tooltip-container--logged-in">
+      <div class="tooltip-container">
         <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
         <div class="tooltip-content tooltip-content--sticky">
           <!-- тултип входа через соц-сети -->
@@ -230,6 +229,7 @@
       </form>
     </div>
   </header>
+
   <div class="container container--small">
     <div class="row">
       <div class="col s-8">

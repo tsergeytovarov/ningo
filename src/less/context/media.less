@@ -921,8 +921,88 @@
 
   /////////////// стили хедера для авторизованного пользователя
 
+  .main-page {
+
+    .main-header {
+
+      &--logged-in {
+        position: fixed;
+      }
+
+      &--hidden {
+        display: block;
+      }
+    }
+  }
+
+  .index-screen {
+
+    &--logged-in {
+
+      .index-screen {
+
+        &__top {
+          opacity: 0;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
   .main-header {
     position: relative;
+
+    &--logged-in {
+
+      .main-header{
+
+        &__right {
+
+          .tooltip-container {
+            left: 63px;
+            z-index: 101;
+          }
+        }
+
+        &__left {
+
+          &--open {
+            position: relative;
+            z-index: 500;
+          }
+        }
+      }
+
+      .logo {
+
+        img {
+          opacity: 0;
+          z-index: 0;
+        }
+
+        &--big {
+
+          &:after {
+            content: url("../img/logo-750--logged-in.png");
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+          }
+        }
+      }
+
+      .mobile-menu-toggle {
+        left: 13px;
+      }
+
+      .mobile-menu {
+
+        &--logged-in {
+          width: 100%;
+        }
+      }
+    }
 
     &__right {
       display: inline-block;
@@ -2252,9 +2332,10 @@
   }
 
   .mobile-menu {
+    box-sizing: border-box;
     padding-left: 3.5%;
     padding-right: 3.5%;
-    width: 93%;
+    width: 100%;
     min-width: 320px;
     overflow: hidden;
 
@@ -2505,7 +2586,7 @@
   .promo-page {
 
     &__background-layer {
-      top: -65px;
+      top: -15px;
       margin-left: -2164px;
     }
 
@@ -3532,6 +3613,38 @@
     }
   }
 
+  /////////////// стили хедера для авторизованного пользователя
+
+  .main-page {
+
+    .main-header {
+
+      &--logged-in {
+
+        .main-header {
+
+          &__input-container {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .main-header {
+
+    &--logged-in {
+
+      .main-header {
+
+        &__input-container {
+
+          width: 41%;
+        }
+      }
+    }
+  }
+
   ////////////// стили страницы подачи объявления
 
   .sell-item-page {
@@ -3915,6 +4028,23 @@
 
     .gallery-item {
       margin-bottom: 11px;
+    }
+  }
+
+  .mobile-menu {
+
+    &--unlogged {
+
+      .mobile-menu {
+
+        &__text {
+          width: 47%;
+        }
+
+        &__social-icons {
+          width: 50%;
+        }
+      }
     }
   }
 }
