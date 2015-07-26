@@ -17,8 +17,8 @@
 </head>
 
 <body class="wallet-page">
-  <!-- основной хедер, который будет на других страницах. Для незалогиненного пользователя. Тут он прилипает к верху и появляется при скролле на определенном месте. -->
-  <header class="main-header main-header--sticky">
+  <!-- основной хедер. модификатор logged-in меняет состояния элементов-->
+  <header class="main-header main-header--logged-in main-header--sticky">
     <div class="main-header__right">
       <div class="tooltip-container">
         <a href="#" class="btn btn--all-blue js-tooltip-toggle">Войти</a>
@@ -47,15 +47,88 @@
             </div>
           </div>
         </div>
+        <!-- блок, видимый авторизованному пользователю -->
+        <div class="user-options user-options--open">
+          <div class="notifications">
+            <div class="notifications__item notifications__item--new-comments">
+              <a href="#" class="notifications__icon  notifications__icon--new-comments">Новые комментарии<span class="notifications__amount notifications__amount--new">3</span></a>
+            </div>
+            <div class="notifications__item notifications__item--new-likes">
+              <a href="#" class="notifications__icon  notifications__icon--new-likes">Новые оценки<span class="notifications__amount">3</span></a>
+            </div>
+            <div class="notifications__item notifications__item--new-notifications">
+              <a href="#" class="notifications__icon  notifications__icon--new-notifications js-notifications-toggle">Новые уведомления<span class="notifications__amount notifications__amount--new">3</span></a>
+              <!-- контент открывается по модификатору open -->
+              <div class="notifications-tooltip-content">
+                <div class="notification-item row">
+                  <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
+                  <span class="notification-item__icon  notification-item__icon--arrow-up"></span>
+                  <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
+                  <div class="notification-item__wrapper">
+                    <!-- обертка картинки, прямоугольная или круглая рамка добавляются модификаторами rectangle и round -->
+                    <div class="notification-item__image-wrapper  notification-item__image-wrapper--rectangle">
+                      <img src="img/item-icon.jpg" alt="" class="notification-item__image">
+                    </div>
+                  </div>
+                  <div class="notification-item__text-wrapper">
+                    <p class="notification-item__text">Ваш друг <a href="#" class="notification-item__link">ilovehapaclothing</a> загрузил новую вещь <a href="#" class="notification-item__link">Туфли Christian Louboutin</a></p>
+                    <p class="notification-item__time">3 часа назад</p>
+                  </div>
+                </div>
+                <div class="notification-item row">
+                  <!-- на ссылке висит иконка-псевдоэлемент, добавляется по модификаторам. arrow-up - стрелка вверх, plus - плюсик -->
+                  <span class="notification-item__icon  notification-item__icon--plus"></span>
+                  <!-- обертка блока с картинкой, модификатор multiple-shadow добавляет тень для уведомлении о нескольких подписках -->
+                  <div class="notification-item__wrapper">
+                    <!-- обертка картинки, прямоугольная или круглая рамка добавляются модификаторами rectangle и round -->
+                    <div class="notification-item__image-wrapper  notification-item__image-wrapper--round">
+                      <img src="img/user-avatar-3.png" alt="" class="notification-item__image">
+                    </div>
+                  </div>
+                  <div class="notification-item__text-wrapper">
+                    <p class="notification-item__text"><a href="#" class="notification-item__link">ilovehapaclothing</a> подписалась на вас</p>
+                    <p class="notification-item__time">4 часа назад</p>
+                  </div>
+                </div>
+
+                <a href="notifications.html" class="notifications-tooltip-content__link">Смотреть все</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="user-menu-container">
+            <!-- по модификатору open галочка переворачивается -->
+            <a href="#" class="user-menu-toggle">
+              <span class="user-avatar-wrapper">
+                <img src="img/user-avatar--header.jpg" alt="">
+              </span>
+            </a>
+            <!-- меню открывается по модификатору open -->
+            <div class="user-menu">
+              <nav>
+                <ul class="user-menu__list">
+                  <li class="user-menu__list-item"><a href="profile.html" class="user-menu__link">Мой профиль</a></li>
+                  <li class="user-menu__list-item"><a href="my-profile.html" class="user-menu__link">Мои настройки</a></li>
+                  <li class="user-menu__list-item"><a href="my-items.html" class="user-menu__link">Мои вещи</a></li>
+                  <li class="user-menu__list-item"><a href="wallet.html" class="user-menu__link">Кошелёк</a><span class="user-menu__money-available">12000</span></li>
+                  <li class="user-menu__list-item"><a href="#" class="user-menu__link">Выйти</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
       </div>
       <a href="#" class="btn btn--all-blue">Продать</a>
     </div>
+
     <!-- левая часть нормальная -->
     <div class="main-header__left main-header__left--open main-header__left--basic row">
       <!-- логотип -->
       <figure class="logo logo--big">
         <img src="img/logo--big.png" alt="">
       </figure>
+
       <!-- гамбургер для управления мобильным меню, переключение состояний по модификатору active -->
       <a href="#" class="mobile-menu-toggle"></a>
       <!-- мобильное меню для незалогиненного пользователя, переключение по модификатору active -->
@@ -93,13 +166,52 @@
           </li>
         </ul>
       </nav>
+
+      <!-- мобильное меню для авторизованного пользователя, переключение по модификатору active -->
+      <nav class="mobile-menu mobile-menu--logged-in">
+        <ul class="user-menu__list">
+          <li class="user-menu__list-item">
+            <a href="profile.html" class="user-avatar-wrapper">
+              <img src="img/user-avatar--header.jpg" alt="">
+            </a>
+            <a href="profile.html" class="user-menu__link">Anna-ahoes</a>
+            <a href="#" class="user-menu__logout">Выйти</a>
+          </li>
+          <li class="user-menu__list-item">
+            <a href="my-profile.html" class="user-menu__link">Мои настройки</a>
+          </li>
+          <li class="user-menu__list-item">
+            <a href="my-items.html" class="user-menu__link">Мои вещи</a>
+          </li>
+          <li class="user-menu__list-item">
+            <a href="wallet.html" class="user-menu__link">Кошелёк</a>
+            <span class="user-menu__money-available">12000</span>
+          </li>
+          <li class="mobile-menu__item mobile-menu__item--first">
+            <a href="sell-item" class="mobile-menu__link">Продать вещь</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Моя лента</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Каталог</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="info.html" class="mobile-menu__link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+
       <nav class="main-header__navigation row row--inline">
-        <a href="#" class="btn btn--all-blue-soft">Моя лента</a>
+        <a href="#" class="btn btn--all-blue-soft btn--timeline">Моя лента</a>
         <a href="#" class="btn btn--all-blue-soft">Каталог</a>
         <a href="#" class="btn btn--all-blue-soft">О проекте</a>
       </nav>
+
       <button type="button" class="main-header__find btn btn--all-blue-soft js-open-header-find">Искать</button>
+
     </div>
+
     <!-- левая часть с поиском -->
     <div class="main-header__left main-header__left--find">
       <form action="/echo" method="POST" class="main-header__form">

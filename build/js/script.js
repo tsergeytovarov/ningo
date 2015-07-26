@@ -17,6 +17,7 @@ $(function(){
   $(".js-open-header-find").on("click", function(event){
     event.preventDefault();
     $(".main-header__left--basic").removeClass("main-header__left--open");
+    $(".user-options").removeClass("user-options--open");
     $(".main-header__left--find").addClass("main-header__left--open");
   })
 
@@ -24,6 +25,7 @@ $(function(){
   $(".js-close-header-find").on("click", function(event){
     event.preventDefault();
     $(".main-header__left--basic").addClass("main-header__left--open");
+    $(".user-options").addClass("user-options--open");
     $(".main-header__left--find").removeClass("main-header__left--open");
   })
 
