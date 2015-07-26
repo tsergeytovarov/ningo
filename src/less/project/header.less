@@ -538,7 +538,6 @@
         position: relative;
         display: none;
         height: 50px;
-        border-right: 1px solid #edf7fa;
         border-left: 1px solid #edf7fa;
 
         &--open {
@@ -567,6 +566,13 @@
   &__right{
     float: right;
     font-size: 0;
+
+    &>.btn {
+
+      &--all-blue {
+        border-left: 1px solid #edf7fa;
+      }
+    }
   }
 
   &__left{

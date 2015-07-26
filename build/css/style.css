@@ -390,13 +390,11 @@ b {
   line-height: 21px;
   padding: 14px 25px 15px;
   font-weight: 300;
-  border-right: 1px solid #edf7fa;
   border-left: 1px solid #edf7fa;
 }
 .btn--all-blue:hover,
 .btn--all-blue--hover {
   background: #6ecbed;
-  border-right: 1px solid #6ecbed;
   color: #fff;
 }
 .btn--all-blue:active,
@@ -5163,7 +5161,6 @@ body {
   position: relative;
   display: none;
   height: 50px;
-  border-right: 1px solid #edf7fa;
   border-left: 1px solid #edf7fa;
 }
 .main-header--logged-in .tooltip-container .user-options--open {
@@ -5182,6 +5179,9 @@ body {
 .main-header__right {
   float: right;
   font-size: 0;
+}
+.main-header__right > .btn--all-blue {
+  border-left: 1px solid #edf7fa;
 }
 .main-header__left {
   display: none;
